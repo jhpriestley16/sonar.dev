@@ -1,0 +1,55 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: main-theme-font;
+  src: url("../fonts/Monad.otf");
+}
+@font-face {
+  font-family: main-theme-font;
+  src: url("../fonts/NeueMontreal-bold.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f5f5;
+  background-size: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.top {
+  height: 8%;
+  width: 70%;
+  display: flex;
+  float: right;
+  border-bottom: 1px #272727 solid;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: main-theme-font;
+  margin: 0 0 0 1%;
+  width: 25%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #a9fffb;
+  background-image: linear-gradient(180deg, #272727 0%, #000000 100%);
+  text-align: center;
+  display: flex;
+  text-shadow: 2px 7px 5px rgba(78, 78, 78, 0.3), 0px -4px 10px rgba(119, 119, 119, 0.3);
+}/*# sourceMappingURL=home.css.map */

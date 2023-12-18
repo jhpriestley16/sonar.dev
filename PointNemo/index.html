@@ -11,18 +11,17 @@
 <html>
 <body>
 
-<!--<form onsubmit="event.preventDefault();" role="search">
-    <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
-</form>-->
-
 <div class="top">
-    <a href="home.html" class="title-a">
+    <a href="index.html" class="title-a">
         <h1>[a]</h1>
             <div class="logo-title-break"></div>
         <h1 class="title" alt="array">array</h1>
     </a>
 
     <nav class="top-right-nav">
+    <form onsubmit="event.preventDefault();" role="search">
+        <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
+    </form>  
     <a href="#" class="sign-in-out">
         <i class="fa-solid fa-user"></i><p>Profile</p>
     </a>
@@ -42,16 +41,24 @@
 <div class="main">
 
     <a href="#" class="category-nav">
-        
+        <div class="page-box">
+            
+        </div>
     </a>
     <a href="#" class="category-nav">
-        
+        <div class="page-box">
+            <i class="fa-solid fa-record-vinyl"></i>
+        </div>
     </a>
     <a href="#" class="category-nav">
-        
+        <div class="page-box">
+            
+        </div>
     </a>
     <a href="#" class="category-nav">
-        
+        <div class="page-box">
+            
+        </div>
     </a>
     
     
@@ -59,19 +66,44 @@
 <div class="nav-description">
     <div class="des-box">
         <i class="fa-solid fa-angles-down"></i>
-        <p>games</p>
+        <p class="page-text-mobile">games</p>
+        <p class="bracket-text-mobile">classic games, available at your fingertips</p>
     </div>
     <div class="des-box">
         <i class="fa-solid fa-angles-down"></i>
-        <p>music</p>
+        <p class="page-text-mobile">music</p>
+        <p class="bracket-text-mobile">music curated by us [powered by Spotify]</p>
     </div>
     <div class="des-box">
         <i class="fa-solid fa-angles-down"></i>
-        <p>quizzes</p>
+        <p class="page-text-mobile">quizzes</p>
+        <p class="bracket-text-mobile">test your knowledge with our own quizzes</p>
     </div>
     <div class="des-box">
         <i class="fa-solid fa-angles-down"></i>
-        <p>array news</p>
+        <p class="page-text-mobile">array news</p>
+        <p class="bracket-text-mobile">news on array's development and updates</p>
+    </div>
+</div>
+
+<div class="resource-pointer">
+    <div class="arrow-1" id="arrow">
+        <i class="fa-solid fa-angles-down"></i>
+    </div>
+    <div class="arrow-2" id="arrow">
+        <i class="fa-solid fa-angles-down"></i>
+    </div>
+    <div class="arrow-3" id="arrow">
+        <i class="fa-solid fa-angles-down"></i>
+    </div>
+</div>
+
+<div class="about-text">
+    <p class="resources-caption">Resources used to build array</p>
+    <div class="resources-img-box">
+        <img src="img/vercel.png" alt="vercel logo" class="vercel">
+        <img src="img/github.png" alt="github logo" class="github">
+        <img src="img/mongodb.png" alt="mongodb logo" class="mongodb">
     </div>
 </div>
 </body>

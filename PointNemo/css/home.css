@@ -9,8 +9,13 @@ html, body {
 }
 
 @font-face {
-  font-family: main-theme-font;
-  src: url("../fonts/Monad.otf");
+  font-family: top-title-font;
+  src: url("../fonts/Geist-Regular.otf");
+}
+@font-face {
+  font-family: top-title-font-mobile;
+  src: url("../fonts/NeueMontreal-Light.otf");
+  letter-spacing: normal;
 }
 @font-face {
   font-family: neue;
@@ -23,6 +28,8 @@ html, body {
 * {
   margin: 0;
   padding: 0;
+  shape-rendering: crispEdges;
+  text-rendering: optimizeLegibility;
 }
 
 :root {
@@ -38,101 +45,293 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+  background: url("../img/gridbg.jpg");
   background-size: cover;
+  background-position: 21.5%;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  overflow-y: scroll;
 }
 
+.typography-box {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0% 0 0 0;
+  background: radial-gradient(80.99% 100% at 50% 0%, #FFFFFF 0%, #1e682e 100%), linear-gradient(180deg, #FFF500 0%, #0b0b0b 100%), linear-gradient(83.76deg, #5000F9 3.4%, #000000 96.6%), radial-gradient(70.71% 99% at 100% 39.75%, #8F00FF 0%, #0F0018 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+  background-blend-mode: overlay, difference, difference, difference, normal;
+}
+
+.typing-demo {
+  width: 50%;
+  animation: typing 2s steps(50), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: neue;
+  font-size: 4em;
+  margin-top: -1%;
+}
+
+span {
+  color: #00b392;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 .top {
-  width: 12%;
-  height: 40%;
-  background: #141414;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  border-radius: 15px;
-  position: fixed;
-  inset: 13.5% 0.25% 0.25% 0.25%;
+  width: 100%;
+  height: 5%;
+  background: #030303;
+  border-top: 0.01px solid #181818;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  inset: 9.9% 0 0 0;
+  z-index: 2;
 }
 
-.title-box {
+.title-a {
+  text-decoration: none;
   width: 12%;
-  height: 6%;
-  position: fixed;
-  inset: 0.5% 0.25%;
-  background: #141414;
-  border-radius: 15px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 1%;
+}
+
+.title-a:hover {
+  background: transparent;
+  transform: none;
+}
+
+h1:hover {
+  color: #00b392;
+}
+
+.logo-title-break {
+  width: 1%;
+  height: 90%;
+  margin-top: 1%;
+  background: rgba(105, 105, 105, 0.6823529412);
 }
 
 h1 {
-  font-size: clamp(1.5625rem, 1.2917rem + 0.9028vw, 2.375rem);
+  color: #e9e9e9;
   font-family: neue;
-  text-align: center;
-  color: #e0e0e0;
-  padding: 2.25%;
+  letter-spacing: -0.045rem;
+  font-size: 2.1875rem;
+  margin: 0 5% 0 5%;
 }
 
-nav {
-  height: 50%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-a {
+.top-right-nav {
+  width: 220px;
   height: 100%;
-  font-size: clamp(0.9375rem, 0.8333rem + 0.3472vw, 1.25rem);
-  font-family: neue;
-  color: #ebebeb;
-  text-decoration: none;
-  margin-inline: 6%;
+  margin-right: 1%;
+  margin-left: 73.9%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.sign-in-out {
+  height: 60%;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #858585;
+  font-family: top-title-font;
+  align-items: center;
+  border: 1px rgba(55, 55, 55, 0.7019607843) solid;
+  background: linear-gradient(45deg, #111111, #000000);
+  border-radius: 100px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  margin-inline: 2%;
+}
+
+.sign-in-out i {
+  padding-left: 17%;
+}
+
+.settings {
+  height: 60%;
+  width: 105px;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #858585;
+  font-family: top-title-font;
+  align-items: center;
+  border: 1px rgba(55, 55, 55, 0.7019607843) solid;
+  background: linear-gradient(45deg, #111111, #000000);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 100px;
+  margin-inline: 2%;
+}
+
+a i {
+  margin-right: 7%;
+  padding-left: 10%;
 }
 
 a:hover {
-  -webkit-text-decoration: underline 1px;
-          text-decoration: underline 1px;
+  color: #b9b7b7;
+  background: #080808;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
-form {
-  width: 12%;
-  height: 6%;
-  position: fixed;
-  inset: 7% 0.25% 0.25% 0.25%;
-  background: #141414;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  border-radius: 15px;
-}
-
-input {
-  height: 100%;
+.main {
   width: 100%;
-  font-size: clamp(0.9375rem, 0.875rem + 0.2083vw, 1.125rem);
-  font-family: neue;
-  padding-inline: 3%;
-  color: #ffffff;
-  background: transparent;
-  border: none;
-  border-radius: 50px;
-  border: none;
+  height: 40%;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  inset: 15% 0 0 0;
+  background: #030303;
+  border-top: 0.01px solid #181818;
+  border-bottom: 0.01px solid #181818;
 }
 
-::-webkit-search-cancel-button {
+.category-nav {
+  width: 22%;
+  margin-left: 2.35%;
+  height: 85%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #858585;
+  font-family: top-title-font;
+  border: 1px rgba(55, 55, 55, 0.7019607843) solid;
+  background: linear-gradient(-45deg, #060606, #030303);
+  border-radius: 25px;
+}
+
+.category-nav:hover {
+  background: linear-gradient(45deg, #080808, #000000);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-description {
   display: none;
 }
 
-input:focus, input:active {
-  outline: none;
-}
-
-.content {
-  height: 199%;
-  width: 60%;
-  background: #141414;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  border-radius: 15px;
-  position: relative;
-  inset: 0.5% 0 0.5% 20%;
+@media only screen and (max-width: 500px) {
+  .typing-demo {
+    width: 85%;
+    font-size: 1.5em;
+  }
+  h1 {
+    font-size: 1.7rem;
+    font-family: top-title-font;
+  }
+  .title {
+    display: none;
+  }
+  .logo-title-break {
+    display: none;
+  }
+  a p {
+    display: none;
+  }
+  .sign-in-out {
+    width: 30px;
+    border-radius: 50px;
+    margin-right: 1%;
+    display: flex;
+  }
+  .settings {
+    width: 30px;
+    border-radius: 50px;
+  }
+  i::before {
+    padding-left: 2px;
+  }
+  .fa-solid.fa-gear {
+    padding-left: 4.5px;
+  }
+  .top-right-nav {
+    width: 70px;
+    margin-left: 71%;
+  }
+  .main {
+    width: 100%;
+    height: 12%;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    inset: 15% 0 0 0;
+    background: #030303;
+    border-top: 0.01px solid #181818;
+    border-bottom: 0.01px solid #181818;
+  }
+  .category-nav {
+    width: 17%;
+    margin: 4%;
+    height: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #858585;
+    font-family: top-title-font;
+    border: 1px rgba(55, 55, 55, 0.7019607843) solid;
+    border-radius: 15px;
+  }
+  .nav-description {
+    width: 100%;
+    height: 8%;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    inset: 27% 0 0 0;
+    background: #030303;
+    border-top: 0.01px solid #181818;
+    border-bottom: 0.01px solid #181818;
+  }
+  .des-box {
+    height: 100%;
+    width: 25%;
+    border: 0.01px solid #181818;
+    display: flex;
+    flex-direction: column;
+  }
+  .des-box:nth-child(1) {
+    border-left: none;
+  }
+  .des-box:nth-child(4) {
+    border-right: none;
+  }
+  .des-box i {
+    color: #434343;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 8%;
+  }
+  .des-box p {
+    color: #434343;
+    font-size: 10px;
+    text-align: center;
+    font-family: top-title-font;
+    margin-top: 3%;
+  }
 }/*# sourceMappingURL=home.css.map */

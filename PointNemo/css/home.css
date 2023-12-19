@@ -96,8 +96,8 @@ span {
   width: 100%;
   height: 5%;
   background: #030303;
-  border-top: 0.01px solid #181818;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  border-top: 1px solid #181818;
+  border-bottom: 1px solid #181818;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -239,8 +239,8 @@ nav a:hover {
 }
 
 .category-nav {
-  width: 22%;
-  margin-left: 2.35%;
+  width: 30%;
+  margin-inline: auto;
   height: 85%;
   align-items: center;
   display: flex;
@@ -264,7 +264,7 @@ nav a:hover {
 
 .page-box {
   height: 98%;
-  width: 98%;
+  width: 98.5%;
   color: #858585;
   font-family: top-title-font;
   background: linear-gradient(-45deg, #060606, #030303);
@@ -274,6 +274,47 @@ nav a:hover {
 
 .page-box i {
   visibility: hidden;
+}
+
+.news-box-block {
+  width: 50%;
+  height: 41.8%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  inset: 55.3% 0 0 0;
+  background: #030303;
+  border-right: 0.01px solid #181818;
+}
+
+.news-box-window {
+  height: 100%;
+  width: 65%;
+  border-right: 0.01px solid #181818;
+}
+
+.news-box-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 35%;
+  height: 100%;
+}
+
+.news-text {
+  color: #a0a0a0;
+  font-size: 10px;
+  text-align: center;
+  font-family: top-title-font;
+  margin-top: 4%;
+}
+
+.news-verse {
+  color: #434343;
+  font-size: 8px;
+  text-align: center;
+  font-family: top-title-font;
+  margin-top: 6%;
 }
 
 .resource-pointer {
@@ -350,10 +391,18 @@ nav a:hover {
   width: 160px;
 }
 
+.font-awesome {
+  height: 50px;
+  width: 310px;
+}
+
 @media only screen and (max-width: 500px) {
   .typing-demo {
     width: 85%;
     font-size: 1.5em;
+  }
+  .top {
+    height: 4.95%;
   }
   h1 {
     font-size: 1.7rem;
@@ -424,6 +473,7 @@ nav a:hover {
     height: 12%;
     position: absolute;
     align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     inset: 15% 0 0 0;
@@ -440,6 +490,9 @@ nav a:hover {
     flex-direction: column;
     text-decoration: none;
     border-radius: 15px;
+  }
+  .category-nav:nth-child(2) {
+    margin-inline: 12%;
   }
   .page-box {
     height: 97%;
@@ -460,6 +513,9 @@ nav a:hover {
     font-size: 50px;
     color: #504f4f;
   }
+  .fa-solid.fa-gamepad, .fa-solid.fa-chalkboard {
+    padding-left: 8%;
+  }
   .nav-description {
     width: 100%;
     height: 10%;
@@ -474,7 +530,7 @@ nav a:hover {
   }
   .des-box {
     height: 100%;
-    width: 25%;
+    width: 33%;
     border: 0.01px solid #181818;
     display: flex;
     flex-direction: column;
@@ -483,7 +539,7 @@ nav a:hover {
   .des-box:nth-child(1) {
     border-left: none;
   }
-  .des-box:nth-child(4) {
+  .des-box:nth-child(3) {
     border-right: none;
   }
   .des-box i {
@@ -491,28 +547,44 @@ nav a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 10px;
+    font-size: 13px;
     text-align: center;
-    padding-top: 8%;
+    padding-top: 3%;
   }
   .page-text-mobile {
     color: #a0a0a0;
-    font-size: 10px;
+    font-size: 13px;
     text-align: center;
     font-family: top-title-font;
-    margin-top: 3%;
+    margin-top: 2%;
   }
   .bracket-text-mobile {
     color: #434343;
-    font-size: 8px;
+    font-size: 10px;
     text-align: center;
     font-family: top-title-font;
-    margin-top: 9%;
+    margin-top: 4%;
+  }
+  .news-box-block {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    inset: 74% 0 0 0;
+    background: #030303;
+    border: none;
+    border-top: 0.01px solid #181818;
+  }
+  .news-box-window {
+    height: 100%;
+    width: 65%;
+    border-right: 0.01px solid #181818;
   }
   .resource-pointer {
     height: 3%;
     width: 100%;
-    border-top: 1px solid #181818;
+    border-top: 0.01px solid #181818;
     background: #030303;
     position: absolute;
     inset: 96.9% 0 0 0;
@@ -551,6 +623,7 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow-x: scroll;
   }
   .resources-img-box img {
     margin-left: 2%;
@@ -566,5 +639,9 @@ nav a:hover {
   .mongodb {
     height: 25px;
     width: 90px;
+  }
+  .font-awesome {
+    height: 25px;
+    width: 155px;
   }
 }/*# sourceMappingURL=home.css.map */

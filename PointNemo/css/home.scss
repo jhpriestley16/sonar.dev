@@ -4,6 +4,10 @@ html, body { box-sizing: border-box; overflow-x: hidden;}
     src: url("../fonts/Geist-Regular.otf");
 }
 @font-face{
+    font-family: nav-box-font;
+    src: url("../fonts/Geist-SemiBold.otf");
+}
+@font-face{
     font-family: top-title-font-mobile;
     src: url("../fonts/NeueMontreal-Light.otf");
     letter-spacing:normal;
@@ -275,13 +279,24 @@ main{
     height: 98.7%;
     width: 98.5%;
     color: #858585;
-    font-family: top-title-font;
     background: linear-gradient(-45deg, #060606,#030303);
     border-radius: 23px;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .page-box i{
     visibility: hidden;
+}
+h2{
+    background: linear-gradient(to right, #9e4eff, #d000ff);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+    font-stretch: condensed;
+    font-family: top-title-font;
 }
 
 .about-us-text-block{

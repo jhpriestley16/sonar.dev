@@ -90,7 +90,7 @@ nav{
 }
 .logo-title-box{
     text-decoration: none;
-    width: 80%;
+    width: 85%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -131,6 +131,7 @@ form{
     border-radius: 15px;
     display: flex;
     align-items: center;
+    margin-inline: 1%;
 }
 input{
     height: 100%;
@@ -149,21 +150,6 @@ input{
 input:focus, input:active{
     outline: none;
 }
-.sign-in-out{
-    height: 60%;
-    width: 105px;
-    display: flex;
-    text-decoration: none;
-    color: #858585;
-    font-family: top-title-font;
-    align-items: center;
-    justify-content: center;
-    border: 1px #373737b3 solid;
-    background: linear-gradient(45deg, #111111, #000000);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    border-radius: 100px;
-    margin-inline: 2%;
-}
 .settings{
     height: 60%;
     width: 105px;
@@ -178,9 +164,6 @@ input:focus, input:active{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     border-radius: 100px;
     margin-inline: 2%;
-}
-.fa-solid.fa-user{
-    margin-inline: 4%;
 }
 .fa-solid.fa-gear{
     margin-inline: 2%;
@@ -214,7 +197,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid #181818;
+    border-bottom: 1.5px solid #181818;
     background: radial-gradient(80.99% 100% at 50% 0%, #FFFFFF 0%, #cb9058 100%), linear-gradient(180deg, #ff2f00 0%, #0b0b0b 100%), linear-gradient(83.76deg, #5000F9 3.4%, #eeeeee 96.6%), radial-gradient(70.71% 99% at 100% 39.75%, #8F00FF 0%, #0F0018 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #00aa93 100%);
     background-blend-mode: overlay, difference, difference, difference, normal;
 }
@@ -251,7 +234,7 @@ main{
     display: flex;
     flex-direction: row;
     background: #030303;
-    border-bottom: 3px solid #181818;
+    border-bottom: 1.5px solid #181818;
 }
 .category-nav{
     width: 18%;
@@ -290,74 +273,40 @@ main{
     visibility: hidden;
 }
 h2{
-    background: linear-gradient(to right, #9e4eff, #d000ff);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-    font-size: 1.8rem;
+    color: #2f2f2f;
+    font-size: 2.4rem;
     font-stretch: condensed;
     font-family: top-title-font;
-}
 
+}
+.suggestion-box-tab-container{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    background: #030303;
+    align-items: center;
+    justify-content: center;
+}
+.suggestion-box{
+    background: #0a0a0a;
+    border: 2px solid #2f2f2f;
+    width: 20%;
+    height: 80%;
+    margin-inline: auto;
+    border-radius: 40px;
+}
 .about-us-text-block{
-    width: 65%;
-    height: 60vh;
+    width: 100%;
+    height: 10vh;
     display: flex;
     background: #030303;
     border: none;
-    border-bottom: 3px solid #181818;
-    border-right: 3px solid #181818;
+    border-top: 1.5px solid #181818;
+    border-bottom: 1.5px solid #181818;
 }
-/*
-.vertical-tab-block{
-    width: 34.7%;
-    height: 64.5%;
-    inset: 35.2% 0 0 65.3%;
-    display: flex;
-    flex-direction: row;
-    background: #030303;
-    border: 3px solid #181818;
-    border-left: none;
-    border-bottom: none;
-}
-.news-box-block{
-    width: 65%;
-    height: 31.8%;
-    inset: 68% 0 0 0;
-    display: flex;
-    flex-direction: row;
-    background: #030303;
-    border: 3px solid #181818;
-    border-left: none;
-    border-bottom: none;
-}
-.news-box-window{
-    height: 100%;
-    width: 65%;
-    border-right: 0.01px solid #181818;
-}
-.news-box-text{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 35%;
-    height: 100%;
-}
-.news-text{
-    color: #a0a0a0;
-    font-size: 10px;
-    text-align: center;
-    font-family: top-title-font;
-    margin-top: 4%;
-}
-.news-verse{
-    color: #434343;
-    font-size: 8px;
-    text-align: center;
-    font-family: top-title-font;
-    margin-top: 6%;
-}
-*/
+
+
 
 
 
@@ -373,7 +322,7 @@ h2{
 
 
 footer{
-    height: 10%;
+    height: 10vh;
     width: 100%;
     position: relative;
     background: #030303;

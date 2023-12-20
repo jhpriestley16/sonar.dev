@@ -74,7 +74,7 @@ header{
     height: 5vh;
     background: #030303;
     border-bottom: 2px solid #181818;
-    position: relative;
+    position: fixed;
     z-index: 2;
 }
 nav{
@@ -86,7 +86,7 @@ nav{
 }
 .logo-title-box{
     text-decoration: none;
-    width: 60%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -99,25 +99,26 @@ nav{
     text-decoration: none;
 }
 li.header-nav-pills{
-    width: 20%;
     height: 100%;
     display: flex;
     flex-direction: row;
     text-decoration: none;
+    align-items: center;
 }
 h1:hover{
     color:#e7e7e7;
 }
 .logo-title-break{
-    width: 1%;
+    width: 2%;
+    margin-inline: 5%;
     height: 90%;
-    margin-top: 1%; 
+    margin-top: 1.5%;
     background: #696969ae;
 }
 h1{
     color: #c6c6c6;
     font-family: neue;
-    letter-spacing: -0.045rem;
+    letter-spacing: 0.001rem;
     font-size: 2.1875rem;
 }
 form{
@@ -146,42 +147,41 @@ input:focus, input:active{
 }
 .sign-in-out{
     height: 60%;
-    width: 100px;
+    width: 105px;
     display: flex;
-    flex-direction: row;
     text-decoration: none;
     color: #858585;
     font-family: top-title-font;
     align-items: center;
+    justify-content: center;
     border: 1px #373737b3 solid;
     background: linear-gradient(45deg, #111111, #000000);
-    border-radius: 100px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 100px;
     margin-inline: 2%;
-}
-.sign-in-out i{
-    padding-left: 17%;
 }
 .settings{
     height: 60%;
     width: 105px;
     display: flex;
-    flex-direction: row;
     text-decoration: none;
     color: #858585;
     font-family: top-title-font;
     align-items: center;
+    justify-content: center;
     border: 1px #373737b3 solid;
     background: linear-gradient(45deg, #111111, #000000);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     border-radius: 100px;
     margin-inline: 2%;
 }
-a i{
-    margin-right: 7%;
-    padding-left: 10%;
+.fa-solid.fa-user{
+    margin-inline: 4%;
 }
-nav a:hover{
+.fa-solid.fa-gear{
+    margin-inline: 2%;
+}
+nav li a:hover{
     color: #b9b7b7;
     background: #080808;
     transform: scale(1.05);
@@ -198,12 +198,15 @@ nav a:hover{
 main{
     background: #000000;
     position: relative;
-    min-height: 94.4vh;
-    display: grid;
+    min-height: 93vh;
+    margin: 5vh 0 0 0;
+    display: flex;
+    flex-direction: column;
 }
+
 .typography-box{
     width: 100%;
-    height: 20%;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,30 +228,29 @@ main{
   span{
     color:#000000;
   }
-  
+
   @keyframes typing {
     from {
       width: 0
     }
   }
-      
   @keyframes blink {
     50% {
       border-color: transparent
     }
   }
-.main{
+
+.page-nav-boxes-container{
     width:100%;
-    height: 25%;
+    height: 40vh;
     align-items: center;
     display: flex;
     flex-direction: row;
     background: #030303;
-    border-top: 3px solid #181818;
     border-bottom: 3px solid #181818;
 }
 .category-nav{
-    width: 30%;
+    width: 18%;
     margin-inline: auto;
     height: 85%;
     align-items: center;
@@ -268,6 +270,7 @@ main{
 .nav-description{
     display:none;
 }
+
 .page-box{
     height: 98.7%;
     width: 98.5%;
@@ -280,17 +283,17 @@ main{
 .page-box i{
     visibility: hidden;
 }
-.text-block{
+
+.about-us-text-block{
     width: 65%;
-    height: 32.6%;
-    inset: 35.4% 0 0 0;
+    height: 60vh;
     display: flex;
     background: #030303;
-    border: 3px solid #181818;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
+    border: none;
+    border-bottom: 3px solid #181818;
+    border-right: 3px solid #181818;
 }
+/*
 .vertical-tab-block{
     width: 34.7%;
     height: 64.5%;
@@ -339,30 +342,7 @@ main{
     font-family: top-title-font;
     margin-top: 6%;
 }
-.resource-pointer{
-    height: 25%;
-    width: 100%;
-    border-bottom: 1px solid #181818;
-    background: #030303;
-    display: flex;
-    flex-direction: row;
-}
-#arrow{
-    width: 33.3%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to bottom, #d0bb30 0%, #9e4eff 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-    font-size: 15px;
-}
-#arrow i{
-    padding: 0;
-    margin: 0;
-}
+*/
 
 
 
@@ -395,6 +375,30 @@ footer{
     font-family: top-title-font;
     padding: 0.1% 0 0 0.5%;
 }
+.resource-pointer{
+    height: 25%;
+    width: 100%;
+    border-bottom: 1px solid #181818;
+    background: #030303;
+    display: flex;
+    flex-direction: row;
+}
+#arrow{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #d0bb30 0%, #9e4eff 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-size: 15px;
+}
+#arrow i{
+    padding: 0;
+    margin: 0;
+}
 .resources-img-box{
     height: 90%;
     width: 100%;
@@ -425,58 +429,4 @@ footer{
 
 @media only screen and (max-width: 500px) {
     
-    .resource-pointer{
-        height: 3%;
-        width: 100%;
-        border-top: 0.01px solid #181818;
-        background: #030303;
-
-        inset: 96.9% 0 0 0;
-        display: flex;
-        flex-direction: row;
-    }
-    #arrow{
-        font-size: 10px;
-    }
-    #arrow i{
-        padding: 0;
-        margin: 0;
-    }
-    .resources-caption{
-        height: 10%;
-        width: 100%;
-        font-size: 12px;
-        color: #6f6f6f;
-        font-family: top-title-font;
-        margin-bottom: 1%;
-        padding-left: 0.5%;
-        padding-top: 0.1%;
-    }
-    .resources-img-box{
-        height: 90%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow-x: scroll;
-    }
-    .resources-img-box img{
-        margin-left: 2%;
-    }
-    .vercel{
-        height: 20px;
-        width: 90px;
-    }
-    .github{
-        height: 35px;
-        width: 90px;
-    }
-    .mongodb{
-        height: 25px;
-        width: 90px;
-    }
-    .font-awesome{
-        height: 25px;
-        width: 155px;
-    }
 }

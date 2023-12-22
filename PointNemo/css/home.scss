@@ -487,11 +487,9 @@ footer{
     justify-content: center;
     margin-inline: auto;
     border-radius: 21px;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
-.social-navigation li:hover{
-    transform: scale(1.05);
-    transition: transform .3s;
+.social-navigation li:hover p{
+    color: #ffffff;
 }
 .li-social-box{
     height: 96%;

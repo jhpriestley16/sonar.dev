@@ -35,12 +35,18 @@ html, body { box-sizing: border-box; overflow-x: hidden;}
   --ff-text-label: text-labels;
   --ff-titles: neue;
 
-  --clr-light: #f4f4f4;
-  --clr-box: #f4f4f4;
+  --clr-light: #eeeeee;
+  --clr-box: #e6e6e6;
+  --clr-typo-box: radial-gradient(80.99% 100% at 50% 0%, #FFFFFF 0%, #00801C 100%), linear-gradient(180deg, #FFF500 0%, #000000 100%), linear-gradient(83.76deg, #5000F9 3.4%, #000000 96.6%), radial-gradient(70.71% 99% at 100% 39.75%, #8F00FF 0%, #0F0018 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+  --clr-typo-blend: overlay, difference, difference, difference, normal;
   --clr-dark: #000000;
+  --clr-footer: #e6e6e6;
+
   --ff-clr: #040404;
   --ff-header-clr: #292929;
-  --border: 1.5px solid #707070;
+  
+  --border: none;
+  --header-footer-border: 1.5px solid #707070;
   --box-shadow-active: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   --box-shadow-inactive: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 
@@ -55,14 +61,22 @@ html, body { box-sizing: border-box; overflow-x: hidden;}
   --ff-titles: neue;
 
   --clr-light: #eaeaea;
-  --clr-box: #111111;
-  --clr-dark: linear-gradient(-45deg, #030303, #161616);
+  --clr-box: #080808;
+  --clr-typo-box: radial-gradient(80.99% 100% at 50% 0%, #FFFFFF 0%, #00801C 100%), linear-gradient(180deg, #FFF500 0%, #000000 100%), linear-gradient(83.76deg, #5000F9 3.4%, #000000 96.6%), radial-gradient(70.71% 99% at 100% 39.75%, #8F00FF 0%, #0F0018 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+  --clr-typo-blend: overlay, difference, difference, difference, normal;
+  --clr-dark: #000000;
+  --clr-footer: #111111;
 
   --ff-clr: #e1e1e1;
   --ff-header-clr: #c3c3c3;
-  --border: 1.5px solid #383838;
+  
+  --border: 2px solid #5d2664;
+  --header-footer-border: 1.5px solid #707070;
   --box-shadow-active: none;
   --box-shadow-inactive: none;
+
+  --transi-nav: transform .3s ease-in-out;
+  --transf-nav: scale(1.05);
 
 
   --foreground: var(--clr-light);
@@ -98,7 +112,7 @@ header{
     width: 100vw;
     height: 5vh;
     background: var(--background);
-    border-bottom: var(--border);
+    border-bottom: var(--header-footer-border);
     position: fixed;
     z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
@@ -178,7 +192,7 @@ input:focus, input:active{
     font-family: var(--ff-text-label);
     align-items: center;
     justify-content: center;
-    background: var(--background);
+    background: var(--clr-box-dark);
     border-radius: 100px;
     margin-inline: 2%;
     border: none;
@@ -211,6 +225,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--clr-typo-box);
+    background-blend-mode: var(--clr-typo-blend);
 }
 .typing-demo {
     width: 50%;
@@ -264,14 +280,16 @@ main{
     text-decoration: none;
     border-radius: 25px;
     z-index:1;
-    background: var(--clr-box-dark);
+    background: var(--clr-box);
     padding: 0;
     box-shadow: var(--box-shadow-inactive);
+    border: var(--border);
 }
 .category-nav:hover{
     background: var(--clr-box);
     box-shadow: var(--box-shadow-active);
-    transition: box-shadow .3s ease-in-out
+    transition: var(--transi-nav);
+    transform: var(--transf-nav);
     }
 .nav-description{
     display:none;
@@ -421,8 +439,8 @@ footer{
     height: 23vh;
     width: 100%;
     position: relative;
-    background: #d1d1d1;
-    border-top: 3px solid #393939;
+    background: var(--clr-footer);
+    border-top: var(--header-footer-border);
     display: flex;
     flex-direction: column;
 }
@@ -474,7 +492,7 @@ footer{
     align-items: center;
 }
 .social-link-text p{
-    color: #6f6f6f;
+    color: #949494;
     font-family: var(--ff-text-label);
     font-size: 1rem;
     width: 80%;
@@ -491,7 +509,7 @@ footer{
 
 .social-navigation i{
     font-size: 3rem;
-    color: #6f6f6f;
+    color: #9134a2;
     margin-inline: auto;
     width: 20%;
     text-align: center;
@@ -510,6 +528,7 @@ footer{
     width: 100%;
     display: flex;
     flex-direction: row;
+    border-bottom: var(--header-footer-border);
 }
 #arrow{
     width: 33.3%;

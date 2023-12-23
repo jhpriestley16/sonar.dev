@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array - Home</title>
     <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-right.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
 </head>
@@ -30,9 +32,7 @@
     </div>
 
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="dark-mode-toggle">
-
-        <i class="fa-regular fa-lightbulb"></i>
-
+        <i class="gg-sun"></i><i class="gg-moon"></i>
     </button>
     
     <form onsubmit="event.preventDefault();" role="search">
@@ -40,8 +40,13 @@
     </form> 
 
     <li class="header-nav-pills">
-        <div class="settings" onclick()>
+        <div class="settings" onclick="toggleMenu()">
             <i class="gg-menu-right"></i>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    
+                </div>
+            </div>
         </div>
     </li>
 
@@ -49,7 +54,6 @@
 </header>
 
 <main>
-    
 
     <div class="typography-box">
         <div class="typing-demo">
@@ -193,6 +197,12 @@
 </footer>
 
 
-<script src="js/darkmode.js"></script>
+<script src="js/global.js">
+    let subMenu = document.getElementById('subMenu');
+
+function toggleMenu(){
+    subMenu.classList.toggle('open-menu');
+}
+</script>
 </body>
 </html>

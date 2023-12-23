@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array - Home</title>
     <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/notifications.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-right.css' rel='stylesheet'>
@@ -21,15 +23,11 @@
 <header>
     <nav>
 
-    <div class="logo-title-box">
-        <a href="#top" class="home-refresh-via-title-logo">
-            <h1>
-                [a]
-            </h1>
-            <div class="logo-title-break"></div>
-            <h1 class="title" alt="array">array</h1>
-        </a>
-    </div>
+        <div class="logo-title-box">
+            <a href="#top" class="home-refresh-via-title-logo">
+                <i class="fa-solid fa-user-astronaut"></i>
+            </a>
+        </div>
 
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="dark-mode-toggle">
         <i class="gg-sun"></i><i class="gg-moon"></i>
@@ -44,7 +42,21 @@
             <i class="gg-menu-right"></i>
             <div class="sub-menu-wrap" id="subMenu">
                 <div class="sub-menu">
-                    
+                    <nav class="sub-nav">
+                        <div class="profile-tab"></div>
+                        <hr>
+                        <div class="link-row">
+                        <a href="#" class="profile" id="sub-menu-links">
+                            <i class="fa-solid fa-user-astronaut"></i></i> <p>Profile</p>
+                        </a>
+                        <a href="#" class="gear" id="sub-menu-links">
+                            <i class="fa-solid fa-gears"></i> <p>Settings</p>
+                        </a>
+                        <a href="#" class="sign-out" id="sub-menu-links">
+                            <i class="fa-solid fa-right-from-bracket"></i> <p>Sign Out</p>
+                        </a>
+                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -147,16 +159,6 @@
 <div class="typography-box-lower"></div>
 
 <footer>
-    <div class="resource-pointer">
-        <div class="arrow-1" id="arrow">
-            <i class="fa-solid fa-angles-down"></i>
-        </div>
-        <div class="arrow-2" id="arrow">
-            <i class="fa-solid fa-angles-down"></i>
-        </div>
-        <div class="arrow-3" id="arrow">
-            <i class="fa-solid fa-angles-down"></i>
-        </div>
     </div>
     <nav class="social-navigation">
         <div class="social-tabs">
@@ -187,13 +189,6 @@
         </div>
     </div>
     </nav>
-    <p class="resources-caption">Resources used to build array</p>
-    <div class="resources-img-box">
-        <img src="img/vercel.png" alt="vercel logo" class="vercel">
-        <img src="img/github.png" alt="github logo" class="github">
-        <img src="img/mongodb.png" alt="mongodb logo" class="mongodb">
-        <img src="img/fontawesome.png" alt="font awesome logo" class="font-awesome">
-    </div>
 </footer>
 
 

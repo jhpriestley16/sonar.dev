@@ -303,6 +303,16 @@ input:focus, input:active {
   border: var(--header-footer-border);
 }
 
+#sub-menu-links p {
+  letter-spacing: -0.05rem;
+  font-size: clamp(1rem, 0.8333rem + 0.5556vw, 1.5rem);
+}
+
+#sub-menu-links i {
+  margin-inline: 1%;
+  font-size: clamp(1.1rem, 0.9333rem + 0.5556vw, 1.6rem);
+}
+
 main {
   background: transparent;
   position: relative;

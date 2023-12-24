@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array - Home</title>
     <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/box.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/notifications.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
@@ -38,8 +40,27 @@
         <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
     </form> 
 
-    <li class="header-nav-pills">
-        <div class="settings"  onclick="toggleMenu()">
+    <div class="header-nav-pills">
+        <div class="notifications" onclick="toggleNoti()">
+            <i class="gg-bell"></i>
+            <div class="noti-menu-wrap" id="subNoti">
+                <label class="noti-label"><i class="gg-bell"></i>Notifications</label>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+            </div>
+            <script>
+                let subNoti = document.getElementById('subNoti');
+
+function toggleNoti(){
+    subNoti.classList.toggle('open-noti');
+}
+            </script>
+        </div>
+        <div class="menu"  onclick="toggleMenu()">
             <i class="gg-menu-right"></i>
             <div class="sub-menu-wrap" id="subMenu">
                 <div class="sub-menu">
@@ -63,7 +84,7 @@
                 </div>
             </div>
         </div>
-    </li>
+    </div>
 
     </nav>
 </header>

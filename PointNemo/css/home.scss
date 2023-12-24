@@ -72,11 +72,11 @@ html, body { box-sizing: border-box; overflow-x: hidden;}
   --clr-nav-blend: darken, hue, overlay, color, color-dodge, difference, normal;
   --clr-typo-box: radial-gradient(80.99% 100% at 50% 0%, #FFFFFF 0%, #00801C 100%), linear-gradient(180deg, #FFF500 0%, #000000 100%), linear-gradient(83.76deg, #5000F9 3.4%, #000000 96.6%), radial-gradient(70.71% 99% at 100% 39.75%, #8F00FF 0%, #0F0018 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
   --clr-typo-blend: overlay, difference, difference, difference, normal;
-  --clr-dark: #030303;
+  --clr-dark: #070707;
   --clr-footer: #080808;
   --clr-link: #090909;
 
-  --ff-clr: #d3d3d3;
+  --ff-clr: #949494;
   --ff-header-clr: #c3c3c3;
   
   --border: 1.5px solid #575757;
@@ -495,10 +495,36 @@ h2{
     margin-inline: auto;
     border-radius: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
     box-shadow: none;
     border: var(--header-footer-border)
+}
+.suggestion-label{
+    height: 15%;
+    width: 30%;
+    margin-top: 0.5%;
+    margin-bottom: 0.2%;
+    margin-left: 4%;
+    text-align: center;
+    color: var(--ff-clr);
+    font-family: var(--ff-text-label);
+    font-size: clamp(0.8rem, 0.6333rem + 0.5556vw, 1.3rem);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+p.suggestion-text{
+    height: 80%;
+    text-align: center;
+    color: var(--ff-clr);
+    font-family: var(--ff-text-label);
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);   
+    display: flex;
+    margin-inline: 3%;
+    align-items: center;
+    justify-content: center;
 }
 .suggestion-box:hover{
     transition: var(--transi-nav);
@@ -517,9 +543,44 @@ h2{
 .about-us{
     height: 100%;
     width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 20px;
     background: var(--clr-box);
     border: var(--header-footer-border);
+}
+.about-us-label{
+    height: 15%;
+    width: 30%;
+    margin-top: 0.5%;
+    margin-bottom: 0.2%;
+    text-align: center;
+    color: var(--ff-clr);
+    font-family: var(--ff-text-label);
+    font-size: clamp(0.8rem, 0.6333rem + 0.5556vw, 1.3rem);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+.about-us p{
+    height: 80%;
+    text-align: center;
+    color: var(--ff-clr);
+    font-family: var(--ff-text-label);
+    font-size: clamp(0.6rem, 0.4667rem + 0.4444vw, 1rem);   
+    display: flex;
+    margin-inline: 1%;
+    align-items: center;
+    justify-content: center;
+}
+.sign-off{
+    width: 20%;
+}
+.sign-off i{
+    margin-inline: 1%;
 }
 .spotify-playlist-quiz-container-large{
     width: 100%;

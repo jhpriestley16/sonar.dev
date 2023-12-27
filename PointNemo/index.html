@@ -41,7 +41,6 @@
         <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
     </form> 
 
-    <div class="header-nav-pills">
         <div class="notifications" onclick="toggleNoti()">
             <i class="gg-bell"></i>
             <div class="noti-menu-wrap" id="subNoti">
@@ -61,11 +60,6 @@ function toggleNoti(){
 }
             </script>
         </div>
-        <div class="profile-menu">
-            <img src="img/dm-bg.jpg" style="border-radius: 50%;">
-        </div>
-    </div>
-        <!--
         <button class="menu"  onclick="toggleMenu()">
             <i class="gg-menu-right"></i>
             <div class="sub-menu-wrap" id="subMenu">
@@ -90,7 +84,10 @@ function toggleNoti(){
                 </div>
             </div>
         </div>
-    </button>-->
+    </button>
+        <div class="profile-menu">
+            <img src="img/dm-bg.jpg" style="border-radius: 50%;">
+        </div>
 
     </nav>
 </header>
@@ -122,38 +119,6 @@ function toggleNoti(){
     </nav>
 
     <hr>
-<!--
-    <section class="page-nav-boxes-container">
-        
-        <a href="#" class="category-nav">
-            <h2>Games</h2>
-    </a>
-    <a href="#" class="category-nav">
-        <h2>Music</h2>
-</a>
-<a href="#" class="category-nav">
-    <h2>Quizzes</h2>
-</a>
-
-</section>
-    
-<div class="nav-description">
-    <div class="des-box">
-        <i class="fa-solid fa-angles-down"></i>
-        <p class="page-text-mobile">games</p>
-        <p class="bracket-text-mobile">classic games, available at your fingertips</p>
-    </div>
-    <div class="des-box">
-        <i class="fa-solid fa-angles-down"></i>
-        <p class="page-text-mobile">music</p>
-        <p class="bracket-text-mobile">music curated by us [powered by Spotify]</p>
-    </div>
-    <div class="des-box">
-        <i class="fa-solid fa-angles-down"></i>
-        <p class="page-text-mobile">quizzes</p>
-        <p class="bracket-text-mobile">test your knowledge with our own quizzes</p>
-    </div>
-</div>-->
 
 <div class="slider">
 	<div class="slide-track">
@@ -227,12 +192,216 @@ function toggleNoti(){
             <label class="spotify-playlist-otd-label">Playlist of the Day</label>
             Today's playlist is Non-Stop Pop by Rockstar Games
             <hr>
+            <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/119RwhTmhNelp6IqJpt0K4?utm_source=generator&theme=0" 
+            width="95%" height="80%" frameBorder="0" allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+             loading="lazy">
+            </iframe>
     </div>
     
         <div class="quiz-box">
             <label class="quiz-otd-label">Quiz of the Day</label>
             Today's quiz is a European Flags quiz by Array
             <hr>
+            <div class="app">
+                <h1>European Flags- By Array</h1>
+                <div class="quiz">
+                  <h2 id="question">Question goes here</h2>
+                  <div id="answer-buttons">
+              
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                  </div>
+                  <button id="next-btn">Next</button>
+                </div>
+              </div>
+              <script>
+                const questions = [
+    {
+        question: "What flag is this?",
+        answers: [
+            { text: "...", correct: false},
+            { text: "...", correct: true},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+        ]
+    },
+    {
+        question: "Who is known as the King of Pop?",
+        answers: [
+            { text: "...", correct: true},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+        ]
+    },
+    {
+        question: "what year did the Titanic sink",
+        answers: [
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: true},
+        ]
+    },
+    {
+        question: "question?",
+        answers: [
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: true},
+        ]
+    },
+    {
+        question: "question?",
+    answers: [
+        { text: "...", correct: true},
+        { text: "...", correct: false},
+        { text: "...", correct: false},
+        { text: "...", correct: false},
+    ]
+    },
+
+    {
+        question: "question?",
+        answers: [
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: true},
+            { text: "...", correct: false},
+        ]
+    },
+
+    {
+        question: "question?",
+        answers: [
+            { text: "...", correct: false},
+            { text: "...", correct: true},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+        ]
+    },
+
+    {
+        question: "question?",
+        answers: [
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: true},
+        ]
+    },
+
+    {
+        question: "question?",
+        answers: [
+            { text: "...", correct: true},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+        ]
+    },
+
+    {
+        question: "question?",
+        answers: [
+            { text: "...", correct: false},
+            { text: "...", correct: false},
+            { text: "...", correct: true},
+            { text: "...", correct: false},
+        ]
+    },
+   
+];
+
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+}
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    }else{
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
+
+
+startQuiz();
+              </script>
         </div>
 </section>
 

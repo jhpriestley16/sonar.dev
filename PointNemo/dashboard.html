@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array - Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/box.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/notifications.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-right.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
+</head>
+<html>
+<body>
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+      </script>
+      <script defer src="/_vercel/speed-insights/script.js"></script>
+
+<header>
+    <nav>
+
+        <div class="logo-title-box">
+            <a href="index.html" class="home-refresh-via-title-logo">
+                <i class="fa-solid fa-user-astronaut"></i><h1>array</h1>
+            </a>
+        </div>
+    
+    <form onsubmit="event.preventDefault();" role="search">
+        <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
+    </form> 
+
+        <div class="notifications" onclick="toggleNoti()">
+            <i class="gg-bell"></i>
+            <div class="noti-menu-wrap" id="subNoti">
+                <label class="noti-label"><i class="gg-bell"></i>Notifications</label>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
+            </div>
+            <script>
+                let subNoti = document.getElementById('subNoti');
+
+function toggleNoti(){
+    subNoti.classList.toggle('open-noti');
+}
+            </script>
+        </div>
+    </button>
+
+    </nav>
+</header>
+
+
+
+
+
+
+
+<main>
+    <section class="profile-tab">
+
+    </section>
+    
+<hr>
+
+    <section class="vertical-tabs">
+        <div class="friends-tab" id="large-tab">
+
+        </div>
+        <div class="messages-tab" id="large-tab">
+
+        </div>
+        <div class="large-notifications-tab" id="large-tab">
+
+        </div>
+        <div class="large-settings-tab" id="large-tab">
+            <h1 class="tab-caption">Settings <span>(Scroll enabled upon setting expansion)</span></h1>
+            <hr class="top-hr">
+            <ul>
+                <li class="appearances-list-tab">
+                    <label>Appearance mode. Choose between light mode, dark mode, and your system's preference (this applies to every page and saves on return).</label>
+                    <div class="appearance-button-container">
+                    <button class="toggle-appearance-drop" aria-pressed="false" onclick="toggleAppearance()">Choose Appearance<i class="fa-solid fa-caret-down"></i></button>
+                    <div class="sub-menu-app" id="subApp">
+                        <div class="sub-app">
+                            <div class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="fa-solid fa-sun"></i>Light</div>
+                            <div class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="fa-solid fa-cloud-moon"></i>Dark</div>
+                            <div class="system-mode-button" id="mode-button"><i class="fa-solid fa-display"></i>System</div>
+                        </div>
+                    </div>
+                    <script>
+                        let subApp = document.getElementById('subApp');
+    
+    function toggleAppearance(){
+        subApp.classList.toggle('open-app');
+    }
+                    </script>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    
+                </li>
+                <hr>
+                <li>
+                    
+                </li>
+                <hr>
+                <li>
+                    
+                </li>
+                <hr>
+                <li>
+                    
+                </li>
+                <hr>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+</main>
+
+
+
+
+
+
+
+
+<footer>
+
+</footer>
+
+
+
+
+
+
+
+
+<script src="js/global.js">
+    let subMenu = document.getElementById('subMenu');
+
+function toggleMenu(){
+    subMenu.classList.toggle('open-menu');
+}
+</script>
+</body>
+</html>

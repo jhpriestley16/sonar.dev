@@ -17,6 +17,11 @@ html, body {
   letter-spacing: normal;
 }
 @font-face {
+  font-family: fauna;
+  src: url("../fonts/fauna-thin.ttf");
+  letter-spacing: normal;
+}
+@font-face {
   font-family: neue;
   src: url("../fonts/NeueMontreal-Bold.otf");
 }
@@ -39,6 +44,7 @@ html, body {
   --header-title-gradient: linear-gradient(to right, #d74800ed, #500000);
   --header-subtitle-gradient: linear-gradient(to right, #404040ed, #6b6b6b);
   --ff-icon-color: #3d3d3d;
+  --ff-title: fauna;
 }
 
 body {
@@ -51,9 +57,15 @@ body {
   background: var(--body-background);
 }
 
+.game-page-sidebar {
+  width: 200px;
+  height: 90vh;
+}
+
 header.page-header {
-  height: 250px;
+  height: 10vh;
   background: var(--header-background);
+  background-size: cover;
   position: relative;
   display: flex;
 }
@@ -82,7 +94,7 @@ header.page-header {
 .header-text-wrap {
   width: 70%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: baseline;
 }
@@ -95,18 +107,33 @@ h1 {
   -webkit-text-fill-color: transparent;
   width: -moz-fit-content;
   width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
   font-family: neue;
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 h2 {
   font-size: 2rem;
   background: var(--header-subtitle-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 48%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.6s steps(20), blink 0.5s step-end infinite alternate;
   font-family: neue;
+  animation-delay: 0.5s;
 }
 
 .quick-options {
@@ -194,4 +221,8 @@ h2 {
 
 #mode-button:hover {
   border: var(--border-noti);
+}
+
+li {
+  list-style-type: none;
 }/*# sourceMappingURL=games.css.map */

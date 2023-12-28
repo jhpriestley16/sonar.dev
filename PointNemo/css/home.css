@@ -43,13 +43,13 @@ html, body {
   --clr-typo-box: radial-gradient(80.99% 100% at 50% 0%, #FFFFFF 0%, #00801C 100%), linear-gradient(180deg, #FFF500 0%, #000000 100%), linear-gradient(83.76deg, #5000F9 3.4%, #000000 96.6%), radial-gradient(70.71% 99% at 100% 39.75%, #8F00FF 0%, #0F0018 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
   --clr-typo-blend: overlay, difference, difference, difference, normal;
   --clr-dark: #050505;
-  --clr-footer: #ffffff96;
+  --clr-footer: #ffffffdd;
   --clr-link: #090909;
   --ff-clr: #363636f9;
   --ff-header-clr: #1c1c1cf9;
-  --border: 1.5px solid #a4a4a4cd;
-  --box-borders: 2px solid #787878cd;
-  --border-noti: 2px solid #161616cd;
+  --border: 1.5px solid transparent;
+  --box-borders: 2px solid transparent;
+  --border-noti: 2px solid transparent;
   --header-footer-border: 2px solid #505050;
   --typo-text-shadow: 2px 7px 5px rgba(0,0,0,0.3),
   0px -4px 10px rgba(255,255,255,0.3);
@@ -212,8 +212,6 @@ form {
   width: 200px;
   height: 60%;
   border-radius: 15px;
-  display: flex;
-  align-items: center;
   margin-inline: 1%;
 }
 

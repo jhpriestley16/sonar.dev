@@ -1,0 +1,183 @@
+html, body { box-sizing: border-box; overflow-x: hidden;}
+@font-face{
+    font-family: text-labels;
+    src: url("../fonts/Geist-Regular.otf");
+}
+@font-face{
+    font-family: nav-box-font;
+    src: url("../fonts/Geist-SemiBold.otf");
+}
+@font-face{
+    font-family: var(--ff-text-label);
+    src: url("../fonts/NeueMontreal-Light.otf");
+    letter-spacing:normal;
+}
+
+@font-face{
+    font-family: neue;
+    src: url("../fonts/NeueMontreal-Bold.otf");
+}
+
+@font-face{
+    font-family: profont;
+    src: url("../fonts/Maverix-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    shape-rendering: crispEdges;
+    text-rendering: optimizeLegibility;
+    scroll-behavior:smooth;
+}
+:root{
+    
+}
+
+.darkmode{
+  --header-background: #000;
+  --body-background: #050505;
+
+  --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
+  --header-title-gradient: linear-gradient(to right, #d74800ed, #500000);
+  --header-subtitle-gradient: linear-gradient(to right, #404040ed, #6b6b6b);
+
+  --ff-icon-color: #3d3d3d;
+}
+body{
+    position: relative;
+    font-size: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--body-background);
+}
+
+
+
+header.page-header{
+    height: 250px;
+    background: var(--header-background);
+    position: relative;
+    display: flex;
+}
+.menu-opener-container{
+    width: 15%;
+}
+.header-menu-opener{
+    height: fit-content;
+    width: fit-content;
+    margin: 10% 20%;
+    background: transparent;
+    background: var(--header-subtitle-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    outline-color: transparent;
+    border: none;
+    display: inline-flex;
+}
+.header-text-wrap{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+h1{
+    font-size: 4rem;
+    background: var(--header-title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    font-family: neue;
+}
+h2{
+    font-size: 2rem;
+    background: var(--header-subtitle-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    font-family: neue;
+}
+.quick-options{
+    width: 15%;
+}
+.toggle-appearance-drop{
+    width: fit-content;
+    height: 40px;
+    color: var(--ff-icon-color);
+    text-align: center;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-solid.fa-caret-down{
+    margin: 0 3%;
+    padding: 0;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+.sub-menu-app{
+    max-height: 140px;
+    height: 0;
+    width: 100%;
+    margin-top: 10px;
+    background: var(--clr-footer);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.sub-menu-app.open-app{
+    height: 140px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s ease, visibility .3s ease, height .3s ease;
+    border: var(--border-noti);
+}
+.sub-app{
+    height: 100%;
+    width: 100%;
+    z-index: 20000000000;
+    padding-inline: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sub-menu-wrap > *{
+    visibility: hidden;
+}
+.sub-menu-wrap.sub-menu-wrap.open-menu > *{
+    visibility: visible;
+}
+#mode-button{
+    height: 30%;
+    width: 95%;
+    margin: 1% auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--box-borders);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+#mode-button i{
+    margin-inline: 2%;
+}
+#mode-button:hover{
+    border: var(--border-noti);
+}

@@ -26,7 +26,7 @@
 
 <header class="page-header">
     <div class="header-text-wrap">
-        <h1>AETHER</h1>
+        <a href="index.html"><h1>AR</h1></a><span class="title-subtext">Aether</span>
         <!--<h2>A web gaming platform by Array</h2>-->
     </div>
     <nav class="quick-options">
@@ -39,15 +39,36 @@
                 </div>
             </li>
             <li>
-                <button class="header-menu-opener" id="subMenu" onclick="toggleMenu()"></button>
+                <form onsubmit="event.preventDefault();" role="search">
+                    <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
+                </form> 
+            </li>
+            <li>
+                <button class="header-menu-opener" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+                <script>
+                    function toggleNav() {
+  var x = document.getElementById("subNav");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+                </script>
             </li>
         </ul>
     </nav>
 </header>
+<div class="site-navigation-menu" id="subNav" style="display:none;">
+    <nav class="pages-nav-bar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="music.html" class="nav-link">Music</a>
+        <a href="quizzes.html" class="nav-link">Quizzes</a>
+        <a href="settings.html" class="nav-link">Settings</a>
+    </nav>
+</div>
 <main>
-
-
-
 
 
 
@@ -63,17 +84,13 @@
 
 
 
+<footer>
+    <span class="title-subtext">A web gaming network by Array</span>
+</footer>
 
 
 
 
-
-<script src="js/global.js">
-    let subMenu = document.getElementById('subMenu');
-
-function toggleMenu() {
-subMenu.classList.toggle('open-menu');
-}
-  </script>
+<script src="js/global.js"></script>
 </body>
 </html>

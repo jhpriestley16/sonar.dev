@@ -25,40 +25,27 @@
       <script defer src="/_vercel/speed-insights/script.js"></script>
 
 <header class="page-header">
-    <div class="menu-opener-container">
-        <button class="header-menu-opener" id="subMenu" onclick="toggleMenu()"></button>
-    </div>
     <div class="header-text-wrap">
-        <h1>GameNexus</h1>
-        <h2>A web gaming platform by Array</h2>
+        <h1>AETHER</h1>
+        <!--<h2>A web gaming platform by Array</h2>-->
     </div>
     <nav class="quick-options">
         <ul class="quick-options-list">
             <li>
-                <button class="toggle-appearance-drop" aria-pressed="false" onclick="toggleAppearance()"><i class="fa-solid fa-sun"></i>/<i class="fa-solid fa-cloud-moon"></i>/<i class="fa-solid fa-display"></i><i class="fa-solid fa-caret-down"></i></button>
-                    <div class="sub-menu-app" id="subApp">
-                        <div class="sub-app">
-                            <div class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="fa-solid fa-sun"></i>Light</div>
-                            <div class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="fa-solid fa-cloud-moon"></i>Dark</div>
-                            <div class="system-mode-button" id="mode-button"><i class="fa-solid fa-display"></i>System</div>
-                        </div>
-                    </div>
-                    <script>
-                        let subApp = document.getElementById('subApp');
-    
-    function toggleAppearance(){
-        subApp.classList.toggle('open-app');
-    }
-                    </script>
+                <div class="appearance-button-group">
+                    <button class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="fa-solid fa-moon"></i></button>
+                    <button class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="fa-solid fa-sun"></i></button>
+                    <button class="system-mode-button" id="mode-button" onclick="x()"><i class="fa-solid fa-display"></i></button>
+                </div>
+            </li>
+            <li>
+                <button class="header-menu-opener" id="subMenu" onclick="toggleMenu()"></button>
             </li>
         </ul>
     </nav>
 </header>
 <main>
 
-    <div class="game-page-sidebar">
-
-    </div>
 
 
 

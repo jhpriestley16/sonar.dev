@@ -26,7 +26,7 @@
 
 <header class="page-header">
     <div class="header-text-wrap">
-        <a href="index.html"><h1>AR</h1></a><span class="title-subtext">Aether</span>
+        <a class="title-link" href="index.html"><h1>AR</h1></a><span class="title-subtext">Aether</span>
         <!--<h2>A web gaming platform by Array</h2>-->
     </div>
     <nav class="quick-options">
@@ -44,7 +44,30 @@
                 </form> 
             </li>
             <li>
-                <button class="header-menu-opener" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+                <button aria-expanded="false" aria-controls="site-navigation-menu" class="header-menu-opener" onclick="toggleNav()">
+                    <svg class="hamburger" viewbox="0 0 100 100" width="30px">
+                        <rect class="line top-line" 
+                        width="80" height="8" 
+                        x="10" y="30">
+                        </rect>
+                        <rect class="line bottom-line" 
+                        width="80" height="8" 
+                        x="10" y="70">
+                        </rect>
+                    </svg>
+                </button>
+                <script>
+                    const menuButton = document.querySelector('.header-menu-opener');
+
+menuButton.addEventListener('click', () => {
+    const isOpened = menuButton.getAttribute('aria-expanded');
+    if (isOpened === 'false') {
+        menuButton.setAttribute('aria-expanded', 'true');
+    } else {
+        menuButton.setAttribute('aria-expanded', 'false');
+    }
+})
+                </script>
                 <script>
                     function toggleNav() {
   var x = document.getElementById("subNav");
@@ -61,11 +84,23 @@
 </header>
 <div class="site-navigation-menu" id="subNav" style="display:none;">
     <nav class="pages-nav-bar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="dashboard.html" class="nav-link">Dashboard</a>
-        <a href="music.html" class="nav-link">Music</a>
-        <a href="quizzes.html" class="nav-link">Quizzes</a>
-        <a href="settings.html" class="nav-link">Settings</a>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>       
+            </li>
+            <li class="nav-list-item">
+                <a href="music.html" class="nav-link">Music</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="quizzes.html" class="nav-link">Quizzes</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="settings.html" class="nav-link">Settings</a>
+            </li>
+        </ul>
     </nav>
 </div>
 <main>

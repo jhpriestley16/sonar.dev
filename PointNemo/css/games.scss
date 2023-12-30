@@ -96,12 +96,23 @@ header.page-header{
     border-bottom: var(--header-footer-border);
 }
 .header-text-wrap{
-    width: 75%;
-    height: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
+.header-content-wrap{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+nav.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 1%;
+}
+
 h1{
     font-size: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
     background: var(--header-title-gradient);
@@ -138,20 +149,11 @@ span.title-subtext{
       border-color: transparent
     }
   }
-.quick-options{
-    width: 440px;
+.quick-options-list{
+    width: 400px;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.quick-options-list{
-    width: 100%;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
 }
 .appearance-button-group{
     width: 120px;
@@ -193,12 +195,18 @@ li{
     margin-inline: 2%;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 form{
     width: 200px;
     height: 100%;
     border-radius: 15px;
     margin-inline: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 input{
     height: 30px;
@@ -206,7 +214,7 @@ input{
     font-size: 15px;
     color: var(--ff-search-color);
     font-family: text-labels;
-    padding-inline: 6%;
+    padding-inline: 4%;
     border: none;
     border-bottom: 1px var(--ff-menu-icon-color) solid;
     background: none;
@@ -304,15 +312,6 @@ main{
     position: relative;
     display: flex;
     min-height: calc(100vh - 50px);
-}
-aside.left-sidebar{
-    width: 14vw;
-    height: 100%;
-    background: var(--header-background);
-    border-right: var(--header-footer-border);
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 

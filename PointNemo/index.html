@@ -24,73 +24,68 @@
       </script>
       <script defer src="/_vercel/speed-insights/script.js"></script>
 
-<header>
-    <nav>
-
-        <div class="logo-title-box">
-            <a href="#top" class="home-refresh-via-title-logo">
-                <i class="fa-solid fa-user-astronaut"></i><h1>array</h1>
-            </a>
+      <header class="page-header">
+        <div class="header-text-wrap">
+            <a class="title-link" href="index.html"><h1>AR</h1></a><span class="title-subtext">Array</span>
+            <!--<h2>A web gaming platform by Array</h2>-->
         </div>
-
-    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="dark-mode-toggle">
-        <i class="gg-sun"></i><i class="gg-moon"></i>
-    </button>
+        <nav class="quick-options">
+            <ul class="quick-options-list">
+                <li>
+                    <div class="appearance-button-group">
+                        <button class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="fa-solid fa-moon"></i></button>
+                        <button class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="fa-solid fa-sun"></i></button>
+                        <button class="system-mode-button" id="mode-button" onclick="x()"><i class="fa-solid fa-display"></i></button>
+                    </div>
+                </li>
+                <li>
+                    <form onsubmit="event.preventDefault();" role="search">
+                        <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
+                    </form> 
+                </li>
+                <li>
+                    <button aria-expanded="false" aria-controls="site-navigation-menu" class="header-menu-opener" onclick="toggleNav()">
+                        <svg class="hamburger" viewbox="0 0 100 100" width="30px">
+                            <rect class="line top-line" 
+                            width="80" height="10" 
+                            x="10" y="20">
+                            </rect>
+                            <rect class="line middle-line" 
+                            width="80" height="10" 
+                            x="10" y="50">
+                            </rect>
+                            <rect class="line bottom-line" 
+                            width="80" height="10" 
+                            x="10" y="80">
+                            </rect>
+                        </svg>
+                    </button>
+                    <script>
+                        const menuButton = document.querySelector('.header-menu-opener');
     
-    <form onsubmit="event.preventDefault();" role="search">
-        <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
-    </form> 
-
-        <div class="notifications" onclick="toggleNoti()">
-            <i class="gg-bell"></i>
-            <div class="noti-menu-wrap" id="subNoti">
-                <label class="noti-label"><i class="gg-bell"></i>Notifications</label>
-                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
-                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
-                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
-                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
-                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
-                <div class="noti"><i class="fa-solid fa-box-archive"></i>Sample notification box</div>
-            </div>
-            <script>
-                let subNoti = document.getElementById('subNoti');
-
-function toggleNoti(){
-    subNoti.classList.toggle('open-noti');
-}
-            </script>
-        </div>
-        <button class="menu"  onclick="toggleMenu()">
-            <i class="gg-menu-right"></i>
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <nav class="sub-nav">
-                        <a href="#" class="profile" id="sub-menu-links">
-                            <i class="fa-solid fa-user-astronaut"></i></i> <p>Profile</p>
-                        </a>
-                        <a href="#" class="friends" id="sub-menu-links">
-                            <i class="fa-solid fa-user-group"></i><p>Friends</p>
-                        </a>
-                        <a href="#" class="messages" id="sub-menu-links">
-                            <i class="gg-mail"></i><p>Messages</p>
-                        </a>
-                        <a href="#" class="gear" id="sub-menu-links">
-                            <i class="fa-solid fa-gears"></i> <p>Settings</p>
-                        </a>
-                        <a href="#" class="sign-out" id="sub-menu-links">
-                            <i class="fa-solid fa-right-from-bracket"></i> <p>Sign Out</p>
-                        </a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </button>
-        <div class="profile-menu">
-            <img src="img/dm-bg.jpg" style="border-radius: 50%;">
-        </div>
-
-    </nav>
-</header>
+    menuButton.addEventListener('click', () => {
+        const isOpened = menuButton.getAttribute('aria-expanded');
+        if (isOpened === 'false') {
+            menuButton.setAttribute('aria-expanded', 'true');
+        } else {
+            menuButton.setAttribute('aria-expanded', 'false');
+        }
+    })
+                    </script>
+                    <script>
+                        function toggleNav() {
+      var x = document.getElementById("subNav");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+                    </script>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 <main>
     <nav class="main-pages-navigation">
@@ -205,7 +200,7 @@ function toggleNoti(){
             Today's quiz is a European Flags quiz by Array
             <hr>
             <div class="app">
-                <h1>European Flags- By Array</h1>
+                <span>European Flags- By Array</span>
                 <div class="quiz">
                   <h2 id="question">Question goes here</h2>
                   <div id="answer-buttons">

@@ -47,12 +47,16 @@
                 <button aria-expanded="false" aria-controls="site-navigation-menu" class="header-menu-opener" onclick="toggleNav()">
                     <svg class="hamburger" viewbox="0 0 100 100" width="30px">
                         <rect class="line top-line" 
-                        width="80" height="8" 
-                        x="10" y="30">
+                        width="80" height="10" 
+                        x="10" y="20">
+                        </rect>
+                        <rect class="line middle-line" 
+                        width="80" height="10" 
+                        x="10" y="50">
                         </rect>
                         <rect class="line bottom-line" 
-                        width="80" height="8" 
-                        x="10" y="70">
+                        width="80" height="10" 
+                        x="10" y="80">
                         </rect>
                     </svg>
                 </button>
@@ -86,26 +90,28 @@ menuButton.addEventListener('click', () => {
     <nav class="pages-nav-bar">
         <ul class="nav-list">
             <li class="nav-list-item">
-                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
             </li>
             <li class="nav-list-item">
-                <a href="dashboard.html" class="nav-link">Dashboard</a>       
+                <a href="dashboard.html" class="nav-link"><i class="fa-solid fa-house-flag"></i>Dashboard</a>       
             </li>
             <li class="nav-list-item">
-                <a href="music.html" class="nav-link">Music</a>
+                <a href="music.html" class="nav-link"><i class="fa-solid fa-headphones"></i>Music</a>
             </li>
             <li class="nav-list-item">
-                <a href="quizzes.html" class="nav-link">Quizzes</a>
+                <a href="quizzes.html" class="nav-link"><i class="fa-solid fa-brain"></i>Quizzes</a>
             </li>
             <li class="nav-list-item">
-                <a href="settings.html" class="nav-link">Settings</a>
+                <a href="settings.html" class="nav-link"><i class="fa-solid fa-gears"></i>Settings</a>
             </li>
         </ul>
     </nav>
 </div>
 <main>
 
+    <aside class="left-sidebar">
 
+    </aside>
 
 
 

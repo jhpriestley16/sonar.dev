@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array - Home</title>
-    <link rel="stylesheet" type="text/css" href="css/games.css" />
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
@@ -28,6 +28,28 @@
             <a class="title-link" href="index.html"><h1>AR</h1></a><span class="title-subtext">Array</span>
             <!--<h2>A web gaming platform by Array</h2>-->
         </div>
+        <ul class="pages-nav">
+            <li>
+                <a href="dashboard.html" class="page-nav">
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="games.html" class="page-nav">
+                    Games
+                </a>
+            </li>
+            <li>
+                <a href="music.html" class="page-nav">
+                    Music
+                </a>
+            </li>
+            <li>
+                <a href="quizzes.html" class="page-nav">
+                    Quizzes
+                </a>
+            </li>
+        </ul>
             <ul class="quick-options-list">
                 <li>
                     <div class="appearance-button-group">
@@ -42,7 +64,7 @@
                     </form> 
                 </li>
                 <li>
-                    <button class="dashboard-menu-opener" id="dashboard-opener" aria-expanded="false" aria-pressed="false" onclick="openDashboard">
+                    <button class="dashboard-menu-opener" id="dashboard-opener" aria-expanded="false" aria-pressed="false" onclick="toggleDashboard()">
                         <svg class="hamburger" viewbox="0 0 100 100" width="30px">
                             <rect class="line top-line" 
                             width="80" height="10" 
@@ -70,13 +92,6 @@
             }
             });
                     </script>
-                    <script>
-                        let toggleDashboard = document.getElementById('dashboard-opener');
-
-                        function openDashboard(){
-                            toggleDashboard.classList.toggle('misc-menu');
-                        }
-                    </script>
                 </li>
             </ul>
     </nav>
@@ -86,7 +101,9 @@
     
     
     <main>
-    
+        <header class="section-header">
+            <span class="about-title">About Us</span>
+        </header>
     
         
     </main>

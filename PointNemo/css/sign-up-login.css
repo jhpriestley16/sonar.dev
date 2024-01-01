@@ -157,7 +157,8 @@ a.title-link {
   }
 }
 .quick-options-list {
-  width: 400px;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -217,72 +218,12 @@ a.title-link {
 li {
   list-style-type: none;
   margin-inline: 2%;
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-form {
-  width: 200px;
-  height: 100%;
-  border-radius: 15px;
-  margin-inline: 1%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-input {
-  height: 30px;
-  width: 100%;
-  font-size: 15px;
-  color: var(--ff-search-color);
-  font-family: text-labels;
-  padding-inline: 4%;
-  border: none;
-  border-bottom: 1px var(--ff-menu-icon-color) solid;
-  background: none;
-}
-
-::-webkit-search-cancel-button {
-  display: none;
-}
-
-input:focus, input:active {
-  outline: none;
-}
-
-.dashboard-menu-opener {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 30px;
-  background: transparent;
-  color: var(--ff-menu-icon-color);
-  font-size: 1.5rem;
-  outline-color: transparent;
-  border: none;
-  display: inline-flex;
-}
-
-.dashboard-menu-opener .line {
-  transition: x 0.1s ease-in 400ms, height 0.1s ease-in, width 0.1s ease-in 400ms, transform 0.1s ease-in 200ms;
-  transform-origin: center;
-  fill: var(--ff-menu-icon-color);
-}
-
-.dashboard-menu-opener[aria-expanded=true] .line {
-  width: 10%;
-  x: 40;
-  transform-origin: center;
-  transition: x 0.2s ease-in, width 0.2s ease-in, transform 0.2s ease-in;
-  transform: rotate(-90deg);
-}
-
-.dashboard-menu-opener[aria-expanded=true] .top-line {
-  transition: height 0.1s ease-in 400ms;
-  height: 70%;
 }
 
 #subNav {
@@ -339,15 +280,6 @@ li.nav-list-item {
   background: transparent;
   background-clip: content-box;
   -webkit-text-fill-color: var(--ff-nav-hover-color);
-}
-
-.misc-menu {
-  height: 17vh;
-  width: 100%;
-  background: red;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 main {

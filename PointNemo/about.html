@@ -64,7 +64,7 @@
                     </form> 
                 </li>
                 <li>
-                    <button class="dashboard-menu-opener" id="dashboard-opener" aria-expanded="false" aria-pressed="false" onclick="toggleDashboard()">
+                    <button class="dashboard-menu-opener" id="dashboard-opener" aria-expanded="false" aria-pressed="false" onclick="toggleNav()">
                         <svg class="hamburger" viewbox="0 0 100 100" width="30px">
                             <rect class="line top-line" 
                             width="80" height="10" 
@@ -101,6 +101,9 @@
     
     
     <main>
+        <div class="nav-menu" id="subNav" style="visibility: hidden;">
+
+        </div>
         <header class="section-header">
             <span class="about-title">About Us</span>
         </header>
@@ -112,6 +115,10 @@
     
     
     
-    <script src="js/global.js"></script>
+    <script src="js/global.js">
+        function toggleNav(){
+            
+        }
+    </script>
     </body>
     </html>

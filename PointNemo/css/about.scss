@@ -37,13 +37,14 @@ html, body { box-sizing: border-box; overflow-x: hidden;}
 }
 :root{
   --header-background: #c7bbc8;
-  --body-background: #d8c8d9;
+  --body-background: #ddd5df;
   --footer-background: #c7bbc8;
-  --nav-background: #bcb0bd;
+  --nav-background: #c7bbc8;
   --quiz-btn-background: #b9b0b0;
 
   --button-border: 1.5px solid #424040;
   --universal-border: 1.5px solid #969090;
+  --nav-border: 2px solid rgb(98, 0, 234);
 
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
   --header-title-gradient: rgb(98, 0, 234);
@@ -67,7 +68,7 @@ html, body { box-sizing: border-box; overflow-x: hidden;}
 
   --button-border: 1.5px solid #424040;
   --universal-border: 1.5px solid #424040;
-  --nav-border: 2px solid #424040;
+  --nav-border: 2px solid rgb(251, 140, 0);
 
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
   --header-title-gradient:  rgb(251, 140, 0);
@@ -286,13 +287,15 @@ input:focus, input:active{
     transition: height .1s ease-in 400ms;
     height: 70%;
 }
-.misc-menu{
-    height: 17vh;
-    width: 100%;
-    background: red;
+#subNav{
+    height: 200px;
+    width: 300px;
+    border-radius: 15px;
+    border: var(--nav-border);
+    background: var(--nav-background);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1vh;
+    right: 1vw;
 }
 
 

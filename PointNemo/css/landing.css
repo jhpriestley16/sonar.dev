@@ -341,6 +341,15 @@ li.nav-list-item {
   -webkit-text-fill-color: var(--ff-nav-hover-color);
 }
 
+.misc-menu {
+  height: 17vh;
+  width: 100%;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 main {
   position: relative;
   display: flex;

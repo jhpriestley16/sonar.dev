@@ -40,40 +40,45 @@ html, body { box-sizing: border-box; overflow-x: hidden;}
   --body-background: #d8c8d9;
   --footer-background: #c7bbc8;
   --nav-background: #bcb0bd;
+  --quiz-btn-background: #b9b0b0;
 
   --button-border: 1.5px solid #424040;
-  --header-footer-border: 1.5px solid #969090;
+  --universal-border: 1.5px solid #969090;
 
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
-  --header-title-gradient: linear-gradient(to right, #7a00d7ed, #374486);
+  --header-title-gradient: rgb(98, 0, 234);
   --header-subtitle-gradient: linear-gradient(to right, #272727ed, #232323);
 
   --ff-icon-color: #656565;
-  --ff-menu-icon-color: #404040;
+  --ff-menu-icon-color: rgb(98, 0, 234);
   --ff-search-color: #515151;
   --ff-nav-color: #363636;
   --ff-nav-hover-color: #242424;
+  --ff-clr: #1f1f1f;
 }
 
 .darkmode{
-  --header-background: #1f1f1f;
-  --body-background: #1a1a1a;
+  --header-background: #0f0f0f;
+  --body-background: linear-gradient(to bottom, #101010,#050505);
   --footer-background: #1f1f1f;
   --nav-background: #212121;
+  --quiz-btn-background: #1c1b1b;
+  --app-background: #0f0f0f;
 
   --button-border: 1.5px solid #424040;
-  --header-footer-border: 1.5px solid #424040;
+  --universal-border: 1.5px solid #424040;
   --nav-border: 2px solid #424040;
 
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
-  --header-title-gradient: linear-gradient(to right, #7a00d7ed, #374486);
+  --header-title-gradient:  rgb(251, 140, 0);
   --header-subtitle-gradient: linear-gradient(to right, #404040ed, #6b6b6b);
 
   --ff-icon-color: #3d3d3d;
-  --ff-menu-icon-color: #a9a9a9;
+  --ff-menu-icon-color: rgb(251, 140, 0);
   --ff-search-color: #a4a4a4;
   --ff-nav-color: linear-gradient(to right, #8b8b8bed, #7a7a7a);
   --ff-nav-hover-color: #cfcfcf;
+  --ff-clr: #c7c7c7;
 }
 
 body{
@@ -124,12 +129,6 @@ h1{
     height: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
     letter-spacing: -0.5rem;
 }
-a.title-link{
-    text-decoration: none;
-    width: fit-content;
-    height: fit-content;
-    padding-inline: 2% 0%;
-}
 span.title-subtext{
     font-size: clamp(1.2rem, 1.3333rem + 0.5556vw, 1.7rem);
     background: var(--header-subtitle-gradient);
@@ -137,6 +136,12 @@ span.title-subtext{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: neue;
+}
+a.title-link{
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    padding-inline: 2% 0%;
 }
 @keyframes typing {
     from {
@@ -178,17 +183,25 @@ span.title-subtext{
     font-size: clamp(1rem, 1.3333rem + 0.5556vw, 1.5rem);
     color: var(--ff-icon-color);
 }
-.darkmode .fa-solid.fa-moon{
+.darkmode .gg-moon{
     color: #fff;
 }
-.darkmode .fa-solid.fa-sun{
+.darkmode .gg-sun{
     color: #363636;
 }
-.darkmode .fa-solid.fa-display{
+.darkmode .gg-screen{
     color:  #363636;
 }
-.fa-solid.fa-sun{
-    color: #ffa202;
+.gg-sun{
+    color: rgb(251, 140, 0);
+}
+.gg-sun:hover{
+    transform: rotate(180deg);
+    transition: transform .3s ease-in;
+}
+.darkmode .gg-sun:hover{
+    transform: none;
+    transition: none;
 }
 li{
     list-style-type: none;
@@ -225,7 +238,7 @@ input{
 input:focus, input:active{
     outline: none;
 }
-.header-menu-opener{
+.dashboard-menu-opener{
     height: fit-content;
     width: 30px;
     background: transparent;
@@ -235,12 +248,12 @@ input:focus, input:active{
     border: none;
     display: inline-flex;
 }
-.header-menu-opener .line{
+.dashboard-menu-opener .line{
     transition: x .1s ease-in 400ms, height .1s ease-in, width .1s ease-in 400ms, transform .1s ease-in 200ms;
     transform-origin: center;
     fill: var(--ff-menu-icon-color);
 }
-.header-menu-opener[aria-expanded=true] .line{
+.dashboard-menu-opener[aria-expanded=true] .line{
     width: 10%;
     x: 40;
     transform-origin: center;
@@ -250,7 +263,7 @@ input:focus, input:active{
     transform .2s ease-in;
     transform: rotate(-90deg);
 }
-.header-menu-opener[aria-expanded=true] .top-line{
+.dashboard-menu-opener[aria-expanded=true] .top-line{
     transition: height .1s ease-in 400ms;
     height: 70%;
 }
@@ -305,14 +318,31 @@ li.nav-list-item{
     background-clip: content-box;
     -webkit-text-fill-color: var(--ff-nav-hover-color);
 }
+.misc-menu{
+    height: 17vh;
+    width: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 
 
 main{
     position: relative;
     display: flex;
+    flex-direction: column;
     min-height: calc(100vh - 50px);
 }
+
+
+
+
+
+
+
+
 
 
 

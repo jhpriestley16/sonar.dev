@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array - Aether</title>
-    <link rel="stylesheet" type="text/css" href="css/games.css" />
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/box.css' rel='stylesheet'>
+    <title>Array - Home</title>
+    <link rel="stylesheet" type="text/css" href="css/landing.css" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/notifications.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-right.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
 </head>
 <html>
@@ -24,112 +21,101 @@
       </script>
       <script defer src="/_vercel/speed-insights/script.js"></script>
 
-<header class="page-header">
-    <div class="header-content-wrap">
-        <nav class="header-nav">
-    <div class="header-text-wrap">
-        <a class="title-link" href="index.html"><h1>AR</h1></a><span class="title-subtext">Aether</span>
-        <!--<h2>A web gaming platform by Array</h2>-->
-    </div>
-        <ul class="quick-options-list">
-            <li>
-                <div class="appearance-button-group">
-                    <button class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="fa-solid fa-moon"></i></button>
-                    <button class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="fa-solid fa-sun"></i></button>
-                    <button class="system-mode-button" id="mode-button" onclick="x()"><i class="fa-solid fa-display"></i></button>
-                </div>
-            </li>
-            <li>
-                <form onsubmit="event.preventDefault();" role="search">
-                    <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
-                </form> 
-            </li>
-            <li>
-                <button aria-expanded="false" aria-controls="site-navigation-menu" class="header-menu-opener" onclick="toggleNav()">
-                    <svg class="hamburger" viewbox="0 0 100 100" width="30px">
-                        <rect class="line top-line" 
-                        width="80" height="10" 
-                        x="10" y="20">
-                        </rect>
-                        <rect class="line middle-line" 
-                        width="80" height="10" 
-                        x="10" y="50">
-                        </rect>
-                        <rect class="line bottom-line" 
-                        width="80" height="10" 
-                        x="10" y="80">
-                        </rect>
-                    </svg>
-                </button>
-                <script>
-                    const menuButton = document.querySelector('.header-menu-opener');
+      <header class="page-header">
+        <div class="header-content-wrap">
+            <nav class="header-nav">
+        <div class="header-text-wrap">
+            <a class="title-link" href="index.html"><h1>AR</h1></a><span class="title-subtext">Array</span>
+            <!--<h2>A web gaming platform by Array</h2>-->
+        </div>
+            <ul class="quick-options-list">
+                <li>
+                    <div class="appearance-button-group">
+                        <button class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+                        <button class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+                        <button class="system-mode-button" id="mode-button" onclick="x()"><i class="gg-screen"></i></button>
+                    </div>
+                </li>
+                <li>
+                    <form onsubmit="event.preventDefault();" role="search">
+                        <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
+                    </form> 
+                </li>
+                <li>
+                    <button class="dashboard-menu-opener" id="dashboard-opener" aria-expanded="false" aria-pressed="false" onclick="openDashboard">
+                        <svg class="hamburger" viewbox="0 0 100 100" width="30px">
+                            <rect class="line top-line" 
+                            width="80" height="10" 
+                            x="10" y="20" rx="5">
+                            </rect>
+                            <rect class="line middle-line" 
+                            width="80" height="10" 
+                            x="10" y="50" rx="5">
+                            </rect>
+                            <rect class="line bottom-line" 
+                            width="80" height="10" 
+                            x="10" y="80" rx="5">
+                            </rect>
+                        </svg>
+                    </button>
+                    <script>
+                        const menuButton = document.querySelector('.dashboard-menu-opener');
+            
+            menuButton.addEventListener('click', () => {
+            const isOpened = menuButton.getAttribute('aria-expanded');
+            if (isOpened === 'false') {
+            menuButton.setAttribute('aria-expanded', 'true');
+            } else {
+            menuButton.setAttribute('aria-expanded', 'false');
+            }
+            });
+                    </script>
+                    <script>
+                        let toggleDashboard = document.getElementById('dashboard-opener');
 
-menuButton.addEventListener('click', () => {
-    const isOpened = menuButton.getAttribute('aria-expanded');
-    if (isOpened === 'false') {
-        menuButton.setAttribute('aria-expanded', 'true');
-    } else {
-        menuButton.setAttribute('aria-expanded', 'false');
-    }
-})
-                </script>
-                <script>
-                    function toggleNav() {
-  var x = document.getElementById("subNav");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-                </script>
-            </li>
-        </ul>
-</nav>
-</div>
-</header>
-<div class="site-navigation-menu" id="subNav" style="display:none;">
-    <nav class="pages-nav-bar">
-        <ul class="nav-list">
-            <li class="nav-list-item">
-                <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="dashboard.html" class="nav-link"><i class="fa-solid fa-house-flag"></i>Dashboard</a>       
-            </li>
-            <li class="nav-list-item">
-                <a href="music.html" class="nav-link"><i class="fa-solid fa-headphones"></i>Music</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="quizzes.html" class="nav-link"><i class="fa-solid fa-brain"></i>Quizzes</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="settings.html" class="nav-link"><i class="fa-solid fa-gears"></i>Settings</a>
-            </li>
-        </ul>
+                        function openDashboard(){
+                            toggleDashboard.classList.toggle('misc-menu');
+                        }
+                    </script>
+                </li>
+            </ul>
     </nav>
-</div>
-<main>
-
-
-
-
-
-
-
-
-</main>
-
-
-
-
-<footer>
-    <span class="title-subtext">A web gaming network by Array</span>
-</footer>
-
-
-
-
-<script src="js/global.js"></script>
-</body>
-</html>
+    </div>
+    </header>
+    <div class="site-navigation-menu" id="subNav" style="display:none;">
+        <nav class="pages-nav-bar">
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="dashboard.html" class="nav-link"><i class="fa-solid fa-house-flag"></i>Dashboard</a>       
+                </li>
+                <li class="nav-list-item">
+                    <a href="music.html" class="nav-link"><i class="fa-solid fa-headphones"></i>Music</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="quizzes.html" class="nav-link"><i class="fa-solid fa-brain"></i>Quizzes</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="settings.html" class="nav-link"><i class="fa-solid fa-gears"></i>Settings</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    
+    
+    <main>
+    
+    
+        
+    </main>
+    
+    
+    
+    
+    
+    <script src="js/global.js"></script>
+    </body>
+    </html>

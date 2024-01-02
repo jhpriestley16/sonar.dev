@@ -49,13 +49,13 @@ function toggleColorScheme() {
 }
 
 
-function toggleNav() {
-    let = document.getElementById('subNav');
+function toggleMenu() {
+    let = document.querySelector('.toggled-menu');
 
-    if(subNav.style.visibility === 'hidden') {
-        subNav.style.visibility = 'visible';
+    if(let.style.visibility === 'hidden') {
+        let.style.visibility = 'visible';
     } else {
-        subNav.style.visibility = 'hidden';
+        let.style.visibility = 'hidden';
     }
 }
 

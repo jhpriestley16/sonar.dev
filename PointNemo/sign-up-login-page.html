@@ -28,75 +28,102 @@
             <a class="title-link" href="index.html"><h1>AR</h1></a><span class="title-subtext">Array</span>
             <!--<h2>A web gaming platform by Array</h2>-->
         </div>
-            <ul class="quick-options-list">
-                <li>
-                    <div class="appearance-button-group" onclick="toggleAppearance()" aria-expanded="false">
-                        <p>Choose Mode</p> <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                    <script>
-                        const appearanceButton = document.querySelector('.appearance-button-group');
-            
-            appearanceButton.addEventListener('click', () => {
-            const isOpened = appearanceButton.getAttribute('aria-expanded');
-            if (isOpened === 'false') {
-            appearanceButton.setAttribute('aria-expanded', 'true');
-            } else {
-            appearanceButton.setAttribute('aria-expanded', 'false');
-            }
-            });
-                    </script>
-                </li>
-                <li>
-                    <form onsubmit="event.preventDefault();" role="search">
-                        <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
-                    </form> 
-                </li>
-                <li>
-                    <button class="dashboard-menu-opener" id="dashboard-opener" aria-expanded="false" aria-pressed="false" onclick="openDashboard">
-                        <svg class="hamburger" viewbox="0 0 100 100" width="30px">
-                            <rect class="line top-line" 
-                            width="80" height="10" 
-                            x="10" y="20" rx="5">
-                            </rect>
-                            <rect class="line middle-line" 
-                            width="80" height="10" 
-                            x="10" y="50" rx="5">
-                            </rect>
-                            <rect class="line bottom-line" 
-                            width="80" height="10" 
-                            x="10" y="80" rx="5">
-                            </rect>
-                        </svg>
-                    </button>
-                    <script>
-                        const menuButton = document.querySelector('.dashboard-menu-opener');
-            
-            menuButton.addEventListener('click', () => {
-            const isOpened = menuButton.getAttribute('aria-expanded');
-            if (isOpened === 'false') {
-            menuButton.setAttribute('aria-expanded', 'true');
-            } else {
-            menuButton.setAttribute('aria-expanded', 'false');
-            }
-            });
-                    </script>
-                    <script>
-                        let toggleDashboard = document.getElementById('dashboard-opener');
+        <ul class="quick-options-list">
+            <li class="appearance-list-item">
+                <div class="appearance-button-group" onclick="toggleAppearance()" aria-expanded="false">
+                    <p>Choose Mode</p> <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <script>
+                    const appearanceButton = document.querySelector('.appearance-button-group');
+        
+        appearanceButton.addEventListener('click', () => {
+        const isOpened = appearanceButton.getAttribute('aria-expanded');
+        if (isOpened === 'false') {
+        appearanceButton.setAttribute('aria-expanded', 'true');
+        } else {
+        appearanceButton.setAttribute('aria-expanded', 'false');
+        }
+        });
+                </script>
+                <div id="appearance-menu" style="visibility: hidden;">
+                    <button class="dark-mode-button" id="mode-button" aria-pressed="false" onclick="enableDarkMode()"><i class="gg-moon"></i><p>Dark</p></button>
+                    <button class="light-mode-button" id="mode-button" aria-pressed="false" onclick="disableDarkMode()"><i class="gg-sun"></i><p>Light</p></button>
+                    <button class="system-mode-button" id="mode-button" aria-pressed="false" onclick="toggleColorScheme()"><i class="gg-screen"></i><p>System</p></button>
+                </div>
+            </li>
+            <li class="search-box">
+                <form onsubmit="event.preventDefault();" role="search">
+                    <input type="search" placeholder="Search..." alt="search-bar" spellcheck="false">
+                </form> 
+            </li>
+            <li class="menu-opener">
+                <button class="dashboard-menu-opener" id="dashboard-opener" aria-expanded="false" aria-pressed="false" onclick="toggleMenu()">
+                    <svg class="hamburger" viewbox="0 0 100 100" width="30px">
+                        <rect class="line top-line" 
+                        width="80" height="10" 
+                        x="10" y="20" rx="5">
+                        </rect>
+                        <rect class="line middle-line" 
+                        width="80" height="10" 
+                        x="10" y="50" rx="5">
+                        </rect>
+                        <rect class="line bottom-line" 
+                        width="80" height="10" 
+                        x="10" y="80" rx="5">
+                        </rect>
+                    </svg>
+                </button>
+                <script>
+                    const menuButton = document.querySelector('.dashboard-menu-opener');
+        
+        menuButton.addEventListener('click', () => {
+        const isOpened = menuButton.getAttribute('aria-expanded');
+        if (isOpened === 'false') {
+        menuButton.setAttribute('aria-expanded', 'true');
+        } else {
+        menuButton.setAttribute('aria-expanded', 'false');
+        }
+        });
+                </script>
+                <div class="toggled-menu" style="visibility: hidden;">
 
-                        function openDashboard(){
-                            toggleDashboard.classList.toggle('misc-menu');
-                        }
-                    </script>
-                </li>
-            </ul>
-    </nav>
-    </div>
-    </header>
-    <div id="appearance-menu" style="visibility: hidden;">
-        <button class="dark-mode-button" id="mode-button" aria-pressed="false" onclick="enableDarkMode()"><i class="gg-moon"></i><p>Dark</p></button>
-        <button class="light-mode-button" id="mode-button" aria-pressed="false" onclick="disableDarkMode()"><i class="gg-sun"></i><p>Light</p></button>
-        <button class="system-mode-button" id="mode-button" aria-pressed="false" onclick="toggleColorScheme()"><i class="gg-screen"></i><p>System</p></button>
-    </div>
+                </div>
+            </li>
+            <li class="mobile-menu">
+                <button class="mobile-menu-opener" id="mobile-opener" aria-expanded="false" aria-pressed="false" onclick="openMobileSidebar()">
+                    <svg class="hamburger" viewbox="0 0 100 100" width="30px">
+                        <rect class="line top-line" 
+                        width="80" height="10" 
+                        x="10" y="20" rx="5">
+                        </rect>
+                        <rect class="line middle-line" 
+                        width="80" height="10" 
+                        x="10" y="50" rx="5">
+                        </rect>
+                        <rect class="line bottom-line" 
+                        width="80" height="10" 
+                        x="10" y="80" rx="5">
+                        </rect>
+                    </svg>
+                </button>
+                <script>
+                    const mobileButton = document.querySelector('.mobile-menu-opener');
+        
+        mobileButton.addEventListener('click', () => {
+        const isOpened = mobileButton.getAttribute('aria-expanded');
+        if (isOpened === 'false') {
+        mobileButton.setAttribute('aria-expanded', 'true');
+        } else {
+        mobileButton.setAttribute('aria-expanded', 'false');
+        }
+        });
+                </script>
+            </li>
+        </ul>
+</nav>
+</div>
+</header>
+    
     
     
     

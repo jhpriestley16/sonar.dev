@@ -30,11 +30,21 @@
         </div>
             <ul class="quick-options-list">
                 <li>
-                    <div class="appearance-button-group">
-                        <button class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-                        <button class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-                        <button class="system-mode-button" id="mode-button" onclick="x()"><i class="gg-screen"></i></button>
+                    <div class="appearance-button-group" onclick="toggleAppearance()" aria-expanded="false">
+                        <p>Choose Mode</p> <i class="fa-solid fa-caret-down"></i>
                     </div>
+                    <script>
+                        const appearanceButton = document.querySelector('.appearance-button-group');
+            
+            appearanceButton.addEventListener('click', () => {
+            const isOpened = appearanceButton.getAttribute('aria-expanded');
+            if (isOpened === 'false') {
+            appearanceButton.setAttribute('aria-expanded', 'true');
+            } else {
+            appearanceButton.setAttribute('aria-expanded', 'false');
+            }
+            });
+                    </script>
                 </li>
                 <li>
                     <form onsubmit="event.preventDefault();" role="search">
@@ -82,6 +92,11 @@
     </nav>
     </div>
     </header>
+    <div id="appearance-menu" style="visibility: hidden;">
+        <button class="dark-mode-button" id="mode-button" aria-pressed="false" onclick="enableDarkMode()"><i class="gg-moon"></i><p>Dark</p></button>
+        <button class="light-mode-button" id="mode-button" aria-pressed="false" onclick="disableDarkMode()"><i class="gg-sun"></i><p>Light</p></button>
+        <button class="system-mode-button" id="mode-button" aria-pressed="false" onclick="toggleColorScheme()"><i class="gg-screen"></i><p>System</p></button>
+    </div>
     
     
     

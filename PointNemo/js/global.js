@@ -36,18 +36,37 @@ darkModeToggle.addEventListener('click', () => {
     }
 });
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // dark mode
-    enableDarkMode();
+function toggleColorScheme() {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (prefersDark) {
+        enableDarkMode();
+        // Add other styles for light mode
+    } else {
+        disableDarkMode();
+        // Add other styles for dark mode
+    }
 }
 
 
+function toggleNav() {
+    let = document.getElementById('subNav');
 
+    if(subNav.style.visibility === 'hidden') {
+        subNav.style.visibility = 'visible';
+    } else {
+        subNav.style.visibility = 'hidden';
+    }
+}
 
-let subMenu = document.getElementById('subMenu');
+function toggleAppearance() {
+    let openMenu = document.getElementById('appearance-menu');
 
-function toggleMenu(){
-    subMenu.classList.toggle('open-menu');
+    if (openMenu.style.visibility === 'hidden') {
+        openMenu.style.visibility = 'visible';
+    } else {
+        openMenu.style.visibility = 'hidden';
+    }
 }
 
 

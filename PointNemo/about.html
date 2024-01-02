@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array - Home</title>
+    <title>Array - About</title>
     <link rel="stylesheet" type="text/css" href="css/about.css" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
@@ -28,35 +28,23 @@
             <a class="title-link" href="index.html"><h1>AR</h1></a><span class="title-subtext">Array</span>
             <!--<h2>A web gaming platform by Array</h2>-->
         </div>
-        <ul class="pages-nav">
-            <li>
-                <a href="dashboard.html" class="page-nav">
-                    Dashboard
-                </a>
-            </li>
-            <li>
-                <a href="games.html" class="page-nav">
-                    Games
-                </a>
-            </li>
-            <li>
-                <a href="music.html" class="page-nav">
-                    Music
-                </a>
-            </li>
-            <li>
-                <a href="quizzes.html" class="page-nav">
-                    Quizzes
-                </a>
-            </li>
-        </ul>
             <ul class="quick-options-list">
                 <li>
-                    <div class="appearance-button-group">
-                        <button class="dark-mode-button" id="mode-button" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-                        <button class="light-mode-button" id="mode-button" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-                        <button class="system-mode-button" id="mode-button" onclick="x()"><i class="gg-screen"></i></button>
+                    <div class="appearance-button-group" onclick="toggleAppearance()" aria-expanded="false">
+                        <p>Choose Mode</p> <i class="fa-solid fa-caret-down"></i>
                     </div>
+                    <script>
+                        const appearanceButton = document.querySelector('.appearance-button-group');
+            
+            appearanceButton.addEventListener('click', () => {
+            const isOpened = appearanceButton.getAttribute('aria-expanded');
+            if (isOpened === 'false') {
+            appearanceButton.setAttribute('aria-expanded', 'true');
+            } else {
+            appearanceButton.setAttribute('aria-expanded', 'false');
+            }
+            });
+                    </script>
                 </li>
                 <li>
                     <form onsubmit="event.preventDefault();" role="search">
@@ -97,16 +85,83 @@
     </nav>
     </div>
     </header>
-    
-    
+    <div id="appearance-menu" style="visibility: hidden;">
+        <button class="dark-mode-button" id="mode-button" aria-pressed="false" onclick="enableDarkMode()"><i class="gg-moon"></i><p>Dark</p></button>
+        <button class="light-mode-button" id="mode-button" aria-pressed="false" onclick="disableDarkMode()"><i class="gg-sun"></i><p>Light</p></button>
+        <button class="system-mode-button" id="mode-button" aria-pressed="false" onclick="toggleColorScheme()"><i class="gg-screen"></i><p>System</p></button>
+    </div>
     
     <main>
-        <div class="nav-menu" id="subNav" style="visibility: hidden;">
 
+        <div id="subNav" style="visibility: hidden;">
+            <a href="music.html" class="sub-link">Quizzes</a>
+            <a href="quizzes.html" class="sub-link">Music</a>
+            <a href="games.html" class="sub-link">Games</a>
+            <a href="dashboard.html" class="sub-link">Dashboard</a>
         </div>
+
         <header class="section-header">
             <span class="about-title">About Us</span>
         </header>
+        
+        <section class="main-content">
+            <article class="about-text-block">
+                <span class="about-text-block-title">What is Array?</span>
+                <p>Array is an online platform which provides content with the goal of entertaining people. 
+                    We have 3 categories: Games, Music, Quizzes; but we aim to expand to other places as we grow and learn. 
+                    On Array you can browse as a guest, or create your own account and customise your own unique profile, 
+                    allowing you to message and play with friends, 
+                    have your quiz and game stats tracked and optionally displayed to other players, 
+                    allowing them to have a score to beat. 
+                    We also have our own Music platform powered by Spotify for Developers' powerful, open-source Web API. 
+                    The music platform contains custom playlists curated by us, as well as a series of lists and suggestions. 
+                    If you don't like what we suggest, 
+                    you can log into your Spotify account and play your favourite songs while browsing.</p>
+                <hr>
+                <span class="about-text-block-title">The people behind Array</span>
+                <p>Array is a passion project by two students, our names are Jayden and Aiden. 
+                    We have a newfound passion for web development, specifically front-end web development. 
+                    However, we are intrigued by all aspects of it and are eager to carry on learning both ends of the spectrum. 
+                    Jayden has an affinity for HTML and CSS, and is learning JavaScript. 
+                    Aiden has an affinity for JavaScript and is learning HTML and CSS. 
+                    So we partner well, and teach each other new things as we work together. 
+                    We started learning web development in January 2023, but we didn't really focus on it and properly take keen interest until September 2023. 
+                    Please understand that we still have a long way to go on our journey so there will be some bugs and issues. 
+                    Please feel free to inform us of these via our social media accounts.</p>
+            </article>
+            <article class="tech-stack-info-group">
+                <div class="tech-stack-top-box">
+                    <span class="tech-stack-info-title">Our tech stack</span>
+                    <p style="padding-inline: 1rem;">To build Array we used a series of different languages and technologies, all of which we learned while building. These include: HTML5, CSS3, JavaScript, PHP, SCSS, Github and Vercel. </p>
+                    <div class="stack-box">
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-sass"></i>
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                </div>
+                <div class="tech-stack-bottom-box">
+                    <span class="tech-stack-info-title">Platforms we use</span>
+                    <p style="padding-inline: 1rem;">
+                        Array is active on 3 social media sites, 
+                        however we are open to expanding to more based upon user feedback. 
+                        Those 2 platforms are X (FKA. Twitter), Instagram, and Facebook. 
+                        We encourage users to follow us on these platforms to stay up to 
+                        date with the development of new features, bug fixes, and our own content. 
+                        Also, please use our social platforms to inform us of any bugs and issues as 
+                        it will allow us to put out a fix as soon as possible. As well as this, you can also follow our 
+                        developer's social accounts to stay up to date on our journey.
+                    </p>
+                    <div class="stack-box">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </article>
+        </section>
     
         
     </main>
@@ -115,10 +170,6 @@
     
     
     
-    <script src="js/global.js">
-        function toggleNav(){
-            
-        }
-    </script>
+    <script src="js/global.js"></script>
     </body>
     </html>

@@ -70,3 +70,13 @@ function toggleAppearance() {
 }
 
 
+
+function openMobileSidebar() {
+    let openSide = document.querySelector('.mobile-sidebar');
+
+    if (openSide.style.display === 'none') {
+        openSide.style.display = 'block';
+    } else {
+        openSide.style.display = 'none';
+    }
+}

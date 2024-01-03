@@ -43,9 +43,9 @@ html, body {
   --nav-background: #dddddd;
   --nav-hover-background: #bbbbbb;
   --quiz-btn-background: #b9b0b0;
-  --button-border: 1.75px solid #969090;
-  --universal-border: 1.5px solid #969090;
-  --nav-border: 2px solid rgb(127, 127, 127);
+  --button-border: 1px solid #c4c4c4;
+  --universal-border: 1px solid #c7c3c3;
+  --nav-border: 1px solid rgb(127, 127, 127);
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
   --header-title-gradient: rgb(98, 0, 234);
   --header-subtitle-gradient: linear-gradient(to right, #272727ed, #232323);
@@ -74,9 +74,9 @@ html, body {
   --nav-hover-background: #292929;
   --quiz-btn-background: #1c1b1b;
   --app-background: #0f0f0f;
-  --button-border: 2px solid #353535;
-  --universal-border: 1px solid #797474;
-  --nav-border: 2px solid rgb(91, 91, 91);
+  --button-border: 1px solid #353535;
+  --universal-border: 1px solid #1d1d1d;
+  --nav-border: 1px solid rgb(91, 91, 91);
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
   --header-title-gradient: rgb(251, 140, 0);
   --header-subtitle-gradient: linear-gradient(to right, #404040ed, #6b6b6b);
@@ -235,7 +235,7 @@ a.title-link {
   flex-direction: column;
   padding: 0.25%;
   position: absolute;
-  top: 53px;
+  top: 56px;
   z-index: 3;
   background: var(--nav-background);
   border-radius: 10px;
@@ -349,7 +349,7 @@ input:focus, input:active {
   flex-direction: column;
   padding: 0.25%;
   position: absolute;
-  top: 53px;
+  top: 56px;
   right: 10px;
   z-index: 3;
   background: var(--nav-background);
@@ -407,6 +407,34 @@ main {
   min-height: calc(100vh - 50px);
 }
 
+.mobile-sidebar > * {
+  display: none;
+}
+
+.gg-sun {
+  color: rgb(251, 138, 0);
+}
+
+.darkmode .gg-sun {
+  color: rgb(251, 209, 0);
+}
+
+.gg-moon {
+  color: #929292;
+}
+
+.darkmode .gg-moon {
+  color: #fff;
+}
+
+.gg-screen {
+  color: #929292;
+}
+
+.darkmode .gg-screen {
+  color: rgb(79, 79, 79);
+}
+
 footer {
   height: 120px;
   position: relative;
@@ -448,5 +476,46 @@ footer {
     border-bottom: var(--button-border);
     background: var(--header-background);
     display: flex;
+    flex-direction: column;
+    padding-inline: 0.5rem;
+    padding-top: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .mobile-profile {
+    height: 137px;
+    width: 96%;
+    margin-top: none;
+    margin-bottom: 0.3rem;
+    border-radius: 12px;
+    background: var(--nav-background);
+    display: flex;
+    border: var(--button-border);
+  }
+  .mobile-appearance-group {
+    height: 50px;
+    width: 96.5%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #mode-button-mobile {
+    width: 32%;
+    height: 100%;
+    margin-inline: auto;
+    background: var(--nav-background);
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--button-border);
+    color: var(--ff-clr);
+  }
+  #mode-button-mobile > * {
+    margin-inline: 3%;
   }
 }/*# sourceMappingURL=landing.css.map */

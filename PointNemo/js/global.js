@@ -80,3 +80,6 @@ function openMobileSidebar() {
         openSide.style.display = 'none';
     }
 }
+
+
+

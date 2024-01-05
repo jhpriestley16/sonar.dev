@@ -359,7 +359,7 @@ input:focus {
   color: #fff;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 1000px) {
   h1 {
     width: 45px;
     letter-spacing: 0.1rem;

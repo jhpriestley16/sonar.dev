@@ -1,6 +1,7 @@
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
+
 console.log(darkMode);
 
 //check if dark mode is enabled
@@ -25,8 +26,12 @@ if (darkMode === 'enabled') {
     enableDarkMode();
 }
 
+const googleSignIn = document.querySelector('.g_id_signin');
+const gSignInDark = googleSignIn.getAttribute('data-theme');
+
 darkModeToggle.addEventListener('click', () => {
     darkMode = localStorage.getItem('darkMode');
+    
     if (darkMode !== 'enabled') {
         enableDarkMode();
         console.log(darkMode);

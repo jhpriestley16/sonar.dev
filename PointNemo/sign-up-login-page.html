@@ -20,27 +20,28 @@
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
       </script>
       <script defer src="/_vercel/speed-insights/script.js"></script>
-    
+      <div id="fb-root"></div>
+      
     
     
     
     <main>
 
+        <a href="index.html"><h1>AR</h1></a>
+
         <section class="welcome-text-container">
-            <div class="large-text">
-                <span class="large non-highlight text">Welcome to </span>
-                <br>
-                <span class="large highlight text">The Array Network</span>
-            </div>
-            <div class="smaller-text">
-                <span class="small non-highlight text">The platform for </span><span class="small highlight text">everyone.</span>
-            </div>
+                <div class="large-text">
+                    <span class="large non-highlight text">Welcome to </span>
+                    <span class="large highlight text">The Array Network</span>
+                    <div class="small-text">
+                    <span class="small non-highlight text">the platform for everyone.</span>
+                    </div>
+                </div>
         </section>
-         
+        
 
         <section class="login-container">
-            <!--
-            <div class="form-container" id="signUpContainer">
+            <div class="form-container sign-up" id="signUpContainer">
                 <p class="form-title">Sign-Up for Array</p>
                 <form class="signup-form" id="account-form">
                     <input type="email" class="email-input" placeholder="Email">
@@ -50,8 +51,16 @@
                     </button>
                 </form>
             </div>
-            -->
-            <div class="form-container" id="loginContainer">
+
+            <div class="alternative-container">
+                <div class="alternative-content-wrapper">
+                    <div class="horizontal-line"></div>
+                    <span class="alternative-text-or">Or</span>
+                    <div class="horizontal-line"></div>
+                </div>
+            </div>
+
+            <div class="form-container login" id="loginContainer">
                 <p class="form-title">Login to your Array account</p>
                 <form class="login-form" id="account-form">
                     <input type="email" class="email-input" placeholder="Email">
@@ -70,20 +79,25 @@
         data-size="large"
         data-theme="outline"
         data-text="sign_in_with"
-        data-shape="rectangular"
+        data-shape="pill"
         data-logo_alignment="left">
     </div>
-                </form>
+
+</form>
             </div>
         </section>
     
     
-        
+        <div class="appearance-button-group">
+            <button id="lightModeButton" class="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+            <button id="darkModeButton" class="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+            <button id="systemButton" class="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+        </div>
     </main>
     
     
     
-    
+    <script src="js/global.js"></script>
     
     </body>
     </html>

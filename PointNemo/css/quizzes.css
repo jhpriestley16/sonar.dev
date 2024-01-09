@@ -104,6 +104,20 @@ html, body {
   --ff-facebook-color: #1877F2;
 }
 
+::-webkit-scrollbar {
+  background: transparent;
+  height: 5px;
+  width: 5px;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 61, 61);
+  height: 5px;
+  border-radius: 15px;
+  width: 5px;
+}
+
 body {
   font-size: 100%;
   min-height: 100%;
@@ -206,7 +220,6 @@ input.search-bar {
 
 .sidebar-content {
   height: 75%;
-  overflow: scroll;
 }
 
 .sidebar-navigation::-webkit-scrollbar-track {
@@ -234,7 +247,6 @@ button.search-button {
   padding: 0.5rem;
   height: calc(100% - 1rem);
   width: calc(100% - 1rem);
-  overflow: scroll;
 }
 
 #nav-list-links-container {
@@ -372,7 +384,7 @@ span.large-page-title {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  height: calc(100% - 10vh);
+  min-height: calc(100% - 10vh);
 }
 
 .quiz-row-container {
@@ -384,7 +396,7 @@ span.large-page-title {
   font-size: 1.75rem;
   font-family: neue;
   margin-inline: 0.5rem;
-  color: var(--quiz-row-label-color);
+  color: var(--ff-clr);
 }
 
 .quiz-container {
@@ -414,4 +426,11 @@ span.large-page-title {
 .gg-chevron-left, .gg-chevron-right {
   color: var(--ff-clr);
   margin-inline: auto;
+}
+
+.see-all-button {
+  font-size: 0.8rem;
+  color: var(--ff-clr);
+  font-family: text-labels;
+  float: right;
 }/*# sourceMappingURL=quizzes.css.map */

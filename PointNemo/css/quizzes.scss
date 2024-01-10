@@ -59,7 +59,7 @@ html, body { box-sizing: border-box;}
     --ff-menu-icon-color: rgb(98, 0, 234);
     --ff-search-color: #000000;
     --ff-nav-color: #181818;
-    --ff-nav-hover-color: #242424;
+    --ff-nav-hover-color: #a1a1a1;
     --ff-clr: #000000;
     --ff-github-color: #000000;
     --ff-html-color: #E44D26;
@@ -309,7 +309,7 @@ a:hover p {
 .appearance-button-group{
     width: 40%;
     border: var(--nav-border);
-    background-color: var(--ff-nav-hover-color);
+    background-color: var(--nav-background);
     border-radius: 8px;
     height: 100%;
     display: flex;
@@ -361,7 +361,11 @@ i{
 .page-main-header{
     text-align: center;
     position: relative;
-    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    border-bottom: var(--universal-border);
 }
 span.large-page-title{
     font-family: neue;
@@ -369,7 +373,7 @@ span.large-page-title{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: clamp(4rem, 5rem, 6rem);
+    font-size: clamp(3.5rem, 4.5rem, 5.5rem);
 }
 .quiz-content-wrapper{
     display: flex;
@@ -408,6 +412,9 @@ span.large-page-title{
     height: 25px;
     aspect-ratio: 1;
 }
+.back-forward:hover{
+    background: var(--ff-nav-hover-color);
+}
 .gg-chevron-left,.gg-chevron-right{
     color: var(--ff-clr);
     margin-inline: auto;
@@ -417,4 +424,21 @@ span.large-page-title{
     color: var(--ff-clr);
     font-family: text-labels;
     float: right;
+    display: flex;
+    justify-content: last baseline;
+    align-items: last baseline;
+    margin-right: 1rem;
+    margin-top: 0.7rem;
 }
+.see-all-button:hover{
+    text-decoration: underline 1px;
+}
+
+
+
+
+
+
+
+
+

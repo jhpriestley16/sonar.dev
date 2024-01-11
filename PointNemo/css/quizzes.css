@@ -368,11 +368,7 @@ i {
 .page-main-header {
   text-align: center;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10vh;
-  border-bottom: var(--universal-border);
+  margin-bottom: 3rem;
 }
 
 span.large-page-title {

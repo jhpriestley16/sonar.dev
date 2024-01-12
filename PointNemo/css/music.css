@@ -1,0 +1,264 @@
+html, body {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+@font-face {
+  font-family: text-labels;
+  src: url("../fonts/Geist-Regular.otf");
+}
+@font-face {
+  font-family: nav-box-font;
+  src: url("../fonts/Geist-SemiBold.otf");
+}
+@font-face {
+  font-family: search;
+  src: url("../fonts/Geist-Light.otf");
+}
+@font-face {
+  font-family: var(--ff-text-label);
+  src: url("../fonts/NeueMontreal-Light.otf");
+  letter-spacing: normal;
+}
+@font-face {
+  font-family: anurati;
+  src: url("../fonts/Anurati-Regular.otf");
+}
+@font-face {
+  font-family: neue;
+  src: url("../fonts/NeueMontreal-Bold.otf");
+}
+@font-face {
+  font-family: profont;
+  src: url("../fonts/Maverix-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  shape-rendering: crispEdges;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --header-background: rgb(4,4,4);
+  --body-background: #ffffff;
+  --footer-background: #c7bbc8;
+  --nav-background: #0c0c0c;
+  --nav-hover-background: #bbbbbb;
+  --quiz-btn-background: #b9b0b0;
+  --button-background: #000;
+  --input-background: #0e0e0e;
+  --b-f-button-background: #e1e1e1ce;
+  --button-border: 1px solid #969090;
+  --universal-border: 1.75px solid rgb(53, 53, 53);
+  --nav-border: 1.75px solid rgb(61, 61, 61);
+  --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
+  --header-title-gradient: linear-gradient(to right, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+  --header-subtitle-gradient: linear-gradient(to right, #f2f2f2ed, #f7f7f7);
+  --ff-icon-color: #909090;
+  --quiz-row-label-color: #000;
+  --ff-menu-icon-color: rgb(98, 0, 234);
+  --ff-search-color: #000000;
+  --ff-nav-color: #181818;
+  --ff-nav-hover-color: #a1a1a1;
+  --ff-clr: #ffffff;
+  --ff-github-color: #000000;
+  --ff-html-color: #E44D26;
+  --ff-css-color: #1572B6;
+  --ff-js-color: #F7DF1E;
+  --ff-scss-color: #912952;
+  --ff-php-color: #4F5D95;
+  --ff-x-color: #000000;
+  --ff-instagram-color: linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  --ff-facebook-color: #1877F2;
+}
+
+.darkmode {
+  --header-background: rgb(6, 6, 6);
+  --body-background: rgb(9, 9, 9);
+  --footer-background: #c7bbc8;
+  --nav-background: #0c0c0c;
+  --nav-hover-background: #bbbbbb;
+  --quiz-btn-background: #b9b0b0;
+  --button-background: #fff;
+  --input-background: #0e0e0e;
+  --b-f-button-background: #1a1a1a;
+  --button-border: 1px solid #969090;
+  --universal-border: 1.75px solid #2f2f2f;
+  --nav-border: 1.75px solid rgb(61, 61, 61);
+  --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
+  --header-title-gradient: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  /*linear-gradient(to right, #00dbde 0%, #fc00ff 100%)*/
+  /*background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)*/
+  --header-subtitle-gradient: linear-gradient(to right, #f2f2f2ed, #ffffff);
+  --ff-icon-color: #909090;
+  --quiz-row-label-color: #909090;
+  --ff-menu-icon-color: rgb(98, 0, 234);
+  --ff-search-color: #ffffff;
+  --ff-nav-color: #ededed;
+  --ff-nav-hover-color: #242424;
+  --ff-clr: #ffffff;
+  --ff-github-color: #000000;
+  --ff-html-color: #E44D26;
+  --ff-css-color: #1572B6;
+  --ff-js-color: #F7DF1E;
+  --ff-scss-color: #912952;
+  --ff-php-color: #4F5D95;
+  --ff-x-color: #000000;
+  --ff-instagram-color: linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  --ff-facebook-color: #1877F2;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  height: 5px;
+  width: 5px;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 61, 61);
+  height: 5px;
+  border-radius: 15px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+body {
+  font-size: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--body-background);
+}
+
+header.main-page-header {
+  height: 50px;
+  border-bottom: var(--universal-border);
+  background: var(--header-background);
+}
+
+.main-page-header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+.external-page-navigation {
+  height: 100%;
+}
+
+.page-logo-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: first baseline;
+  align-items: center;
+  width: 250px;
+}
+
+h1.page-logo {
+  font-size: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
+  background: var(--header-title-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 65px;
+  font-family: anurati;
+  letter-spacing: -0.5rem;
+}
+
+span.page-title {
+  font-size: clamp(1.1rem, 1.3333rem + 2.2222vw, 1.7rem);
+  background: var(--header-subtitle-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: neue;
+  height: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
+  display: grid;
+  place-items: center;
+}
+
+ul.nav-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+li.nav-list-item {
+  list-style-type: none;
+}
+
+a {
+  color: var(--ff-clr);
+  text-decoration: none;
+  font-family: text-labels;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form.search-bar-container {
+  height: 80%;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--nav-background);
+  border-radius: 4px;
+  border: var(--nav-border);
+}
+
+input.search-bar {
+  padding-inline: 0.3rem;
+  font-size: 0.8rem;
+  width: 85%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-family: search;
+}
+
+input:focus {
+  outline: none;
+}
+
+button.search-button {
+  background: none;
+  font-size: 0.8rem;
+  border: none;
+  color: #fff;
+  width: 15%;
+  border-left: var(--nav-border);
+}
+
+::-webkit-search-cancel-button {
+  display: none;
+}
+
+.playback-navigation {
+  border-bottom: var(--universal-border);
+  height: 80px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--header-background);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+main {
+  min-height: calc(150vh - 120px);
+  position: relative;
+}/*# sourceMappingURL=music.css.map */

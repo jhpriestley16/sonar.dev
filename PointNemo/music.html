@@ -64,9 +64,35 @@
         </form>
     </nav>
 </header>
-<nav class="playback-navigation">
+<div class="playback-navigation-container">
+    <nav class="playback-navigation">
+        <div class="appearance-buttons-container">
+            <div class="appearance-btn-group">
+                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+            </div>
+        </div>
 
-</nav>
+        <div class="playback-button-timeline-container">
+            <div class="playback-button-group">
+                <button class="backward-button back-forth" id="playback-button">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button class="pause-button" id="playback-button">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+                <button class="forward-button back-forth" id="playback-button">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="music-settings-button-container">
+
+        </div>
+    </nav>
+</div>
 
 
 
@@ -86,6 +112,6 @@
 
 
 
-
+<script src="js/global.js"></script>
 </body>
 </html>

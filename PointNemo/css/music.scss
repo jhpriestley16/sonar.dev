@@ -55,7 +55,7 @@ html, body { box-sizing: border-box; user-select: none;}
     --nav-border: 1.75px solid rgb(61, 61, 61);
   
     --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
-    --header-title-gradient: linear-gradient(to right, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);   
+    --header-title-gradient: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);  
     --header-subtitle-gradient: linear-gradient(to right, #f2f2f2ed, #f7f7f7);
   
     --ff-icon-color: #909090;
@@ -252,7 +252,7 @@ button.search-button{
 .playback-navigation-container{
   height: 80px;
   position: sticky;
-  top: 0;
+  top: calc(100vh - 80px);
   width: 100%;
   background: rgba(12, 12, 12, 0.614);
   backdrop-filter: blur(12px);

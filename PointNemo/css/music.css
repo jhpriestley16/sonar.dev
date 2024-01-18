@@ -43,28 +43,33 @@ html, body {
 }
 
 :root {
-  --header-background: rgb(4,4,4);
+  --header-background: rgb(255, 255, 255, 0.85);
   --body-background: #ffffff;
-  --footer-background: #c7bbc8;
-  --nav-background: #0c0c0c;
+  --sidebar-background: rgb(252, 252, 252);
+  --nav-background: #fcfcfc;
   --nav-hover-background: #bbbbbb;
   --quiz-btn-background: #b9b0b0;
   --button-background: #000;
   --input-background: #0e0e0e;
   --b-f-button-background: #e1e1e1ce;
   --button-border: 1px solid #969090;
-  --universal-border: 1.75px solid rgb(53, 53, 53);
-  --nav-border: 1.75px solid rgb(61, 61, 61);
+  --universal-border: 1.75px solid rgb(211, 211, 211);
+  --nav-border: 1.75px solid rgb(201, 201, 201);
+  --nav-hover-border: 1.75px solid rgb(128, 128, 128);
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
   --header-title-gradient: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-  --header-subtitle-gradient: linear-gradient(to right, #f2f2f2ed, #f7f7f7);
-  --ff-icon-color: #909090;
+  --header-subtitle-gradient: linear-gradient(to right, #000000ed, #000000);
+  --ff-icon-color: #d1d1d1;
+  --timeline-track: #cfcfcf;
+  --timeline-button: #000000;
+  --playback-button: #afafaf;
+  --playback-button-hover: #494949;
   --quiz-row-label-color: #000;
   --ff-menu-icon-color: rgb(98, 0, 234);
   --ff-search-color: #000000;
   --ff-nav-color: #181818;
   --ff-nav-hover-color: #a1a1a1;
-  --ff-clr: #ffffff;
+  --ff-clr: #000000;
   --ff-github-color: #000000;
   --ff-html-color: #E44D26;
   --ff-css-color: #1572B6;
@@ -79,7 +84,7 @@ html, body {
 .darkmode {
   --header-background: rgb(6, 6, 6);
   --body-background: rgb(8,8,8);
-  --footer-background: #c7bbc8;
+  --sidebar-background: rgb(4,4,4);
   --nav-background: #0c0c0c;
   --nav-hover-background: #bbbbbb;
   --quiz-btn-background: #b9b0b0;
@@ -89,12 +94,17 @@ html, body {
   --button-border: 1px solid #969090;
   --universal-border: 1.75px solid #2f2f2f;
   --nav-border: 1.75px solid rgb(61, 61, 61);
+  --nav-hover-border: 1.75px solid rgb(230, 230, 230);
   --border-gradient: linear-gradient(45deg, #e7792a, #f07086);
   --header-title-gradient: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
   /*linear-gradient(to right, #00dbde 0%, #fc00ff 100%)*/
   /*background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)*/
   --header-subtitle-gradient: linear-gradient(to right, #f2f2f2ed, #ffffff);
   --ff-icon-color: #909090;
+  --timeline-track: #6d6d6d;
+  --timeline-button: #fff;
+  --playback-button: #979797;
+  --playback-button-hover: #ffffff;
   --quiz-row-label-color: #909090;
   --ff-menu-icon-color: rgb(98, 0, 234);
   --ff-search-color: #ffffff;
@@ -112,24 +122,6 @@ html, body {
   --ff-facebook-color: #1877F2;
 }
 
-::-webkit-scrollbar {
-  background: transparent;
-  height: 5px;
-  width: 5px;
-  border-radius: 15px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(61, 61, 61);
-  height: 5px;
-  border-radius: 15px;
-  width: 5px;
-}
-
-::-webkit-scrollbar-corner {
-  display: none;
-}
-
 body {
   font-size: 100%;
   min-height: 100%;
@@ -142,10 +134,11 @@ body {
 header.main-page-header {
   height: 50px;
   border-bottom: var(--universal-border);
-  background: rgba(0, 0, 0, 0.952);
+  background: var(--header-background);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  position: sticky;
+  top: 0;
 }
 
 .main-page-header nav {
@@ -154,10 +147,8 @@ header.main-page-header {
   justify-content: space-between;
   align-items: center;
   padding-inline: 1rem;
-  background: rgba(0, 0, 0, 0.95);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .external-page-navigation {
@@ -172,17 +163,6 @@ header.main-page-header {
   width: 250px;
 }
 
-h1.page-logo {
-  font-size: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
-  background: var(--header-title-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: 65px;
-  font-family: anurati;
-  letter-spacing: -0.5rem;
-}
-
 span.page-title {
   font-size: clamp(1.1rem, 1.3333rem + 2.2222vw, 1.7rem);
   background: var(--header-subtitle-gradient);
@@ -193,16 +173,6 @@ span.page-title {
   height: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
   display: grid;
   place-items: center;
-}
-
-ul.nav-list-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-}
-
-li.nav-list-item {
-  list-style-type: none;
 }
 
 a {
@@ -217,23 +187,28 @@ a:hover {
 
 form.search-bar-container {
   height: 80%;
-  width: 250px;
+  width: 350px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background: var(--nav-background);
-  border-radius: 4px;
+  border-radius: 7px;
   border: var(--nav-border);
 }
 
 input.search-bar {
-  padding-inline: 0.3rem;
+  padding-inline: 0.3rem 0;
   font-size: 0.8rem;
   width: 85%;
   border: none;
   background: transparent;
-  color: #fff;
-  font-family: search;
+  color: var(--ff-clr);
+  font-family: text-labels;
+  font-weight: 200;
+}
+
+::-webkit-input-placeholder {
+  color: #c0c0c0;
 }
 
 input:focus {
@@ -242,11 +217,10 @@ input:focus {
 
 button.search-button {
   background: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border: none;
-  color: #fff;
+  color: #888888;
   width: 15%;
-  border-left: var(--nav-border);
 }
 
 ::-webkit-search-cancel-button {
@@ -306,43 +280,139 @@ button#appearance-btn {
   color: var(--ff-icon-color);
 }
 
-.playback-button-timeline-container {
-  width: 50%;
+main {
+  height: calc(100vh - 51.75px);
+  position: relative;
+  display: flex;
+}
+
+.col-1 {
+  width: 15%;
   height: 100%;
+  padding: 1.5rem;
+}
+
+.song-art-container {
+  aspect-ratio: 1;
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 8px;
+  border: var(--nav-border);
+  padding: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s ease-in, border 0.2s ease-in;
+}
+
+img.song-art {
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.song-art-container:hover {
+  transform: scale(0.98);
+  transition: transform 0.2s ease-in, border 0.2s ease-in;
+  border: --nav-hover-border;
+}
+
+.playback-container {
+  width: 90%;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.playback-timeline {
+  height: 5px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin: 0.5rem 0;
 }
 
 .playback-button-group {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-  height: 50%;
 }
 
-button#playback-button {
-  margin-inline: 0.3rem;
+button.back-forth {
+  font-size: 1.3rem;
 }
 
 button.pause-button {
   font-size: 1.5rem;
 }
 
-button.back-forth {
-  font-size: 1.2rem;
+button#playback-button {
+  margin-inline: 0.3rem;
+  color: var(--playback-button);
+  transition: color 0.1s ease-in;
 }
 
-.music-settings-button-container {
-  width: 25%;
+#playback-button:hover {
+  color: var(--playback-button-hover);
+  transition: color 0.1s ease-in;
+}
+
+hr {
+  border: none;
+  border-top: 2px var(--timeline-track) solid;
+  border-radius: 100vw;
+  width: 100%;
+  height: 0px;
+}
+
+input[type=range] {
+  height: 20px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: var(--timeline-track);
+  border-radius: 50px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 13px;
+  width: 13px;
+  border-radius: 50px;
+  background: var(--timeline-button);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5.5px;
+}
+
+.col-2 {
+  width: 70%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: last baseline;
+  border-inline: var(--universal-border);
 }
 
-main {
-  min-height: calc(150vh - 120px);
-  position: relative;
+.col-3 {
+  width: 15%;
+  height: 100%;
+}
+
+#col-inline {
+  background: var(--sidebar-background);
+}
+
+#col {
+  padding: 0.5rem 1.5rem;
 }/*# sourceMappingURL=music.css.map */

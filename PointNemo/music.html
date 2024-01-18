@@ -39,23 +39,8 @@
 <header class="main-page-header">
     <nav class="external-page-navigation">
         <div class="page-logo-title-container">
-            <h1 class="page-logo" id="top-return">AR</h1>
             <span class="page-title">Loop</span>
         </div>
-        <ul class="nav-list-wrapper">
-            <li class="nav-list-item">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="games.html">Games</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="quizzes.html">Quizzes</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="#">Social</a>
-            </li>
-        </ul>
         <form class="search-bar-container">
             <input class="search-bar" placeholder="Search Loop..." type="search">
             <button class="search-button">
@@ -64,6 +49,7 @@
         </form>
     </nav>
 </header>
+<!--
 <div class="playback-navigation-container">
     <nav class="playback-navigation">
         <div class="appearance-buttons-container">
@@ -93,11 +79,51 @@
         </div>
     </nav>
 </div>
+-->
 
 
 
 
 <main>
+
+    <div class="col-1 player-col open-state" id="col-inline">
+        <div class="song-art-container">
+            <img src="img/Dark_Side_of_the_Moon.png" class="song-art" alt="Song Art">
+        </div>
+        <div class="playback-container">
+            <div class="playback-timeline">
+                <hr>
+            </div>
+            <div class="playback-button-group">
+                <button class="backward-button back-forth" id="playback-button">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button class="pause-button" id="playback-button">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+                <button class="forward-button back-forth" id="playback-button">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+            </div>
+            <div class="music-settings-buttons">
+                <input type="range">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2 main-feed-col" id="col">
+
+    </div>
+
+    <div class="col-3 misc-col" id="col-inline">
+        <div class="appearance-buttons-container">
+            <div class="appearance-btn-group">
+                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+            </div>
+        </div>
+    </div>
 
 </main>
 

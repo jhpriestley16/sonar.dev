@@ -87,12 +87,22 @@
 <main>
 
     <div class="col-1 player-col open-state" id="col-inline">
+        <div class="player-status-container">
+            <span class="player-status-text">Now Playing...</span>
+        </div>
         <div class="song-art-container">
-            <img src="img/Dark_Side_of_the_Moon.png" class="song-art" alt="Song Art">
+            <img src="img/ah.gif" class="song-art" alt="Song Art">
+            <button class="expand-btn">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </button>
         </div>
         <div class="playback-container">
             <div class="playback-timeline">
-                <hr>
+                <input class="song-timeline" type="range">
+                <div class="time-labels">
+                    <label class="song-time time">01:36</label>
+                    <label class="song-end-time time">04:38</label>
+                </div>
             </div>
             <div class="playback-button-group">
                 <button class="backward-button back-forth" id="playback-button">
@@ -106,7 +116,9 @@
                 </button>
             </div>
             <div class="music-settings-buttons">
-                <input type="range">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <input class="volume-control" type="range">
+                <i class="fa-solid fa-volume-high"></i>
             </div>
         </div>
     </div>

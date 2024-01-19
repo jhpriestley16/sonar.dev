@@ -41,6 +41,13 @@
         <div class="page-logo-title-container">
             <span class="page-title">Loop</span>
         </div>
+        <div class="appearance-buttons-container">
+            <div class="appearance-btn-group">
+                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+            </div>
+        </div>
         <form class="search-bar-container">
             <input class="search-bar" placeholder="Search Loop..." type="search">
             <button class="search-button">
@@ -49,37 +56,6 @@
         </form>
     </nav>
 </header>
-<!--
-<div class="playback-navigation-container">
-    <nav class="playback-navigation">
-        <div class="appearance-buttons-container">
-            <div class="appearance-btn-group">
-                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
-            </div>
-        </div>
-
-        <div class="playback-button-timeline-container">
-            <div class="playback-button-group">
-                <button class="backward-button back-forth" id="playback-button">
-                    <i class="fa-solid fa-backward-step"></i>
-                </button>
-                <button class="pause-button" id="playback-button">
-                    <i class="fa-solid fa-pause"></i>
-                </button>
-                <button class="forward-button back-forth" id="playback-button">
-                    <i class="fa-solid fa-forward-step"></i>
-                </button>
-            </div>
-        </div>
-
-        <div class="music-settings-button-container">
-
-        </div>
-    </nav>
-</div>
--->
 
 
 
@@ -134,6 +110,20 @@
                 </div>
             </div>
         </div>
+        <div class="queue-menu-tab">
+            <div class="queue-tab-icon">
+                <i class="fa-solid fa-diagram-next"></i>
+            </div>
+            <div class="queue-tab-text-wrapper">
+                <label class="next-up-label">Next up...</label>
+                <div class="song-info-wrapper">
+                    <p class="queue-song-title">After Hours </p>
+                    - 
+                    <p class="queue-artist-name"> The Weeknd</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="col-2 main-feed-col" id="col">
@@ -141,15 +131,12 @@
     </div>
 
     <div class="col-3 misc-col" id="col-inline">
-        <div class="appearance-buttons-container">
-            <div class="appearance-btn-group">
-                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
-            </div>
+        <div class="queue-menu-expanded">
+            <button class="close-queue-menu" onclick="toggleQueueMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         </div>
     </div>
-
 
     <div class="music-player-expanded" aria-expanded="false" style="visibility: hidden;">
         <button class="close-expanded-music-player" onclick="toggleSongExpand()">

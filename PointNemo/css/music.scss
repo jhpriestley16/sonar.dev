@@ -387,10 +387,17 @@ hr{
   font-family: text-labels;
   font-size: 10px;
   margin: .3rem 0;
+  color: var(--ff-clr)
 }
 .song-time{
 }
 .song-end-time{
+}
+.volume-control-wrapper{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  gap: .2rem;
 }
 input.song-timeline[type=range]{
   -webkit-appearance: none;
@@ -413,7 +420,7 @@ input.song-timeline[type=range]::-webkit-slider-thumb{
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 0.6rem;
   color: var(--ff-clr);
   margin: .3rem 0;
@@ -463,6 +470,54 @@ input.volume-control[type=range]::-webkit-slider-thumb{
 input[type=range]::-webkit-slider-thumb:hover{
   background: var(--volume-hover);
 }
+.queue-menu-tab{
+  width: 100%;
+  aspect-ratio: 7/1;
+  border-radius: 6px;
+  border: var(--nav-border);
+  background: var(--b-f-button-background);
+  padding: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ff-clr);
+  cursor: pointer;
+}
+.queue-tab-icon{
+  height: calc(100% - .2rem);
+  aspect-ratio: 1;
+  border: var(--nav-border);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  background: var(--header-title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.queue-tab-text-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-inline: 2%;
+  width: 96%;
+}
+label.next-up-label{
+  text-align: center;
+  font-size: .75rem;
+  font-family: text-labels;
+  color: var(--ff-clr);
+}
+.song-info-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+}
+.song-info-wrapper p{
+  font-size: .75rem;
+  font-family: text-labels;
+  color: var(--ff-clr);
+}
 
 .col-2{
   width: 70%;
@@ -506,4 +561,17 @@ input[type=range]::-webkit-slider-thumb:hover{
 .close-expanded-music-player:hover i{
   color: #f8f8f8;
   transition: color .2s ease;
+}
+
+
+
+
+.queue-menu-expanded{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background:rgba(15, 15, 15, 0.486);
+  backdrop-filter: blur(10px);
 }

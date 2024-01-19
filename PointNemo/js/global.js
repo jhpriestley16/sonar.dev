@@ -74,7 +74,15 @@ function toggleAppearance() {
     }
 }
 
+function toggleSongExpand() {
+    let openMenu = document.querySelector('.music-player-expanded');
 
+    if (openMenu.style.visibility === 'hidden') {
+        openMenu.style.visibility = 'visible';
+    } else {
+        openMenu.style.visibility = 'hidden';
+    }
+}
 
 function openMobileSidebar() {
     let openSide = document.querySelector('.mobile-sidebar');

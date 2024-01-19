@@ -91,8 +91,8 @@
             <span class="player-status-text">Now Playing...</span>
         </div>
         <div class="song-art-container">
-            <img src="img/ah.gif" class="song-art" alt="Song Art">
-            <button class="expand-btn">
+            <img src="img/ah.gif" class="song-art" alt="Song Art" onclick="toggleSongExpand()">
+            <button class="expand-btn" onclick="toggleSongExpand()">
                 <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
             </button>
         </div>
@@ -116,9 +116,22 @@
                 </button>
             </div>
             <div class="music-settings-buttons">
-                <i class="fa-solid fa-volume-xmark"></i>
-                <input class="volume-control" type="range">
-                <i class="fa-solid fa-volume-high"></i>
+                <div class="volume-control-wrapper">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                    <input class="volume-control" type="range">
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+                <div class="music-menu-button-group">
+                    <button class="connect-device-btn">
+                        <i class="fa-solid fa-tv"></i>
+                    </button>
+                    <button class="open-queue-menu-btn">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                    <button class="shuffle-play-button">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -135,6 +148,13 @@
                 <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
             </div>
         </div>
+    </div>
+
+
+    <div class="music-player-expanded" aria-expanded="false" style="visibility: hidden;">
+        <button class="close-expanded-music-player" onclick="toggleSongExpand()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
     </div>
 
 </main>

@@ -94,5 +94,13 @@ function openMobileSidebar() {
     }
 }
 
+function openSettings() {
+    let openMenu = document.querySelector('.mobile-settings-menu-opened');
 
+    if (openMenu.style.visibility === 'hidden') {
+        openMenu.style.visibility = 'visible';
+    } else {
+        openMenu.style.visibility = 'hidden';
+    }
+}
 

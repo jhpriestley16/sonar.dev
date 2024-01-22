@@ -27,6 +27,7 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-left.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/info.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
 </head>
 <html>
@@ -54,6 +55,38 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
+    </nav>
+    <nav class="mobile-header">
+        <button class="mobile-sidebar-opener header-btn" aria-expanded="false">
+            <svg class="hamburger" viewbox="0 0 100 100" width="30px">
+                <rect class="line top-line" 
+                width="80" height="10" 
+                x="10" y="30" rx="5">
+                </rect>
+                <rect class="line bottom-line" 
+                width="80" height="10" 
+                x="10" y="70" rx="5">
+                </rect>
+            </svg>
+            <script>
+                const mobileButton = document.querySelector('.mobile-sidebar-opener');
+    
+    mobileButton.addEventListener('click', () => {
+    const isOpened = mobileButton.getAttribute('aria-expanded');
+    if (isOpened === 'false') {
+    mobileButton.setAttribute('aria-expanded', 'true');
+    } else {
+    mobileButton.setAttribute('aria-expanded', 'false');
+    }
+    });
+            </script>
+        </button>
+        <div class="page-logo-title-container">
+            <span class="page-title">Loop</span>
+        </div>
+        <button class="mobile-settings-button header-btn" onclick="openSettings()">
+            <i class="fa-solid fa-sliders"></i>
+        </button>
     </nav>
 </header>
 
@@ -109,6 +142,13 @@
                     </button>
                 </div>
             </div>
+            <div class="appearance-buttons-container">
+                <div class="appearance-btn-group">
+                    <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+                    <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+                    <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+                </div>
+            </div>
         </div>
         <div class="queue-menu-tab">
             <div class="queue-tab-icon">
@@ -151,10 +191,37 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
+    <div class="appearance-buttons-container">
+        <div class="appearance-btn-group">
+            <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+            <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+            <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+        </div>
+    </div>
+    <div class="mobile-settings-menu-opened">
 
+    </div>
 </main>
 
-
+<div class="mobile-tab-menu-bottom">
+    <div class="section-button-group">
+        <button class="section-btns" id="home-btn">
+            <i class="fa-solid fa-house"></i>
+        </button>
+        <button class="section-btns" id="library-btn">
+            <i class="fa-solid fa-music"></i>
+        </button>
+        <button class="section-btns" id="post-btn">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+        <button class="section-btns" id="search-menu-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="section-btns" id="messages-btn">
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+    </div>
+</div>
 
 
 

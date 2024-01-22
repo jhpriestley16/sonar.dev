@@ -657,6 +657,7 @@ label.next-up-label{
   .header-btn{
     font-size: clamp(1.2rem, 1.2vw, 1.4rem);
     color: var(--ff-clr);
+    z-index: 3;
   }
     /*
   .mobile-settings-menu-opened{

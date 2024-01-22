@@ -68,19 +68,19 @@
                 x="10" y="70" rx="5">
                 </rect>
             </svg>
-            <script>
-                const mobileButton = document.querySelector('.mobile-sidebar-opener');
-    
-    mobileButton.addEventListener('click', () => {
-    const isOpened = mobileButton.getAttribute('aria-expanded');
-    if (isOpened === 'false') {
-    mobileButton.setAttribute('aria-expanded', 'true');
-    } else {
-    mobileButton.setAttribute('aria-expanded', 'false');
-    }
-    });
-            </script>
         </button>
+        <script>
+            const mobileButton = document.querySelector('.mobile-sidebar-opener');
+
+mobileButton.addEventListener('click', () => {
+const isOpened = mobileButton.getAttribute('aria-expanded');
+if (isOpened === 'false') {
+mobileButton.setAttribute('aria-expanded', 'true');
+} else {
+mobileButton.setAttribute('aria-expanded', 'false');
+}
+});
+        </script>
         <div class="page-logo-title-container">
             <span class="page-title">Loop</span>
         </div>

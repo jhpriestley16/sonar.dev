@@ -20,6 +20,7 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home-alt.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/heart.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-search.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user-list.css' rel='stylesheet'>
@@ -57,35 +58,32 @@
         </form>
     </nav>
     <nav class="mobile-header">
-        <button class="mobile-sidebar-opener header-btn" aria-expanded="false">
-            <svg class="hamburger" viewbox="0 0 100 100" width="30px">
-                <rect class="line top-line" 
-                width="80" height="10" 
-                x="10" y="30" rx="5">
-                </rect>
-                <rect class="line bottom-line" 
-                width="80" height="10" 
-                x="10" y="70" rx="5">
-                </rect>
-            </svg>
+        <button class="mobile-sidebar-opener header-btn" aria-expanded="false" aria-pressed="false" onclick="openNavMenu()">
+            <i class="fa-regular fa-map"></i>
+            <script>
+                const mobileButton = document.querySelector('.mobile-sidebar-opener');
+                const navIcon = document.querySelector('.fa-map');
+    
+    mobileButton.addEventListener('click', () => {
+    const isOpened = mobileButton.getAttribute('aria-expanded');
+    if (isOpened === 'false') {
+    mobileButton.setAttribute('aria-expanded', 'true');
+    navIcon.classList.remove('fa-regular');
+    navIcon.classList.add('fa-solid');
+    } else {
+        mobileButton.setAttribute('aria-expanded', 'false');
+        navIcon.classList.remove('fa-solid');
+        navIcon.classList.add('fa-regular');
+    }
+    });
+            </script>
         </button>
-        <script>
-            const mobileButton = document.querySelector('.mobile-sidebar-opener');
-
-mobileButton.addEventListener('click', () => {
-const isOpened = mobileButton.getAttribute('aria-expanded');
-if (isOpened === 'false') {
-mobileButton.setAttribute('aria-expanded', 'true');
-} else {
-mobileButton.setAttribute('aria-expanded', 'false');
-}
-});
-        </script>
+        
         <div class="page-logo-title-container">
             <span class="page-title">Loop</span>
         </div>
         <button class="mobile-settings-button header-btn" onclick="openSettings()">
-            <i class="fa-solid fa-sliders"></i>
+            <i class="fa-solid fa-gear"></i>
         </button>
     </nav>
 </header>
@@ -215,7 +213,7 @@ mobileButton.setAttribute('aria-expanded', 'false');
             <i class="fa-solid fa-plus"></i>
         </button>
         <button class="section-btns" id="search-menu-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-search"></i>
         </button>
         <button class="section-btns" id="messages-btn">
             <i class="fa-solid fa-envelope"></i>

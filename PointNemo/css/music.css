@@ -34,6 +34,10 @@ html, body {
   font-family: profont;
   src: url("../fonts/Maverix-Regular.ttf");
 }
+@font-face {
+  font-family: loop;
+  src: url("../fonts/Koeltoerals-owwaz.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +56,7 @@ html, body {
   --button-background: #000;
   --input-background: #0e0e0e;
   --b-f-button-background: #e1e1e1ce;
+  --blur-sidebackground: rgba(244, 244, 244, 0.6);
   --button-border: 1px solid #969090;
   --universal-border: 1.75px solid rgb(211, 211, 211);
   --nav-border: 1.75px solid rgb(201, 201, 201);
@@ -93,6 +98,7 @@ html, body {
   --button-background: #fff;
   --input-background: #0e0e0e;
   --b-f-button-background: #1a1a1a;
+  --blur-sidebackground: rgba(12,12,12,0.6);
   --button-border: 1px solid #969090;
   --universal-border: 1.75px solid #1f1f1f;
   --nav-border: 1.75px solid rgb(61, 61, 61);
@@ -167,15 +173,17 @@ header.main-page-header {
 }
 
 span.page-title {
-  font-size: clamp(1.1rem, 1.3333rem + 2.2222vw, 1.7rem);
+  font-size: 2.2rem;
   background: var(--header-title-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: neue;
+  font-family: loop;
   height: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
   display: grid;
   place-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 a {
@@ -252,6 +260,7 @@ button {
   color: var(--ff-icon-color);
   background: transparent;
   border: none;
+  -webkit-margin-top-collapse: collapse;
 }
 
 button#appearance-btn {
@@ -641,16 +650,20 @@ label.next-up-label {
   display: none;
 }
 
+.mobile-sidebar {
+  display: none;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1100px) {
   :root {
     --button-border: 1px solid #969090;
-    --universal-border: 1px solid rgb(211, 211, 211);
+    --universal-border: 1px solid rgb(244, 244, 244);
     --nav-border: 1px solid rgb(201, 201, 201);
     --nav-hover-border: 1px solid rgb(128, 128, 128);
   }
   .darkmode {
     --button-border: 1px solid #969090;
-    --universal-border: 1px solid #1f1f1f;
+    --universal-border: 1px solid #141414;
     --nav-border: 1px solid rgb(61, 61, 61);
     --nav-hover-border: 1px solid rgb(230, 230, 230);
   }
@@ -675,7 +688,6 @@ label.next-up-label {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    height: 100%;
   }
   .header-btn {
     font-size: clamp(1.2rem, 1.2vw, 1.4rem);
@@ -696,6 +708,26 @@ label.next-up-label {
   */
   .col-1, .col-2, .col-3 {
     display: none;
+  }
+  .mobile-sidebar {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 51.75px);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    background: var(--blur-sidebackground);
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+  }
+  .translated {
+    transform: translateX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  .sidebar-content-wrapper {
+    width: 75%;
+    height: 100%;
+    background: var(--sidebar-background);
   }
   .mobile-tab-menu-bottom {
     position: fixed;

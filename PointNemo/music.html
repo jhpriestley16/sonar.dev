@@ -61,6 +61,14 @@
         <button class="mobile-sidebar-opener header-btn" aria-expanded="false" aria-pressed="false" onclick="openNavMenu()">
             <i class="fa-regular fa-map"></i>
             <script>
+                function openNavMenu() {
+  var sidebar = document.getElementById("mobileSidebar");
+
+  // Toggle the "translated" class on the sidebar
+  sidebar.classList.toggle("translated");
+}
+            </script>
+            <script>
                 const mobileButton = document.querySelector('.mobile-sidebar-opener');
                 const navIcon = document.querySelector('.fa-map');
     
@@ -189,15 +197,21 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
-    <div class="appearance-buttons-container">
-        <div class="appearance-btn-group">
-            <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-            <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-            <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-content-wrapper">
+
         </div>
     </div>
-    <div class="mobile-settings-menu-opened">
-
+    <div class="settings-sidebar" id="settingsSidebar">
+        <div class="settings-sidebar-content-wrapper">
+            <div class="appearance-buttons-container">
+                <div class="appearance-btn-group">
+                    <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+                    <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+                    <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 

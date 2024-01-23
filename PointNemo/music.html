@@ -92,6 +92,13 @@
         </div>
         <button class="mobile-settings-button header-btn" onclick="openSettings()">
             <i class="fa-solid fa-gear"></i>
+            <script>
+                function openSettings() {
+  var settings = document.getElementById("settingsSidebar");
+
+  settings.classList.toggle("settings-translated");
+}
+            </script>
         </button>
     </nav>
 </header>
@@ -199,11 +206,50 @@
     </div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-content-wrapper">
-
-        </div>
-    </div>
-    <div class="settings-sidebar" id="settingsSidebar">
-        <div class="settings-sidebar-content-wrapper">
+            <div class="sidebar-top-text-wrapper">
+                <h1>Array Network</h1>
+                <p>Explore Array</p>
+            </div>
+            <div class="nav-list-wrapper">
+            <div class="nav-list-container">
+                <label class="navigation-type-label">Array</label>
+                <ul class="nav-list-ul">
+                    <a class="nav-list-link" href="index.html">
+                        <li class="nav-list-item">
+                            Array Home
+                        </li>
+                    </a>
+                    <a class="nav-list-link" href="quizzes.html">
+                        <li class="nav-list-item">
+                            Nebula - Quizzes
+                        </li>
+                    </a>
+                    <a class="nav-list-link" href="games.html">
+                        <li class="nav-list-item">
+                            Games
+                        </li>
+                   </a>
+            </div>
+            <div class="nav-list-container">
+                <label class="navigation-type-label">Array Account</label>
+                <ul class="nav-list-ul">
+                    <a class="nav-list-link" href="#">
+                        <li class="nav-list-item">
+                            Profile
+                        </li>
+                    </a>
+                    <a class="nav-list-link" href="#">
+                        <li class="nav-list-item">
+                            Friends
+                        </li>
+                    </a>
+                    <a class="nav-list-link" href="#">
+                        <li class="nav-list-item">
+                            Array Settings
+                        </li>
+                   </a>
+            </div>
+           </div>
             <div class="appearance-buttons-container">
                 <div class="appearance-btn-group">
                     <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
@@ -211,6 +257,11 @@
                     <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="settings-sidebar" id="settingsSidebar">
+        <div class="settings-sidebar-content-wrapper">
+            
         </div>
     </div>
 </main>

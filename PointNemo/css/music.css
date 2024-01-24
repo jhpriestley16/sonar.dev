@@ -52,7 +52,7 @@ html, body {
   --body-background: #ffffff;
   --sidebar-background: rgb(252, 252, 252);
   --nav-background: #fcfcfc;
-  --nav-hover-background: #bbbbbb;
+  --nav-hover-background: #bbbbbb92;
   --quiz-btn-background: #b9b0b0;
   --button-background: #000;
   --input-background: #0e0e0e;
@@ -95,7 +95,7 @@ html, body {
   --body-background: rgb(8,8,8);
   --sidebar-background: rgb(4,4,4);
   --nav-background: #0c0c0c;
-  --nav-hover-background: #bbbbbb;
+  --nav-hover-background: #60606083;
   --quiz-btn-background: #b9b0b0;
   --button-background: #fff;
   --input-background: #0e0e0e;
@@ -737,7 +737,7 @@ label.next-up-label {
     border-right: var(--universal-border);
   }
   .sidebar-top-text-wrapper {
-    height: 75px;
+    height: 50px;
     display: block;
     padding: 0.3rem 0.6rem;
   }
@@ -748,6 +748,7 @@ label.next-up-label {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: neue;
+    letter-spacing: -0.03rem;
   }
   p {
     color: var(--ff-clr);
@@ -763,16 +764,33 @@ label.next-up-label {
     margin: 0.3rem 0;
   }
   label.navigation-type-label {
-    font-size: 16px;
-    font-family: text-labels;
-    color: var(--ff-clr);
+    font-size: 18px;
+    font-family: neue;
+    color: #828282;
+    text-align: center;
   }
   ul.nav-list-ul {
-    padding-inline: 1.3rem;
+    padding-inline: 0.3rem;
   }
   li.nav-list-item {
     list-style-type: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 22px;
+    font-family: neue;
+    padding-inline: 0.3rem;
+    transition: margin-left 0.3s ease-out;
+  }
+  .nav-list-item i {
+    width: 30px;
+    text-align: left;
+    font-size: 18px;
+  }
+  li.nav-list-item:hover {
+    background: var(--nav-hover-background);
+    margin-left: 0.3rem;
+    transition: margin-left 0.2s ease-in-out;
   }
   a.nav-list-link:hover {
     background: var(--nav-hover-background);

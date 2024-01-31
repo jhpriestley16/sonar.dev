@@ -112,13 +112,25 @@
         <div class="player-status-container">
             <span class="player-status-text">Now Playing...</span>
         </div>
+        <div class="player-container">
         <div class="song-art-container">
             <img src="img/ah.gif" class="song-art" alt="Song Art" onclick="toggleSongExpand()">
             <button class="expand-btn" onclick="toggleSongExpand()">
                 <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
             </button>
         </div>
-        <div class="playback-container">
+            <div class="playback-container">
+            <div class="song-information-container">
+                <span class="player-song-artist">
+                    The Weeknd
+                </span>
+                <span class="player-song-dash">
+                    -
+                </span>
+                <span class="player-song-title">
+                    Save Your Tears
+                </span>
+            </div>
             <div class="playback-timeline">
                 <input class="song-timeline" type="range">
                 <div class="time-labels">
@@ -155,15 +167,18 @@
                     </button>
                 </div>
             </div>
-            <div class="appearance-buttons-container">
-                <div class="appearance-btn-group">
-                    <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-                    <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-                    <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
-                </div>
+            </div>
+            
+        </div>
+        <div class="appearance-buttons-container">
+            <div class="appearance-btn-group">
+                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
+                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
+                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
             </div>
         </div>
-        <div class="queue-menu-tab">
+
+        <!-- <div class="queue-menu-tab">
             <div class="queue-tab-icon">
                 <i class="fa-solid fa-diagram-next"></i>
             </div>
@@ -183,7 +198,7 @@
             <div class="post-btn-text-wrapper">
                 Post to Loop
             </div>
-        </button>
+        </button> -->
 
     </div>
 
@@ -191,6 +206,7 @@
 
     </div>
 
+    <!--
     <div class="col-3 misc-col" id="col-inline">
         <div class="queue-menu-expanded">
             <button class="close-queue-menu" onclick="toggleQueueMenu()">
@@ -198,6 +214,7 @@
             </button>
         </div>
     </div>
+    -->
 
     <div class="music-player-expanded" aria-expanded="false" style="visibility: hidden;">
         <button class="close-expanded-music-player" onclick="toggleSongExpand()">

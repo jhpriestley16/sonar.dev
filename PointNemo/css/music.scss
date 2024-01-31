@@ -290,7 +290,7 @@ main{
 .player-status-container{
   display: block;
   margin-bottom: .5rem;
-  width: calc(100% - 1.5rem);
+  width: 100%;
 }
 span.player-status-text{
   font-size: clamp(1rem, 1.2rem, 1.4rem);
@@ -313,9 +313,11 @@ span.player-status-text{
   height: 100%;
   border-radius: 8px;
   border: var(--nav-border);
-  object-fit: cover;
+  object-fit: contain;
   transition: transform .2s ease-in;
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 .expand-btn{
   visibility: hidden;
@@ -334,10 +336,11 @@ span.player-status-text{
   color: var(--expand-button);
 }
 img.song-art{
-  border-radius: 8px;
-  aspect-ratio: 1;
+  border-radius: 7px;
+  image-resolution: inherit;
   width: 100%;
-  display: block;
+  aspect-ratio: 1;
+  transition: transform .2s ease-in;
 }
 .song-art-container:hover{
   transform: scale(0.98);
@@ -347,6 +350,9 @@ img.song-art{
   visibility: visible;
   opacity: 1;
   transition: opacity .1s ease;
+}
+.song-art-container:hover img{
+  transition: transform .2s ease-in;
 }
 .expand-btn i{
   transition: color .1s ease;
@@ -358,7 +364,7 @@ img.song-art{
 .playback-container{
   display: flex;
   flex-grow: 1;
-  margin: .5rem 1rem;
+  margin: 0rem 1rem;
   flex-direction: column;
   align-items: center;
 }
@@ -388,6 +394,9 @@ button.back-forth{
 }
 button.pause-button{
   font-size: 1.5rem;
+}
+.fa-play{
+  font-size: 1.3rem;
 }
 button#playback-button{
   margin-inline: .3rem;

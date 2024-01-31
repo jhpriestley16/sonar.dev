@@ -143,7 +143,7 @@
                     <i class="fa-solid fa-backward-step"></i>
                 </button>
                 <button class="pause-button" id="playback-button">
-                    <i class="fa-solid fa-pause"></i>
+                    <i id="pause-play" class="fa-solid fa-play"></i>
                 </button>
                 <button class="forward-button back-forth" id="playback-button">
                     <i class="fa-solid fa-forward-step"></i>
@@ -311,6 +311,22 @@
 
 
 
-<script src="js/global.js"></script>
+<script src="js/global.js">
+    // Get the elements by their IDs
+    var myIcon = document.getElementById("pause-play");
+                    var playbackButton = document.getElementById("playback-button");
+                
+                    // Add an event listener to the button
+                    toggleButton.addEventListener("click", function() {
+                        // Toggle the class name
+                        if (myIcon.classList.contains("fa-play")) {
+                            myIcon.classList.remove("fa-play");
+                            myIcon.classList.add("fa-pause");
+                        } else {
+                            myIcon.classList.remove("fa-pause");
+                            myIcon.classList.add("fa-play");
+                        }
+                    });
+</script>
 </body>
 </html>

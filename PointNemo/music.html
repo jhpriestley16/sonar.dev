@@ -142,8 +142,8 @@
                 <button class="backward-button back-forth" id="playback-button">
                     <i class="fa-solid fa-backward-step"></i>
                 </button>
-                <button class="pause-button" id="playback-button">
-                    <i id="pause-play" class="fa-solid fa-play"></i>
+                <button class="pause-button" id="playButton">
+                    <i id="pausePlay" class="fa-solid fa-play"></i>
                 </button>
                 <button class="forward-button back-forth" id="playback-button">
                     <i class="fa-solid fa-forward-step"></i>
@@ -170,6 +170,29 @@
             </div>
             
         </div>
+
+        <div class="queue-list-container">
+            <div class="queue-list-info-and-buttons-container">
+                <div class="queued-song-art-container">
+                    <img class="queued-song-art" src="img/33.-Kanye-West-‘My-Beautiful-Dark-Twisted-Fantasy-2010-album-art-billboard-1240.webp">
+                </div>
+            <div class="queue-list-song-artist-information">
+                <label for="queue-list-song-artist-information" class="next-label">Next Up</label>
+                <div class="song-information-container">
+                    <span class="player-song-artist">
+                        Kanye West
+                    </span>
+                    <span class="player-song-dash">
+                        -
+                    </span>
+                    <span class="player-song-title">
+                        Devil In A New Dress
+                    </span>
+                </div>
+            </div>
+            </div>
+        </div>
+
         <div class="appearance-buttons-container">
             <div class="appearance-btn-group">
                 <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
@@ -177,28 +200,6 @@
                 <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
             </div>
         </div>
-
-        <!-- <div class="queue-menu-tab">
-            <div class="queue-tab-icon">
-                <i class="fa-solid fa-diagram-next"></i>
-            </div>
-            <div class="queue-tab-text-wrapper">
-                <label class="next-up-label">Next up...</label>
-                <div class="song-info-wrapper">
-                    <p class="queue-song-title">After Hours </p>
-                    - 
-                    <p class="queue-artist-name"> The Weeknd</p>
-                </div>
-            </div>
-        </div>
-        <button class="make-a-post-btn" onclick="beginPost()">
-            <div class="icon-wrapper">
-                <i class="fa-solid fa-pen-ruler"></i>
-            </div>
-            <div class="post-btn-text-wrapper">
-                Post to Loop
-            </div>
-        </button> -->
 
     </div>
 
@@ -311,22 +312,6 @@
 
 
 
-<script src="js/global.js">
-    // Get the elements by their IDs
-    var myIcon = document.getElementById("pause-play");
-                    var playbackButton = document.getElementById("playback-button");
-                
-                    // Add an event listener to the button
-                    toggleButton.addEventListener("click", function() {
-                        // Toggle the class name
-                        if (myIcon.classList.contains("fa-play")) {
-                            myIcon.classList.remove("fa-play");
-                            myIcon.classList.add("fa-pause");
-                        } else {
-                            myIcon.classList.remove("fa-pause");
-                            myIcon.classList.add("fa-play");
-                        }
-                    });
-</script>
+<script src="js/global.js"></script>
 </body>
 </html>

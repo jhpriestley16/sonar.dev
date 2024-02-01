@@ -41,7 +41,7 @@
 <header class="main-page-header">
     <nav class="external-page-navigation">
         <div class="page-logo-title-container">
-            <span class="page-title">Loop</span>
+            <span class="page-title">loop</span>
         </div>
         <div class="appearance-buttons-container">
             <div class="appearance-btn-group">
@@ -88,7 +88,7 @@
         </button>
         
         <div class="page-logo-title-container">
-            <span class="page-title">Loop</span>
+            <span class="page-title">loop</span>
         </div>
         <button class="mobile-settings-button header-btn" onclick="openSettings()">
             <i class="fa-solid fa-gear"></i>
@@ -171,7 +171,25 @@
             
         </div>
 
-        <div class="queue-list-container">
+        <div class="queue-list-container" id="toggleContainer">
+            <div class="queue-settings">
+                <button class="queue-opener-button" id="toggleButton">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+                <button class="queue-shuffle-button" id="shuffleButton">
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+            </div>
+            <script>
+                var container = document.getElementById("toggleContainer");
+                var button = document.getElementById("toggleButton");
+            
+                button.addEventListener("click", function() {
+                    // Toggle between 12.5% and 42.5%
+                    container.style.height = (container.style.height === "52.5%") ? "22.5%" : "52.5%";
+                    button.classList.toggle("opened");
+                });
+            </script>
             <div class="queue-list-info-and-buttons-container">
                 <div class="queued-song-art-container">
                     <img class="queued-song-art" src="img/33.-Kanye-West-‘My-Beautiful-Dark-Twisted-Fantasy-2010-album-art-billboard-1240.webp">
@@ -190,6 +208,21 @@
                     </span>
                 </div>
             </div>
+            </div>
+            <div class="queued-song" data-order="1">
+                aaaaaa
+            </div>
+            <div class="queued-song" data-order="2">
+                bbbbbb
+            </div>
+            <div class="queued-song" data-order="3">
+                cccccc
+            </div>
+            <div class="queued-song" data-order="4">
+                dddddd
+            </div>
+            <div class="queued-song" data-order="5">
+                eeeeee
             </div>
         </div>
 

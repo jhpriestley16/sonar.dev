@@ -181,11 +181,8 @@ header.main-page-header {
 
 span.page-title {
   font-size: 2.2rem;
-  background: var(--header-title-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: loop;
+  color: var(--ff-js-color);
+  font-family: neue;
   height: clamp(1.5rem, 1.3333rem + 2.2222vw, 2.5rem);
   display: grid;
   place-items: center;
@@ -394,7 +391,7 @@ img.song-art {
 .song-information-container {
   display: flex;
   width: 100%;
-  justify-content: left;
+  justify-content: center;
   margin: 0 0 0.5rem 0;
   white-space: nowrap;
 }
@@ -567,15 +564,19 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 
 .queue-list-container {
-  height: 12.5%;
+  height: 22.5%;
   width: 100%;
   border: var(--nav-border);
   border-radius: 8px;
   margin: 0.5rem 0;
   padding: 0.1rem;
-  background: var(--input-background);
-  box-shadow: 0px -5px 20px var(--preview-shadow) inset;
-  overflow: hidden;
+  background: var(--queue-info-background);
+  overflow: scroll;
+  transition: height 0.3s ease-in-out;
+}
+
+.queue-opener-button.opened {
+  color: var(--ff-js-color);
 }
 
 .queue-list-info-and-buttons-container {
@@ -583,6 +584,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   height: 50px;
   display: flex;
   gap: 0.15rem;
+  margin-bottom: 0.5rem;
 }
 
 .queue-list-song-artist-information {
@@ -590,7 +592,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   height: 100%;
   border: var(--nav-border);
   border-radius: 6px;
-  background: var(--queue-info-background);
+  background: var(--input-background);
   overflow: visible;
 }
 
@@ -602,7 +604,6 @@ input[type=range]::-webkit-slider-thumb:hover {
   top: -12.5%;
   left: 45%;
   z-index: 10;
-  text-decoration: underline;
 }
 
 .queued-song-art-container {
@@ -617,6 +618,16 @@ input[type=range]::-webkit-slider-thumb:hover {
   width: 100%;
   display: block;
   border-radius: 4px;
+}
+
+.queued-song {
+  height: 50px;
+  width: 99%;
+  border: var(--nav-border);
+  border-radius: 6px;
+  background: var(--input-background);
+  margin: 0.3rem 0;
+  cursor: pointer;
 }
 
 .col-2 {

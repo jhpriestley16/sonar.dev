@@ -373,7 +373,7 @@ img.song-art{
 .playback-container{
   display: flex;
   flex-grow: 1;
-  margin: 0rem 1rem;
+  margin: 0rem auto 0 .3rem;
   flex-direction: column;
   align-items: center;
 }
@@ -529,17 +529,39 @@ input[type=range]::-webkit-slider-thumb:hover{
   background: var(--volume-hover);
 }
 .queue-list-container{
-  height: 22.5%;
+  height: 80px;
   width: 100%;
   border: var(--nav-border);
   border-radius: 8px;
   margin: .5rem 0;
   padding: .1rem;
   background: var(--queue-info-background);
-  overflow: scroll;
+  overflow: hidden;
   transition: height .3s ease-in-out;
 }
-.queue-opener-button.opened{
+.queue-settings{
+  width: calc(100% - .6rem);
+  height: 20px;
+  margin-bottom: .2rem;
+  padding-inline: .2rem;
+  border: var(--nav-border);
+  border-radius: 6px;
+  background: var(--input-background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+.queue-settings button i{
+  color: var(--ff-clr);
+}
+.queue-label{
+  font-family: text-labels;
+  color: var(--ff-clr);
+  font-size: 15px;
+}
+.queue-opener-button.opened i{
   color: var(--ff-js-color);
 }
 .queue-list-info-and-buttons-container{

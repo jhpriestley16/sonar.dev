@@ -159,12 +159,6 @@
                     <button class="connect-device-btn">
                         <i class="fa-solid fa-tv"></i>
                     </button>
-                    <button class="open-queue-menu-btn">
-                        <i class="fa-solid fa-list"></i>
-                    </button>
-                    <button class="shuffle-play-button">
-                        <i class="fa-solid fa-shuffle"></i>
-                    </button>
                 </div>
             </div>
             </div>
@@ -173,12 +167,15 @@
 
         <div class="queue-list-container" id="toggleContainer">
             <div class="queue-settings">
-                <button class="queue-opener-button" id="toggleButton">
-                    <i class="fa-solid fa-list"></i>
-                </button>
-                <button class="queue-shuffle-button" id="shuffleButton">
-                    <i class="fa-solid fa-shuffle"></i>
-                </button>
+                <label class="queue-label">Your Queue</label>
+                <div class="queue-button-container">
+                    <button class="queue-opener-button" id="toggleButton">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                    <button class="queue-shuffle-button" id="shuffleButton">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+                </div>
             </div>
             <script>
                 var container = document.getElementById("toggleContainer");
@@ -186,7 +183,8 @@
             
                 button.addEventListener("click", function() {
                     // Toggle between 12.5% and 42.5%
-                    container.style.height = (container.style.height === "52.5%") ? "22.5%" : "52.5%";
+                    container.style.height = (container.style.height === "52.5%") ? "80px" : "52.5%";
+                    container.style.overflow = (container.style.overflow === "scroll") ? "hidden" : "scroll";
                     button.classList.toggle("opened");
                 });
             </script>

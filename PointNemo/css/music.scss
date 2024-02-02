@@ -541,6 +541,9 @@ input[type=range]::-webkit-slider-thumb:hover{
   overflow: hidden;
   transition: height .1s ease-in-out;
 }
+.queue-list-container::-webkit-scrollbar{
+  display: none;
+}
 .queue-settings{
   width: calc(100% - .6rem);
   height: 20px;

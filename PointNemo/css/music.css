@@ -575,6 +575,10 @@ input[type=range]::-webkit-slider-thumb:hover {
   transition: height 0.1s ease-in-out;
 }
 
+.queue-list-container::-webkit-scrollbar {
+  display: none;
+}
+
 .queue-settings {
   width: calc(100% - 0.6rem);
   height: 20px;

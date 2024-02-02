@@ -196,18 +196,32 @@
                 <label class="row-label">
                     Row Label
                 </label>
-                    <button class="back-btn back-forward" id="backBtn" >
+                    <button class="back-btn back-forward" id="backBtn" onclick="scrollBack()">
                         <i class="gg-chevron-left" ></i>
                     </button>
-                    <button class="forward-btn back-forward" id="forwardBtn" >
+                    <script>
+                        function scrollBack() {
+                            var scrollableBox = document.getElementById("quizCont");
+                            scrollableBox.scrollLeft = 0;
+                        }
+                    </script>
+                    <button class="forward-btn back-forward" id="forwardBtn" onclick="scrollRight()">
                         <i class="gg-chevron-right"></i>
                     </button>
+                    <script>
+                        function scrollRight() {
+                            var scrollableBox = document.getElementById("quizCont");
+                            var halfWidth = scrollableBox.scrollWidth / 2;
+                            scrollableBox.scrollLeft = halfWidth;
+                        }
+                    </script>
                     <button class="see-all-button">
                         See All...
                     </button>
                 
 
-                <div class="quiz-container" id="quizCont">
+                <div class="quiz-container" id="quizCont" style="overflow: hidden;">
+                    <div class="quiz-item"></div>
                     <div class="quiz-item"></div>
                     <div class="quiz-item"></div>
                     <div class="quiz-item"></div>

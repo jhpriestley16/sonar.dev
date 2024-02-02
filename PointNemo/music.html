@@ -109,9 +109,6 @@
 <main>
 
     <div class="col-1 player-col open-state" id="col-inline">
-        <div class="player-status-container">
-            <span class="player-status-text">Now Playing...</span>
-        </div>
         <div class="player-container">
         <div class="song-art-container">
             <img src="img/ah.gif" class="song-art" alt="Song Art" onclick="toggleSongExpand()">
@@ -180,12 +177,17 @@
             <script>
                 var container = document.getElementById("toggleContainer");
                 var button = document.getElementById("toggleButton");
+                var queuedSong = document.getElementsByClassName("queued-song");
             
                 button.addEventListener("click", function() {
                     // Toggle between 12.5% and 42.5%
                     container.style.height = (container.style.height === "52.5%") ? "80px" : "52.5%";
                     container.style.overflow = (container.style.overflow === "scroll") ? "hidden" : "scroll";
                     button.classList.toggle("opened");
+
+                    if(container.style.overflow === "hidden"){
+                        container.scrollTop = 0;
+                    } 
                 });
             </script>
             <div class="queue-list-info-and-buttons-container">

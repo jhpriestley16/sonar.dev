@@ -7,6 +7,13 @@ console.log(darkMode);
 //check if dark mode is enabled
 //if enabled we want to turn it off
 //if disabled turn it on
+const enableGreyMode = () => {
+    //add class darkmode to the body
+    document.body.classList.add('greymode');
+    //update darkmode in the local storage
+    localStorage.setItem('greyMode', 'enabled');
+}; 
+
 
 const enableDarkMode = () => {
     //add class darkmode to the body
@@ -26,7 +33,7 @@ if (darkMode === 'enabled') {
     enableDarkMode();
 }
 
-const googleSignIn = document.querySelector('.g_id_signin');
+const googleSignIn = document.getElementsByClassName('g_id_signin');
 const gSignInDark = googleSignIn.getAttribute('data-theme');
 
 darkModeToggle.addEventListener('click', () => {

@@ -285,14 +285,14 @@ main {
   align-items: center;
 }
 
-.player-status-container {
+/*
+.player-status-container{
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   width: 100%;
 }
-
-span.player-status-text {
-  font-size: 1.2rem;
+span.player-status-text{
+  font-size: clamp(1rem, 1.2rem, 1.4rem);
   background: var(--header-subtitle-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -301,7 +301,7 @@ span.player-status-text {
   text-align: left;
   padding: 0;
 }
-
+*/
 .player-container {
   height: 20%;
   width: calc(100% - 1rem);
@@ -572,7 +572,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   padding: 0.1rem;
   background: var(--queue-info-background);
   overflow: hidden;
-  transition: height 0.3s ease-in-out;
+  transition: height 0.1s ease-in-out;
 }
 
 .queue-settings {

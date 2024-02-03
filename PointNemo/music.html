@@ -30,6 +30,7 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/info.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <html>
 <body>
@@ -251,9 +252,42 @@
     -->
 
     <div class="music-player-expanded" aria-expanded="false" style="visibility: hidden;">
-        <button class="close-expanded-music-player" onclick="toggleSongExpand()">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
+<div class="bg"></div>
+<div class="bg hidden"></div>
+
+<script>
+    function newGradient() {
+  var c1 = {
+    r: Math.floor(Math.random()*140),
+    g: Math.floor(Math.random()*140),
+    b: Math.floor(Math.random()*140)
+  };
+  var c2 = {
+    r: Math.floor(Math.random()*140),
+    g: Math.floor(Math.random()*140),
+    b: Math.floor(Math.random()*140)
+  };
+  c1.rgb = 'rgb('+c1.r+','+c1.g+','+c1.b+')';
+  c2.rgb = 'rgb('+c2.r+','+c2.g+','+c2.b+')';
+  return 'radial-gradient(at top left, '+c1.rgb+', '+c2.rgb+')';
+}
+
+function rollBg() {
+  $('.bg.hidden').css('background', newGradient());
+  $('.bg').toggleClass('hidden');
+}
+
+$(document).ready(function() {
+  rollBg();
+  setInterval(rollBg, 3000);
+});
+</script>
+                <button class="close-expanded-music-player" onclick="toggleSongExpand()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            <div class="expanded-music-player">
+                
+            </div>
     </div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-content-wrapper">

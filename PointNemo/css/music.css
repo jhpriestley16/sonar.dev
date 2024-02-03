@@ -680,9 +680,10 @@ input[type=range]::-webkit-slider-thumb:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(15, 15, 15, 0.486);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  background: rgba(6, 6, 6, 0.781);
+  z-index: 10;
 }
 
 .close-expanded-music-player {
@@ -691,12 +692,14 @@ input[type=range]::-webkit-slider-thumb:hover {
   right: 0.5rem;
   border-radius: 4px;
   border: none;
-  background: rgba(221, 221, 221, 0.431372549);
+  background: rgba(221, 221, 221, 0.1960784314);
+  color: #919191;
   aspect-ratio: 1;
   width: 2rem;
   font-size: 1.5rem;
   display: grid;
   place-items: center;
+  z-index: 110;
 }
 
 .close-expanded-music-player {
@@ -706,6 +709,25 @@ input[type=range]::-webkit-slider-thumb:hover {
 .close-expanded-music-player:hover i {
   color: #f8f8f8;
   transition: color 0.2s ease;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  transition: opacity 2s;
+  position: absolute;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.expanded-music-player {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  background: rgba(6, 6, 6, 0.697);
 }
 
 .queue-menu-expanded {

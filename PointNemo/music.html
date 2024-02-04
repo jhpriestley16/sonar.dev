@@ -31,6 +31,9 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
 </head>
 <html>
 <body>
@@ -251,25 +254,35 @@
     </div>
     -->
 
-    <div class="music-player-expanded" aria-expanded="false" style="visibility: hidden;">
+
+
+
+
+
+
+
+
+
+
+    <div class="music-player-expanded" aria-expanded="false" style="display: none;">
 <div class="bg"></div>
 <div class="bg hidden"></div>
 
 <script>
     function newGradient() {
   var c1 = {
-    r: Math.floor(Math.random()*140),
-    g: Math.floor(Math.random()*140),
-    b: Math.floor(Math.random()*140)
+    r: Math.floor(Math.random()*100),
+    g: Math.floor(Math.random()*100),
+    b: Math.floor(Math.random()*100)
   };
   var c2 = {
-    r: Math.floor(Math.random()*140),
-    g: Math.floor(Math.random()*140),
-    b: Math.floor(Math.random()*140)
+    r: Math.floor(Math.random()*70),
+    g: Math.floor(Math.random()*70),
+    b: Math.floor(Math.random()*70)
   };
   c1.rgb = 'rgb('+c1.r+','+c1.g+','+c1.b+')';
   c2.rgb = 'rgb('+c2.r+','+c2.g+','+c2.b+')';
-  return 'radial-gradient(at top left, '+c1.rgb+', '+c2.rgb+')';
+  return 'linear-gradient(to right, '+c1.rgb+', '+c2.rgb+')';
 }
 
 function rollBg() {
@@ -282,13 +295,93 @@ $(document).ready(function() {
   setInterval(rollBg, 3000);
 });
 </script>
+                
+            <div class="expanded-music-player">
                 <button class="close-expanded-music-player" onclick="toggleSongExpand()">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-            <div class="expanded-music-player">
-                
+                <article class="expanded-player-song-cover-art-container">
+                    <div class="expanded-player-song-cover-art-placement">
+                        <img class="expanded-player-song-cover-art-img" src="img/after-hours-album-cover.jpg">
+                    </div>
+                </article>
+                <article class="expanded-player-song-information-settings-buttons-container">
+                    <div class="expanded-player-song-information-wrapper">
+                        <div class="expanded-player-song-information-placement">
+                            <div class="expanded-player-song-information">
+                                <a href="#" class="artist-profile-link">
+                                    <p class="song-artist-name-text">
+                                        The Weeknd
+                                    </p>
+                                </a>
+                                    -
+                                    <p class="song-title-name-text">
+                                       Save Your Tears 
+                                    </p>
+                                    <div class="explicit-icon-container">
+                                        <i class="fa-solid fa-e"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expanded-player-playback-buttons-container">
+                        <div class="expanded-player-playback-buttons-placement">
+                            <div class="expanded-player-playback-button-group">
+                                <button class="expanded-player-playback-button expanded-back-for-button">
+                                    <i class="fa-solid fa-backward"></i>
+                                </button>
+                                <button class="expanded-player-playback-button expanded-pause-button">
+                                    <i class="fa-solid fa-pause"></i>
+                                </button>
+                                <button class="expanded-player-playback-button expanded-back-for-button">
+                                    <i class="fa-solid fa-forward"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <article class="expanded-music-player-links-streaming-platforms-container">
+                        <a href="#" class="expanded-music-player-links-streaming-platforms-spotify">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                    </article>
+                        <!-- <div id="range">
+                            <span id="currentVal">50</span>
+                          </div>
+                          <script>
+                            (function() {
+$("#range").slider({
+range: "min",
+max: 100,
+value: 50,
+slide: function(e, ui) {
+$("#currentVal").html(ui.value);
+}
+});
+}).call(this);
+                          </script> -->
+                </article>
+        
+                <div id='rg_embed_link_4694697' class='rg_embed_link' data-song-id='4694697'>
+                </div> 
+                <script crossorigin src='//genius.com/songs/4694697/embed.js'></script>
+
             </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-content-wrapper">
             <div class="sidebar-top-text-wrapper">

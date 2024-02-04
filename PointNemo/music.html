@@ -271,14 +271,14 @@
 <script>
     function newGradient() {
   var c1 = {
-    r: Math.floor(Math.random()*100),
-    g: Math.floor(Math.random()*100),
-    b: Math.floor(Math.random()*100)
+    r: Math.floor(Math.random()*150),
+    g: Math.floor(Math.random()*150),
+    b: Math.floor(Math.random()*150)
   };
   var c2 = {
-    r: Math.floor(Math.random()*70),
-    g: Math.floor(Math.random()*70),
-    b: Math.floor(Math.random()*70)
+    r: Math.floor(Math.random()*150),
+    g: Math.floor(Math.random()*150),
+    b: Math.floor(Math.random()*150)
   };
   c1.rgb = 'rgb('+c1.r+','+c1.g+','+c1.b+')';
   c2.rgb = 'rgb('+c2.r+','+c2.g+','+c2.b+')';
@@ -314,12 +314,14 @@ $(document).ready(function() {
                                         The Weeknd
                                     </p>
                                 </a>
-                                    -
-                                    <p class="song-title-name-text">
-                                       Save Your Tears 
-                                    </p>
-                                    <div class="explicit-icon-container">
-                                        <i class="fa-solid fa-e"></i>
+                                    <p>-</p>
+                                    <div class="song-title-name-text">
+                                        <p class="song-title-name-text-p">
+                                            Save Your Tears 
+                                         </p>
+                                         <div class="explicit-icon-container">
+                                             <i class="fa-solid fa-e"></i>
+                                         </div>
                                     </div>
                             </div>
                         </div>
@@ -361,9 +363,9 @@ $("#currentVal").html(ui.value);
                           </script> -->
                 </article>
         
-                <div id='rg_embed_link_4694697' class='rg_embed_link' data-song-id='4694697'>
+                <!-- <div id='rg_embed_link_4694697' class='rg_embed_link' data-song-id='4694697'>
                 </div> 
-                <script crossorigin src='//genius.com/songs/4694697/embed.js'></script>
+                <script crossorigin src='//genius.com/songs/4694697/embed.js'></script> -->
 
             </div>
     </div>
@@ -445,7 +447,7 @@ $("#currentVal").html(ui.value);
             <button class="section-btns" id="home-btn">
                 <i class="fa-solid fa-house"></i>
             </button>
-            <button class="section-btns" id="library-btn">
+            <button class="section-btns" id="library-btn" onclick="toggleSongExpand()">
                 <i class="fa-solid fa-music"></i>
             </button>
             <button class="section-btns" id="post-btn">

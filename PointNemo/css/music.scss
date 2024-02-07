@@ -868,19 +868,45 @@ input[type=range]::-webkit-slider-thumb:hover{
 }
 hr{
   margin: .5rem auto;
+  border: none;
+  border-top: var(--expanded-widgets-border);
+
 }
 .expanded-music-queue-song-playing-container{
   height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .expanded-music-queue-song-playing-placement{
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .expanded-music-song-playing{
-  width: 100%;
-  height: 100%;
+  width: 98%;
+  height: 95%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border: var(--expanded-widgets-border);
+  border-radius: 5px;
+  padding: .2rem;
+}
+.expanded-current-song-cover-art{
+  height: 90%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  margin-inline: auto;
+}
+.expanded-current-song-title-artist{
+  height: 90%;
+  flex-grow: 1;
+  border-radius: 4px;
+  margin-inline: auto;
 }
 /*
 #range {

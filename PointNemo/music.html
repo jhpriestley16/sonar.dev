@@ -363,10 +363,61 @@ $("#currentVal").html(ui.value);
                           </script> -->
                 </article>
         
-                <!-- <div id='rg_embed_link_4694697' class='rg_embed_link' data-song-id='4694697'>
+                <div id='rg_embed_link_4694697' class='rg_embed_link' data-song-id='4694697'>
                 </div> 
-                <script crossorigin src='//genius.com/songs/4694697/embed.js'></script> -->
+                <script crossorigin src='//genius.com/songs/4694697/embed.js'></script>
 
+                <article class="expanded-music-queue-container">
+                    <div class="expanded-music-queue-placement">
+                        <div class="expanded-music-queue">
+                            <div class="expanded-music-queue-nav-container">
+                                <nav class="expanded-music-queue-nav">
+                                    <label class="expanded-music-queue-current-song-label">Now Playing...</label>
+                                    <div class="expanded-music-queue-settings-button-group">
+                                        <button class="expanded-music-queue-shuffle-button expanded-music-queue-button" id="queueShuffle" onclick="queueSettingShuffle()">
+                                            <i class="fa-solid fa-shuffle"></i>
+                                            <div class="active-dot active-dot-shuffle"></div>
+                                        </button>
+                                        <button class="expanded-music-queue-repeat-button expanded-music-queue-button" id="queueRepeat" onclick="queueSettingRepeat()">
+                                            <i class="fa-solid fa-repeat"></i>
+                                            <div class="active-dot active-dot-repeat"></div>
+                                        </button>
+                                        <button class="expanded-music-queue-clear-queue-button expanded-music-queue-button" id="queueEmpty" onclick="queueSettingEmpty()">
+                                            <i class="fa-solid fa-trash"></i>
+                                            <div class="active-dot active-dot-clear"></div>
+                                        </button>
+                                        <script>
+                                            function queueSettingShuffle() {
+  var element = document.getElementById("queueShuffle");  element.classList.toggle("selected");
+}
+                                        </script>
+                                        <script>
+                                            function queueSettingRepeat() {
+  var element = document.getElementById("queueRepeat");
+  element.classList.toggle("selected");
+  
+}
+                                        </script>
+                                        <script>
+                                            function queueSettingEmpty() {
+  var element = document.getElementById("queueEmpty");  element.classList.toggle("selected");
+}
+                                        </script>
+                                    </div>
+                                </nav>
+                            </div>
+                            <hr>
+                            <div class="expanded-music-queue-song-playing-container">
+                                <div class="expanded-music-queue-song-playing-placement">
+                                    <div class="expanded-music-song-playing">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </article>
             </div>
     </div>
 

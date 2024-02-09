@@ -55,6 +55,9 @@
             </div>
         </div>
         <form class="search-bar-container">
+            <button class="enlarge-search-button" onclick="enlargeSearch()" type="button">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </button>
             <input class="search-bar" placeholder="Search Loop..." type="search">
             <button class="search-button">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -107,7 +110,108 @@
     </nav>
 </header>
 
+<div class="enlarged-search-pop-out-container" id="enlargedSearchContainer">
+    <button class="close-expanded-music-player" onclick="enlargeSearch()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
 
+    <form class="enlarged-search-box">
+        <input class="enlarged-search-input" type="search" placeholder="Search Loop..." spellcheck="false">
+        <button class="enlarged-search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>     
+    </form>
+
+    </form>
+    <script>
+        function enlargeSearch() {
+var search = document.getElementById("enlargedSearchContainer");
+
+search.classList.toggle("enlarged");
+}
+    </script>
+    <div class="quick-links-container">
+        <label class="quick-links-label" for="ul">Quick Links</label>
+        <ul class="quick-links-ul">
+            <a class="quick-link-a" href="index.html">
+                <li class="quick-link-item">
+                    Home
+                </li>
+            </a>
+            <a class="quick-link-a" href="games.html">
+                <li class="quick-link-item">
+                    Games
+                </li>
+            </a>
+            <a class="quick-link-a" href="quizzes.html">
+                <li class="quick-link-item">
+                    Quizzes
+                </li>
+            </a>
+            <a class="quick-link-a" href="#">
+                <li class="quick-link-item">
+                    Profile
+                </li>
+            </a>
+            <a class="quick-link-a" href="#">
+                <li class="quick-link-item">
+                    Settings
+                </li>
+            </a>
+        </ul>
+    </div>
+    <hr class="enlarged-search-content-separator">
+    <div class="search-results-container">
+        <article class="search-result">
+
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+        <article class="search-result">
+            
+        </article>
+    </div>
+</div>
 
 
 <main>
@@ -415,7 +519,7 @@ $("#currentVal").html(ui.value);
                                                 <p class="expanded-current-song-artist expanded-current-song-info">
                                                     The Weeknd
                                                 </p>
-                                                <p>-</p>
+                                                <p class="expanded-current-song-info">-</p>
                                                 <p class="expanded-current-song-title expanded-current-song-info">
                                                     Tears In The Rain
                                                 </p>

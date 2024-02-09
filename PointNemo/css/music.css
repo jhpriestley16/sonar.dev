@@ -1225,6 +1225,9 @@ hr {
   ul.quick-links-ul {
     flex-direction: column;
   }
+  article.search-result {
+    width: 44%;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 1100px) {
   :root {

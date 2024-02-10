@@ -413,12 +413,14 @@ button#appearance-btn{
 
 main{
   display: flex;
-  flex-grow: 1;
+  height: calc(100vh - 51.75px);
+  position: relative;
+
 }
 .col-1{
   width: 30%;
-  height: calc(100% - 3rem);
-  padding: 1rem;
+  height: calc(100% - 1rem);
+  padding: 1rem 1rem 0 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1197,6 +1199,9 @@ hr{
     transition: height .15s ease-in;
   }
 */
+main{
+  height: calc(100vh - 103px);
+}
 
 
   .col-1,.col-2,.col-3{

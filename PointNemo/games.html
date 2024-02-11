@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array - Games</title>
+    <link rel="website icon" href="img/array-logo.jpg" type="jpg">
     
     <link rel="stylesheet" type="text/css" href="css/games.css" />
+    <script src="js/global.js"></script>
+    <script src="js/games-home-menus.js"></script>
+    <script src="js/filter-check.js"></script>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
@@ -24,16 +28,16 @@
 
       <header class="page-header" id="#top">
         <nav class="header-nav">
-            <h1>Array Games</h1>
+            <span class="page-title">Array Games</span>
             <div class="right-side-nav-group">
                 <div class="appearance-btn-group">
-                    <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()">
+                    <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
                         <i class="gg-moon"></i>
                     </button>
-                    <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()">
+                    <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
                         <i class="gg-sun"></i>
                     </button>
-                    <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()">
+                    <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
                         <i class="gg-screen"></i>
                     </button>
                 </div>
@@ -60,14 +64,89 @@
         });
     </script>
       <main>
-        <div class="search-column-container">
+        <div class="search-container">
             <div class="search-content-container">
-                <form class="search-column-form">
+                <form class="search-form">
                     <input class="search-bar-input" type="search" placeholder="Search Array Games..." spellcheck="false">
-                    <button class="search-button">
+                    <button class="search-button" title="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
+                <div class="search-filters-container">
+                    <div class="search-filter-label-button-container">
+                        <label class="search-filter-label">Search filters</label>
+                        <div class="search-filter-button-group">
+                            <button class="search-filter-button" id="filterSelectBtn" title="Select filter" onclick="openFilterMenu()">
+                                <i class="fa-solid fa-filter"></i>
+                            </button>
+                            <button class="search-filter-button" id="filterCancelBtn" title="Clear all">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="selected-search-filter-container" id="selectedFilters">
+                        <p class="empty-filter-text" id="emptyFilterText">No filters selected...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-selection-container" id="filterSelectionMenu">
+                <div class="filter-selection-title-counter-container">
+                    <label class="filter-selection-title">Select a filter</label>
+                    <label class="filter-selection-counter">0/16 selected</label>
+                    <button class="close-filter-selection-menu" onclick="openFilterMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="filter-type-container">
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Shooter</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Racing</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Sandbox</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Role-Playing Game</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Sports</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Adventure</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Strategy</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter-type" id="filterType" onclick="selectFilter(this)">
+                        <span class="filter-type-text">Simulation</span>
+                        <button class="clear-filter-type">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="main-page-content">
@@ -204,6 +283,5 @@
     
     
     
-    <script src="js/global.js"></script>
     </body>
     </html>

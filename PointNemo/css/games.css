@@ -222,6 +222,13 @@ a.back-top-link :hover {
   color: var(--ff-btn-hover-clr);
 }
 
+.full-width-game-banner-carousel {
+  height: 300px;
+  width: 100vw;
+  background: url(../img/halo-infinite-banner.webp);
+  background-size: cover;
+}
+
 main {
   min-height: calc(100vh - 61.25px);
   width: 100vw;

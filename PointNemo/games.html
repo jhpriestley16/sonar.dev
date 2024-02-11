@@ -8,7 +8,6 @@
     <link rel="website icon" href="img/array-logo.jpg" type="jpg">
     
     <link rel="stylesheet" type="text/css" href="css/games.css" />
-    <script src="js/global.js"></script>
     <script src="js/games-home-menus.js"></script>
     <script src="js/filter-check.js"></script>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
@@ -44,6 +43,9 @@
             </div>
         </nav>
       </header>
+      <!-- <div class="full-width-game-banner-carousel">
+
+      </div> -->
       <div class="back-to-top-btn-container" id="hiddenElement">
         <a class="back-top-link" href="#top">
             <button class="back-to-top-btn">
@@ -79,13 +81,13 @@
                             <button class="search-filter-button" id="filterSelectBtn" title="Select filter" onclick="openFilterMenu()">
                                 <i class="fa-solid fa-filter"></i>
                             </button>
-                            <button class="search-filter-button" id="filterCancelBtn" title="Clear all">
+                            <button class="search-filter-button" id="filterCancelBtn" title="Clear all" onclick="clearAllFilters()">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
                     </div>
                     <div class="selected-search-filter-container" id="selectedFilters">
-                        <p class="empty-filter-text" id="emptyFilterText">No filters selected...</p>
+                        <!-- <p class="empty-filter-text" id="emptyFilterText">No filters selected...</p> -->
                     </div>
                 </div>
             </div>
@@ -97,7 +99,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
-                <div class="filter-type-container">
+                <div class="filter-type-container" id="filtersContainer">
                     <div class="filter-type" id="filterType" onclick="selectFilter(this)">
                         <span class="filter-type-text">Shooter</span>
                         <button class="clear-filter-type">
@@ -282,6 +284,6 @@
       </footer>
     
     
-    
+      <script src="js/global.js"></script>
     </body>
     </html>

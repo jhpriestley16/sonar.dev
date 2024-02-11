@@ -210,6 +210,12 @@ html, body {height: 100dvh; box-sizing: border-box; user-select: none;}
     }
   }
 
+  .full-width-game-banner-carousel{
+    height: 300px;
+    width: 100vw;
+    background: url(../img/halo-infinite-banner.webp);
+    background-size: cover;
+  }
 
 
 

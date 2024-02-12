@@ -31,3 +31,4 @@ function checkEmpty() {
 
 // Call the checkEmpty function when the page finishes loading
 window.addEventListener('load', checkEmpty);
+

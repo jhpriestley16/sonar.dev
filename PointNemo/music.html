@@ -7,6 +7,7 @@
     <title>Loop by Array</title>
     
     <link rel="stylesheet" type="text/css" href="css/music.css" />
+    <script src="js/page-load.js"></script>
     
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
@@ -42,73 +43,30 @@
       </script>
       <script defer src="/_vercel/speed-insights/script.js"></script>
 
-<header class="main-page-header">
-    <nav class="external-page-navigation">
-        <div class="page-logo-title-container">
-            <span class="page-title">loop</span>
+      <div id="preloader">
+        <div id="loader">
+            <span class="page-loader-title">array</span>
         </div>
-        <div class="appearance-buttons-container">
-            <div class="appearance-btn-group">
-                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
+    </div>
+
+    <header class="page-header" id="#top">
+        <nav class="header-nav">
+            <span class="page-title">Array Loop</span>
+            <div class="right-side-nav-group">
+                <div class="appearance-btn-group">
+                    <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                        <i class="gg-moon"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                        <i class="gg-sun"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                        <i class="gg-screen"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-        <form class="search-bar-container">
-            <button class="enlarge-search-button" onclick="enlargeSearch()" type="button">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </button>
-            <input class="search-bar" placeholder="Search Loop..." type="search">
-            <button class="search-button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-    </nav>
-    <nav class="mobile-header">
-        <button class="mobile-sidebar-opener header-btn" aria-expanded="false" aria-pressed="false" onclick="openNavMenu()">
-            <i class="fa-regular fa-map"></i>
-            <script>
-                function openNavMenu() {
-  var sidebar = document.getElementById("mobileSidebar");
-
-  // Toggle the "translated" class on the sidebar
-  sidebar.classList.toggle("translated");
-}
-            </script>
-            <script>
-                const mobileButton = document.querySelector('.mobile-sidebar-opener');
-                const navIcon = document.querySelector('.fa-map');
-    
-    mobileButton.addEventListener('click', () => {
-    const isOpened = mobileButton.getAttribute('aria-expanded');
-    if (isOpened === 'false') {
-    mobileButton.setAttribute('aria-expanded', 'true');
-    navIcon.classList.remove('fa-regular');
-    navIcon.classList.add('fa-solid');
-    } else {
-        mobileButton.setAttribute('aria-expanded', 'false');
-        navIcon.classList.remove('fa-solid');
-        navIcon.classList.add('fa-regular');
-    }
-    });
-            </script>
-        </button>
-        
-        <div class="page-logo-title-container">
-            <span class="page-title">loop</span>
-        </div>
-        <button class="mobile-settings-button header-btn" onclick="openSettings()">
-            <i class="fa-solid fa-gear"></i>
-            <script>
-                function openSettings() {
-  var settings = document.getElementById("settingsSidebar");
-
-  settings.classList.toggle("settings-translated");
-}
-            </script>
-        </button>
-    </nav>
-</header>
+        </nav>
+      </header>
 
 <div class="enlarged-search-pop-out-container" id="enlargedSearchContainer">
     <button class="close-expanded-music-player" onclick="enlargeSearch()">

@@ -1,4 +1,5 @@
-html, body {height: 100dvh; box-sizing: border-box; user-select: none;}
+html, body {height: 100dvh; box-sizing: border-box; user-select: none; transition: background .2s ease-in-out, color .2s ease-in-out, border ease-in-out;
+}
 @font-face{
     font-family: text-labels;
     src: url("../fonts/Geist-Regular.otf");
@@ -69,11 +70,13 @@ html, body {height: 100dvh; box-sizing: border-box; user-select: none;}
     --ff-link-clr: #101010;
     --ff-body-text: #101010;
     --ff-inactive-text: #959595;
+    --ff-descriptive-text: #5c5c5c;
 
     --header-border: 1.25px #cdcdcd solid;
     --to-top-border: 2px #4e4e4e solid;
     --search-column-border: 1.5px #cdcdcd solid;
     --input-search-border: 1.25px #cdcdcd solid;
+    --game-border: 1.65px #8d8d8d solid;
   }
   
   .darkmode{
@@ -86,7 +89,7 @@ html, body {height: 100dvh; box-sizing: border-box; user-select: none;}
     --filter-btn-background: rgb(11, 11, 11);
     --filter-hover-background: rgb(21, 21, 21);
     --filter-type-background: rgb(22, 22, 22);
-    --container-background: rgb(17, 17, 17);
+    --container-background: rgb(14, 13, 13);
     --footer-background: rgb(11, 11, 11);
 
     --ff-page-title-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
@@ -98,11 +101,13 @@ html, body {height: 100dvh; box-sizing: border-box; user-select: none;}
     --ff-link-clr: #a4a4a4;
     --ff-body-text: #e0e0e0;
     --ff-inactive-text: #737373;
+    --ff-descriptive-text: #6b6b6b;
 
     --header-border: 1.25px #272727 solid;
     --to-top-border: 2px #272727 solid;
     --search-column-border: 1.5px #272727 solid;
     --input-search-border: 1.25px #272727 solid;
+    --game-border: 1.65px #272727 solid;
   }
   body{
     background: var(--body-background);
@@ -463,10 +468,72 @@ span.page-loader-title{
   }
   .main-page-content{
     min-height: calc(150vh - 61.25px);
-    width: calc(80vw - 1.5px);
+    width: 100vw;
   }
-
-
+  section.game-type-row-container{
+    height: 240px;
+    // border: 1px red solid;
+    padding-inline: .5rem;
+    margin: 2rem 0;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+  }
+  .game-type-row-top-header{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    // border: 1px blue solid;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .game-type-information{
+  }
+  p.game-type-description{
+    font-size: .9rem;
+    font-family: text-labels;
+    color: var(--ff-descriptive-text);
+  }
+  label.game-type-row-label{
+    font-family: neue;
+    font-size: 1.8rem;
+    color: var(--ff-body-text);
+  }
+  button.see-all-games-btn{
+    background: none;
+    border: none;
+    font-family: text-labels;
+    font-size: .9rem;
+    color: var(--ff-body-text);
+  }
+  button.see-all-games-btn:hover{
+    text-decoration: underline;
+  }
+  .game-container{
+    flex-grow: 1;
+    height: 100%;
+    // border: 1px green solid;
+    display: flex;
+    gap: 1%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .game{
+    height: 100%;
+    width: 24%;
+    border: var(--game-border);
+    box-sizing: border-box;
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    background: var(--container-background);
+  }
+  img.game-art{
+    object-fit: cover;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
 
 
   footer{

@@ -59,6 +59,7 @@ html, body {height: 100dvh; box-sizing: border-box; user-select: none; transitio
     --filter-hover-background: #e5e5e5;
     --filter-type-background: #c0c0c0;
     --container-background: #ededed;
+    --content-nav-btn: rgb(62, 151, 195);
     --footer-background: #f4f4f4;
 
     --ff-page-title-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
@@ -254,15 +255,86 @@ span.page-loader-title{
       color: var(--ff-btn-hover-clr);
     }
   }
+  
 
-  .full-width-game-banner-carousel{
-    height: 300px;
+
+  section.content-introduction-cards-container{
+    height: 45vh;
     width: 100vw;
-    background: url(../img/halo-infinite-banner.webp);
-    background-size: cover;
+    // border: 1px red solid;
   }
-
-
+  .content-introduction-cards-placement{
+    height: 100%;
+    width: 100%;
+    // border: 1px solid blue;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  article.content-introduction-card{
+    height: 100%;
+    aspect-ratio: 1;
+    border: var(--search-column-border);
+    border-radius: 8px;
+    background: var(--container-background);
+  }
+  .content-introduction-card-content-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem;
+    // gap: 1rem;
+  }
+  .content-introduction-card-title-text-wrapper{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: first baseline;
+  }
+  p.content-title{
+    font-family: neue;
+    font-size: 1.3em;
+    color: var(--ff-body-text);
+  }
+  p.content-description{
+    font-family: text-labels;
+    font-size: .9em;
+    color: var(--ff-body-text);
+  }
+  .content-introduction-card-icon-positioning{
+    flex-grow: 1;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  svg.globe-icon{
+    object-fit: cover;
+    height: 90%;
+    aspect-ratio: 1;
+    fill: var(--ff-descriptive-text);
+  }
+  .content-navigate-button-wrapper{
+    height: 20%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  button.content-navigate-button{
+    height: fit-content;
+    width: fit-content;
+    padding: 0.7rem 1rem;
+    background: var(--content-nav-btn);
+    font-family: neue;
+    font-size: 1.1em;
+    color: #fff;
+    border: none;
+    border-radius: 100vw;
+  }
 
   main{
     min-height: calc(100vh - 61.25px);
@@ -533,6 +605,7 @@ span.page-loader-title{
     height: 100%;
     width: 100%;
     position: relative;
+    // mix-blend-mode: color-burn;
   }
 
 

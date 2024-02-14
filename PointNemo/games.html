@@ -11,6 +11,7 @@
     <script src="js/games-home-menus.js"></script>
     <script src="js/filter-check.js"></script>
     <script src="js/page-load.js"></script>
+    <script src="js/game-carousel.js"></script>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
@@ -18,8 +19,6 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="/path/to/font-awesome/all.min.css" />
-    <script src="/path/to/cdn/jquery.min.js"></script> -->
 </head>
 <html>
 <body>
@@ -54,23 +53,52 @@
         </nav>
       </header>
 
+      
 
-      <!-- <div class="slide-carousel" id="one">
-        <div class="arrow-left">&lsaquo;</div>
-        <div class="arrow-right">&rsaquo;</div>
-        <div class="slides">
-          <div class="slide" id="slide1"><span class="title"></span></div>
-          <div class="slide" id="slide2"><span class="title"></span></div>
-          <div class="slide" id="slide3"><span class="title"></span></div>
-          <div class="slide" id="slide4"><span class="title"></span></div>
-          <div class="slide" id="slide5"><span class="title"></span></div>
+      <section class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-item" data-order="1" id="carouselItem1">
+
+            </div>
+            <div class="carousel-item" data-order="2" id="carouselItem2">
+                
+            </div>
+            <div class="carousel-item" data-order="3" id="carouselItem3">
+                
+            </div>
+            <div class="carousel-item" data-order="4" id="carouselItem4">
+                
+            </div>
         </div>
-        <div class="auto-play">
-          <i class="fas fa-play" id="play-slider"></i>
-          <i class="fas fa-pause" id="pause-slider"></i>
+        <div class="carousel-buttons-container">
+            <div class="pause-play-button-group">
+                <button class="carousel-play-button pause-play" id="playButton" onclick="playCarousel()">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="carousel-pause-button pause-play" id="pauseButton" onclick="playCarousel()">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+            </div>
+            <div class="carousel-dot-group">
+                <a href="#carouselItem1">
+                    <div class="slide-activity-dot"></div>
+                </a>
+                <a href="#carouselItem2">
+                    <div class="slide-activity-dot"></div>
+                </a>
+                <a href="#carouselItem3">
+                    <div class="slide-activity-dot"></div>
+                </a>
+                <a href="#carouselItem4">
+                    <div class="slide-activity-dot"></div>
+                </a>
+            </div>
+            <div class="carousel-item-counter-container">
+                <p class="carousel-item-counter">1/4</p>
+            </div>
         </div>
-        <div class="dots"></div>
-      </div> -->
+        
+      </section>
 
 
 

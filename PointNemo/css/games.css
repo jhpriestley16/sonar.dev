@@ -7,39 +7,6 @@ html, body {
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out, border ease-in-out;
 }
 
-@font-face {
-  font-family: text-labels;
-  src: url("../fonts/Geist-Regular.otf");
-}
-@font-face {
-  font-family: nav-box-font;
-  src: url("../fonts/Geist-SemiBold.otf");
-}
-@font-face {
-  font-family: search;
-  src: url("../fonts/Geist-Light.otf");
-}
-@font-face {
-  font-family: light-text;
-  src: url("../fonts/NeueMontreal-Medium.otf");
-  letter-spacing: normal;
-}
-@font-face {
-  font-family: anurati;
-  src: url("../fonts/Anurati-Regular.otf");
-}
-@font-face {
-  font-family: neue;
-  src: url("../fonts/NeueMontreal-Bold.otf");
-}
-@font-face {
-  font-family: profont;
-  src: url("../fonts/Maverix-Regular.ttf");
-}
-@font-face {
-  font-family: loop;
-  src: url("../fonts/Koeltoerals-owwaz.ttf");
-}
 * {
   margin: 0;
   padding: 0;
@@ -50,67 +17,6 @@ html, body {
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-optical-sizing: none;
-}
-
-:root {
-  --header-background: rgb(9, 9, 9);
-  --body-background: #ffffff;
-  --appearance-btn-hover: rgba(61, 61, 61, 0.8);
-  --to-top-btn-background: #131313;
-  --search-column-background: #f4f4f4;
-  --input-search-background: #e5e5e5;
-  --filter-btn-background: #f4f4f4;
-  --filter-hover-background: #e5e5e5;
-  --filter-type-background: #c0c0c0;
-  --container-background: #ededed;
-  --content-nav-btn: rgb(62, 151, 195);
-  --footer-background: #f4f4f4;
-  --ff-page-title-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-  --appearance-btn-clr: #e0e0e0;
-  --ff-to-top: #c3c3c3;
-  --ff-btn-clr: #050505;
-  --ff-btn-hover-clr: #ffffff;
-  --ff-input-clr: #101010;
-  --ff-link-clr: #101010;
-  --ff-body-text: #101010;
-  --ff-inactive-text: #959595;
-  --ff-descriptive-text: #5c5c5c;
-  --header-border: 1.25px #cdcdcd solid;
-  --to-top-border: 2px #4e4e4e solid;
-  --search-column-border: 1.5px #cdcdcd solid;
-  --input-search-border: 1.25px #cdcdcd solid;
-  --game-border: 1.65px #8d8d8d solid;
-  --pause-play-border: 2px #111111 solid;
-}
-
-.darkmode {
-  --header-background: rgb(13, 13, 13);
-  --body-background: rgb(8,8,8);
-  --appearance-btn-hover: rgba(64, 64, 64, 0.8);
-  --to-top-btn-background: #111111;
-  --search-column-background: rgb(11, 11, 11);
-  --input-search-background: rgb(21, 21, 21);
-  --filter-btn-background: rgb(11, 11, 11);
-  --filter-hover-background: rgb(21, 21, 21);
-  --filter-type-background: rgb(22, 22, 22);
-  --container-background: rgb(14, 13, 13);
-  --footer-background: rgb(11, 11, 11);
-  --ff-page-title-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-  --appearance-btn-clr: #e0e0e0;
-  --ff-to-top: #c3c3c3;
-  --ff-btn-clr: rgb(172, 172, 172);
-  --ff-btn-hover-clr: #ffffff;
-  --ff-input-clr: rgb(220, 220, 220);
-  --ff-link-clr: #a4a4a4;
-  --ff-body-text: #e0e0e0;
-  --ff-inactive-text: #737373;
-  --ff-descriptive-text: #6b6b6b;
-  --header-border: 1.25px #272727 solid;
-  --to-top-border: 2px #272727 solid;
-  --search-column-border: 1.5px #272727 solid;
-  --input-search-border: 1.25px #272727 solid;
-  --game-border: 1.65px #272727 solid;
-  --pause-play-border: 2px #e1e1e1 solid;
 }
 
 body {
@@ -167,68 +73,6 @@ span.page-loader-title {
 }
 button {
   cursor: pointer;
-}
-
-header.page-header {
-  height: 60px;
-  width: 100%;
-  z-index: 3;
-  background: var(--header-background);
-}
-
-nav.header-nav {
-  padding-inline: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-span.page-title {
-  font-size: 2.5rem;
-  font-family: neue;
-  background: var(--ff-page-title-clr);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.right-side-nav-group {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.appearance-btn-group {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-button.appearance-mode-btn {
-  display: grid;
-  place-items: center;
-  background: none;
-  border: none;
-  aspect-ratio: 1;
-  height: 100%;
-  border-radius: 100vw;
-  color: var(--appearance-btn-clr);
-  transition: color 0.2s ease-in-out;
-}
-
-button.appearance-mode-btn:hover {
-  background: var(--appearance-btn-hover);
-  transition: color 0.2s ease-in-out;
 }
 
 /*

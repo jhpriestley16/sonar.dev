@@ -7,6 +7,9 @@
     <title>Array - Home</title>
     
     <link rel="stylesheet" type="text/css" href="css/landing.css" />
+    <link rel="stylesheet" type="text/css" href="/PointNemo/css/global-headers.css" />
+    <link rel="stylesheet" type="text/css" href="/PointNemo/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/PointNemo/css/fonts.css" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/bell.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
@@ -25,17 +28,30 @@
 
 
 
-      <div class="main-text-container">
-        <h1 class="page-title">Array</h1>
-        <span class="logo-text">AR</span>
-        <p class="under-title-description">The platform for <span class="highlighted-text">everyone</span></p>
-      </div>
+      <header class="page-header" id="#top">
+        <nav class="header-nav">
+            <span class="page-title">Array</span>
+            <div class="right-side-nav-group">
+                <div class="appearance-btn-group">
+                    <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                        <i class="gg-moon"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                        <i class="gg-sun"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                        <i class="gg-screen"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+      </header>
     
     
     
     <main>
 
-      <div class="cta-wrapper">
+      <!-- <div class="cta-wrapper">
 
         <div class="sign-up-cta-container">
           <div class="sign-up-header-container">
@@ -95,7 +111,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
     
     <a href="quizzes.html">Quiz page</a>
     <a href="sign-up-login-page.html">sign-up-login page</a>
@@ -108,6 +124,6 @@
     
     
     
-    
+    <script src="js/global.js"></script>
     </body>
     </html>

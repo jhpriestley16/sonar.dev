@@ -170,7 +170,7 @@ main.full-page-content{
   flex-direction: row;
 }
 .navigation-column{
-  width: 20%;
+  width: fit-content;
   height: 100%;
   border-right: var(--search-column-border);
   background: var(--container-background);

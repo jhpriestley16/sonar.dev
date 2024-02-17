@@ -176,7 +176,8 @@ main.full-page-content {
 }
 
 .navigation-column {
-  width: 20%;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 100%;
   border-right: var(--search-column-border);
   background: var(--container-background);

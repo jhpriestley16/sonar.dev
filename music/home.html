@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Music Connect</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/music.css" />
+    <link rel="stylesheet" type="text/css" href="css/global-headers.css" />
+    <link rel="stylesheet" type="text/css" href="css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <script src="js/page-load.js"></script>
+    
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/carousel.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-speaker.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-search.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrows-expand-right.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+</head>
+<html>
+<body>
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+      </script>
+      <script defer src="/_vercel/speed-insights/script.js"></script>
+
+      <div id="preloader">
+        <div id="loader">
+            <span class="page-loader-title">array</span>
+        </div>
+    </div>
+
+<div class="page-content-container">
+    <div class="music-navigation">
+        <header class="music-navigation-header">
+            <div class="array-music-connect-text-wrapper">
+                <p class="page-title">Array Music Connect</p>
+                <div class="array-refer-link-wrapper">
+                    <p class="music-hosting-refer-text">Powered by</p>
+                    <div class="service-icon-grouping">
+                        <a href="https://spotify.com" target=”_blank”>
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="https://music.apple.com" target=”_blank”>
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        
+
+        <footer class="navigation-footer">
+            <div class="menu-container">
+                <div class="menu-content-wrapper">
+                </div>
+            </div>
+            <div class="menu-buttons-container">
+                <button class="menu-opener-btn" id="globeNav" onclick="openGlobalNav()">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="menu-opener-btn" id="searchMenu" onclick="enlargeSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="menu-opener-btn" id="messageMenu" onclick="openMessages()">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+                <button class="menu-opener-btn" id="notiMenu" onclick="openNotiMenu()">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <button class="menu-opener-btn" id="profileMenu" onclick="openProfileMenu()">
+                    <img class="pfp-img" src="cover-art/ah.gif">
+                </button>
+                <button class="menu-opener-btn" id="settingsMenu" onclick="openSettingsMenu()">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
+        </footer>
+        
+    </div>
+    <div class="music-main-content">
+        <header class="main-content-header">
+            <div class="header-content-container">
+                <div class="content-tab-wrapper">
+                    <button class="tab-switch-btn active-tab">
+                        <p class="tab-title">Home</p>
+                    </button>
+                    <button class="tab-switch-btn">
+                        <p class="tab-title">For You</p>
+                    </button>
+                    <button class="tab-switch-btn">
+                        <p class="tab-title">Following</p>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="appearance-btn-group">
+            <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                <i class="gg-moon"></i>
+            </button>
+            <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                <i class="gg-sun"></i>
+            </button>
+            <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                <i class="gg-screen"></i>
+            </button>
+        </div>
+        <div class="unopened-player-tab-container">
+            <div class="playback-button-group">
+                <button class="playback-btn">
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+                <button class="playback-btn">
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+                <button class="playback-btn">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="playback-btn">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+                <button class="playback-btn">
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+            </div>
+
+            <div class="player-settings-btn-group">
+                <button class="player-settings-btn">
+                    <i class="gg-carousel"></i>                
+                </button>
+                <button class="player-settings-btn">
+                    <i class="gg-music-speaker"></i>
+                </button>
+                <button class="player-settings-btn" onclick="toggleSongExpand()">
+                    <i class="gg-arrows-expand-right"></i>                
+                </button>
+            </div>
+        </div>
+    </div>
+        
+        
+    <div class="music-player-expanded" aria-expanded="false" style="display: none;">
+            <div class="bg"></div>
+            <div class="bg hidden"></div>
+            
+            <script>
+                function newGradient() {
+              var c1 = {
+                r: Math.floor(Math.random()*150),
+                g: Math.floor(Math.random()*150),
+                b: Math.floor(Math.random()*150)
+              };
+              var c2 = {
+                r: Math.floor(Math.random()*150),
+                g: Math.floor(Math.random()*150),
+                b: Math.floor(Math.random()*150)
+              };
+              c1.rgb = 'rgb('+c1.r+','+c1.g+','+c1.b+')';
+              c2.rgb = 'rgb('+c2.r+','+c2.g+','+c2.b+')';
+              return 'linear-gradient(to right, '+c1.rgb+', '+c2.rgb+')';
+            }
+            
+            function rollBg() {
+              $('.bg.hidden').css('background', newGradient());
+              $('.bg').toggleClass('hidden');
+            }
+            
+            $(document).ready(function() {
+              rollBg();
+              setInterval(rollBg, 3000);
+            });
+            </script>
+                            
+                        <div class="expanded-music-player">
+                            <button class="close-expanded-music-player" onclick="toggleSongExpand()">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <article class="expanded-player-song-cover-art-container">
+                                <div class="expanded-player-song-cover-art-placement">
+                                    <img class="expanded-player-song-cover-art-img" src="img/after-hours-album-cover.jpg">
+                                </div>
+                            </article>
+                            <article class="expanded-player-song-information-settings-buttons-container">
+                                <div class="expanded-player-song-information-wrapper">
+                                    <div class="expanded-player-song-information-placement">
+                                        <div class="expanded-player-song-information">
+                                            <a href="#" class="artist-profile-link">
+                                                <p class="song-artist-name-text">
+                                                    The Weeknd
+                                                </p>
+                                            </a>
+                                                <p>-</p>
+                                                <div class="song-title-name-text">
+                                                    <p class="song-title-name-text-p">
+                                                        Save Your Tears 
+                                                     </p>
+                                                     <div class="explicit-icon-container">
+                                                         <i class="fa-solid fa-e"></i>
+                                                     </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="expanded-player-playback-buttons-container">
+                                    <div class="expanded-player-playback-buttons-placement">
+                                        <div class="expanded-player-playback-button-group">
+                                            <button class="expanded-player-playback-button expanded-back-for-button">
+                                                <i class="fa-solid fa-backward"></i>
+                                            </button>
+                                            <button class="expanded-player-playback-button expanded-pause-button">
+                                                <i class="fa-solid fa-pause"></i>
+                                            </button>
+                                            <button class="expanded-player-playback-button expanded-back-for-button">
+                                                <i class="fa-solid fa-forward"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <article class="expanded-music-player-links-streaming-platforms-container">
+                                    <a href="#" class="expanded-music-player-links-streaming-platforms-spotify">
+                                        <i class="fa-brands fa-spotify"></i>
+                                    </a>
+                                </article>
+                                    <!-- <div id="range">
+                                        <span id="currentVal">50</span>
+                                      </div>
+                                      <script>
+                                        (function() {
+            $("#range").slider({
+            range: "min",
+            max: 100,
+            value: 50,
+            slide: function(e, ui) {
+            $("#currentVal").html(ui.value);
+            }
+            });
+            }).call(this);
+                                      </script> -->
+                            </article>
+                    
+                            <div id='rg_embed_link_4694697' class='rg_embed_link' data-song-id='4694697'>
+                            </div> 
+                            <script crossorigin src='//genius.com/songs/4694697/embed.js'></script>
+            
+                            <article class="expanded-music-queue-container">
+                                <div class="expanded-music-queue-placement">
+                                    <div class="expanded-music-queue">
+                                        <div class="expanded-music-queue-nav-container">
+                                            <nav class="expanded-music-queue-nav">
+                                                <label class="expanded-music-queue-current-song-label">Now Playing...</label>
+                                                <div class="expanded-music-queue-settings-button-group">
+                                                    <button class="expanded-music-queue-shuffle-button expanded-music-queue-button" id="queueShuffle" onclick="queueSettingShuffle()">
+                                                        <i class="fa-solid fa-shuffle"></i>
+                                                        <div class="active-dot active-dot-shuffle"></div>
+                                                    </button>
+                                                    <button class="expanded-music-queue-repeat-button expanded-music-queue-button" id="queueRepeat" onclick="queueSettingRepeat()">
+                                                        <i class="fa-solid fa-repeat"></i>
+                                                        <div class="active-dot active-dot-repeat"></div>
+                                                    </button>
+                                                    <button class="expanded-music-queue-clear-queue-button expanded-music-queue-button" id="queueEmpty" onclick="queueSettingEmpty()">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                        <div class="active-dot active-dot-clear"></div>
+                                                    </button>
+                                                    <script>
+                                                        function queueSettingShuffle() {
+              var element = document.getElementById("queueShuffle");  element.classList.toggle("selected");
+            }
+                                                    </script>
+                                                    <script>
+                                                        function queueSettingRepeat() {
+              var element = document.getElementById("queueRepeat");
+              element.classList.toggle("selected");
+              
+            }
+                                                    </script>
+                                                    <script>
+                                                        function queueSettingEmpty() {
+              var element = document.getElementById("queueEmpty");  element.classList.toggle("selected");
+            }
+                                                    </script>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                        <hr>
+                                        <div class="expanded-music-queue-song-playing-container">
+                                            <div class="expanded-music-queue-song-playing-placement">
+                                                <div class="expanded-music-song-playing">
+                                                        <img class="expanded-current-song-cover-art" src="img/The_Weeknd_-_Kiss_Land.png">
+                                                        <div class="expanded-current-song-title-artist">
+                                                            <p class="expanded-current-song-artist expanded-current-song-info">
+                                                                The Weeknd
+                                                            </p>
+                                                            <p class="expanded-current-song-info">-</p>
+                                                            <p class="expanded-current-song-title expanded-current-song-info">
+                                                                Tears In The Rain
+                                                            </p>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+        </div>
+    </div>
+    
+
+<div class="enlarged-search-pop-out-container" id="enlargedSearchContainer">
+    <button class="close-expanded-music-player" onclick="enlargeSearch()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <form class="enlarged-search-box">
+        <input class="enlarged-search-input" type="search" placeholder="Search Loop..." spellcheck="false">
+        <button class="enlarged-search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>     
+    </form>
+
+    </form>
+    <script>
+        function enlargeSearch() {
+var search = document.getElementById("enlargedSearchContainer");
+
+search.classList.toggle("enlarged");
+}
+    </script>
+    <div class="quick-links-container">
+        <label class="quick-links-label" for="ul">Quick Links</label>
+        <ul class="quick-links-ul">
+            <a class="quick-link-a" href="index.html">
+                <li class="quick-link-item">
+                    Home
+                </li>
+            </a>
+            <a class="quick-link-a" href="games.html">
+                <li class="quick-link-item">
+                    Games
+                </li>
+            </a>
+            <a class="quick-link-a" href="quizzes.html">
+                <li class="quick-link-item">
+                    Quizzes
+                </li>
+            </a>
+            <a class="quick-link-a" href="#">
+                <li class="quick-link-item">
+                    Profile
+                </li>
+            </a>
+            <a class="quick-link-a" href="#">
+                <li class="quick-link-item">
+                    Settings
+                </li>
+            </a>
+        </ul>
+    </div>
+    <hr class="enlarged-search-content-separator">
+    <div class="search-results-container">
+        <article class="search-result">
+
+        </article>
+    </div>
+</div>
+
+<script src="js/global.js"></script>
+</body>
+</html>

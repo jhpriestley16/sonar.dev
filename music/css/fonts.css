@@ -1,0 +1,36 @@
+@font-face{
+    font-family: text-labels;
+    src: url("../fonts/Geist-Regular.otf");
+}
+@font-face{
+    font-family: nav-box-font;
+    src: url("../fonts/Geist-SemiBold.otf");
+}
+@font-face{
+  font-family: search;
+  src: url("../fonts/Geist-Light.otf");
+}
+@font-face{
+    font-family: light-text;
+    src: url("../fonts/NeueMontreal-Medium.otf");
+    letter-spacing:normal;
+}
+
+@font-face{
+    font-family: anurati;
+    src: url("../fonts/Anurati-Regular.otf");
+}
+
+@font-face{
+    font-family: neue;
+    src: url("../fonts/NeueMontreal-Bold.otf");
+}
+
+@font-face{
+    font-family: profont;
+    src: url("../fonts/Maverix-Regular.ttf");
+}
+@font-face{
+  font-family: loop;
+  src: url("../fonts/Koeltoerals-owwaz.ttf");
+}

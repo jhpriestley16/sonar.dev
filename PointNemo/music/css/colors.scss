@@ -11,7 +11,7 @@
     --filter-type-background: #c0c0c0;
     --container-background: #ededed;
     --content-nav-btn: rgb(62, 151, 195);
-    --tab-background: #d5d5d5;
+    --tab-background: #ececec;
     --footer-background: #f4f4f4;
 
     --ff-page-title-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
@@ -19,7 +19,7 @@
     --ff-to-top: #c3c3c3;
     --ff-btn-clr: #050505;
     --ff-btn-hover-clr: #ffffff;
-    --ff-input-clr: #101010;
+    --ff-input-clr: #4b4b4b;
     --ff-link-clr: #101010;
     --ff-body-text: #101010;
     --ff-inactive-text: #959595;
@@ -31,12 +31,13 @@
     --input-search-border: 1.25px #cdcdcd solid;
     --game-border: 1.65px #8d8d8d solid;
     --pause-play-border: 2px #111111 solid;
-    --tab-border: 1.65px #bababa solid;
+    --tab-border: 1.65px #d1d1d1 solid;
+    --player-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 16%);
   }
   
   .darkmode{
     --header-background: rgb(13, 13, 13);
-    --body-background: rgb(21, 21, 21);
+    --body-background: rgb(24, 24, 24);
     --navigation-background: rgb(24, 24, 24);
     --appearance-btn-hover: rgba(64, 64, 64, 0.8);
     --to-top-btn-background: #111111;
@@ -46,7 +47,7 @@
     --filter-hover-background: rgb(21, 21, 21);
     --filter-type-background: rgb(22, 22, 22);
     --container-background: rgb(14, 13, 13);
-    --tab-background: rgb(23, 23, 23);
+    --tab-background: rgb(32, 32, 32);
     --footer-background: rgb(11, 11, 11);
 
     --ff-page-title-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
@@ -66,5 +67,6 @@
     --input-search-border: 1.25px #272727 solid;
     --game-border: 1.65px #272727 solid;
     --pause-play-border: 2px #e1e1e1 solid;
-    --tab-border: 1.65px #1f1f1f solid;
+    --tab-border: 1.65px #474747 solid;
+    --player-box-shadow: 0px 0px 20px 0px rgba(34, 34, 34, 0.76);
   }

@@ -61,10 +61,20 @@
                 </div>
             </div>
         </header>
+
+        
+
         <footer class="navigation-footer">
+            <div class="menu-container">
+                <div class="menu-content-wrapper">
+                </div>
+            </div>
             <div class="menu-buttons-container">
                 <button class="menu-opener-btn" id="globeNav" onclick="openGlobalNav()">
                     <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="menu-opener-btn" id="searchMenu" onclick="enlargeSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <button class="menu-opener-btn" id="messageMenu" onclick="openMessages()">
                     <i class="fa-solid fa-envelope"></i>
@@ -72,28 +82,43 @@
                 <button class="menu-opener-btn" id="notiMenu" onclick="openNotiMenu()">
                     <i class="fa-solid fa-bell"></i>
                 </button>
+                <button class="menu-opener-btn" id="profileMenu" onclick="openProfileMenu()">
+                    <img class="pfp-img" src="cover-art/ah.gif">
+                </button>
                 <button class="menu-opener-btn" id="settingsMenu" onclick="openSettingsMenu()">
                     <i class="fa-solid fa-gear"></i>
                 </button>
-                <!-- <div class="appearance-btn-group">
-                    <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
-                        <i class="gg-moon"></i>
-                    </button>
-                    <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
-                        <i class="gg-sun"></i>
-                    </button>
-                    <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
-                        <i class="gg-screen"></i>
-                    </button>
-                </div> -->
             </div>
         </footer>
         
     </div>
     <div class="music-main-content">
-        <header>
-
+        <header class="main-content-header">
+            <div class="header-content-container">
+                <div class="content-tab-wrapper">
+                    <button class="tab-switch-btn active-tab">
+                        <p class="tab-title">Home</p>
+                    </button>
+                    <button class="tab-switch-btn">
+                        <p class="tab-title">For You</p>
+                    </button>
+                    <button class="tab-switch-btn">
+                        <p class="tab-title">Following</p>
+                    </button>
+                </div>
+            </div>
         </header>
+        <div class="appearance-btn-group">
+            <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                <i class="gg-moon"></i>
+            </button>
+            <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                <i class="gg-sun"></i>
+            </button>
+            <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                <i class="gg-screen"></i>
+            </button>
+        </div>
         <div class="unopened-player-tab-container">
             <div class="playback-button-group">
                 <button class="playback-btn">
@@ -125,7 +150,10 @@
                 </button>
             </div>
         </div>
-        <div class="music-player-expanded" aria-expanded="false" style="display: none;">
+    </div>
+        
+        
+    <div class="music-player-expanded" aria-expanded="false" style="display: none;">
             <div class="bg"></div>
             <div class="bg hidden"></div>
             
@@ -289,9 +317,8 @@
                                 </div>
                             </article>
                         </div>
-                </div>
+        </div>
     </div>
-</div>
     
 
 <div class="enlarged-search-pop-out-container" id="enlargedSearchContainer">
@@ -351,195 +378,6 @@ search.classList.toggle("enlarged");
         </article>
     </div>
 </div>
-
-<!--
-<main>
-
-     <div class="col-1 player-col open-state" id="col-inline">
-        <div class="player-container">
-        <div class="song-art-container">
-            <img src="img/ah.gif" class="song-art" alt="Song Art" onclick="toggleSongExpand()">
-            <button class="expand-btn" onclick="toggleSongExpand()">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </button>
-        </div>
-            <div class="playback-container">
-            <div class="song-information-container">
-                <span class="player-song-artist">
-                    The Weeknd
-                </span>
-                <span class="player-song-dash">
-                    -
-                </span>
-                <span class="player-song-title">
-                    Save Your Tears
-                </span>
-            </div>
-            <div class="playback-timeline">
-                <input class="song-timeline" type="range">
-                <div class="time-labels">
-                    <label class="song-time time">01:36</label>
-                    <label class="song-end-time time">04:38</label>
-                </div>
-            </div>
-            <div class="playback-button-group">
-                <button class="backward-button back-forth" id="playback-button">
-                    <i class="fa-solid fa-backward-step"></i>
-                </button>
-                <button class="pause-button" id="playButton">
-                    <i id="pausePlay" class="fa-solid fa-play"></i>
-                </button>
-                <button class="forward-button back-forth" id="playback-button">
-                    <i class="fa-solid fa-forward-step"></i>
-                </button>
-            </div>
-            <div class="music-settings-buttons">
-                <div class="volume-control-wrapper">
-                    <i class="fa-solid fa-volume-xmark"></i>
-                    <input class="volume-control" type="range">
-                    <i class="fa-solid fa-volume-high"></i>
-                </div>
-                <div class="music-menu-button-group">
-                    <button class="connect-device-btn">
-                        <i class="fa-solid fa-tv"></i>
-                    </button>
-                </div>
-            </div>
-            </div>
-            
-        </div>
-
-        <div class="queue-list-container" id="toggleContainer">
-            <div class="queue-settings">
-                <label class="queue-label">Your Queue</label>
-                <div class="queue-button-container">
-                    <button class="queue-opener-button" id="toggleButton">
-                        <i class="fa-solid fa-list"></i>
-                    </button>
-                    <button class="queue-shuffle-button" id="shuffleButton">
-                        <i class="fa-solid fa-shuffle"></i>
-                    </button>
-                </div>
-            </div>
-            <script>
-                var container = document.getElementById("toggleContainer");
-                var button = document.getElementById("toggleButton");
-                var queuedSong = document.getElementsByClassName("queued-song");
-            
-                button.addEventListener("click", function() {
-                    // Toggle between 12.5% and 42.5%
-                    container.style.height = (container.style.height === "52.5%") ? "80px" : "52.5%";
-                    container.style.overflow = (container.style.overflow === "scroll") ? "hidden" : "scroll";
-                    button.classList.toggle("opened");
-
-                    if(container.style.overflow === "hidden"){
-                        container.scrollTop = 0;
-                    } 
-                });
-            </script>
-            <div class="queue-list-info-and-buttons-container">
-                <div class="queued-song-art-container">
-                    <img class="queued-song-art" src="img/The_Weeknd_-_Kiss_Land.png">
-                </div>
-            <div class="queue-list-song-artist-information">
-                <label for="queue-list-song-artist-information" class="next-label">Next Up</label>
-                <div class="song-information-container">
-                    <span class="player-song-artist">
-                        The Weeknd
-                    </span>
-                    <span class="player-song-dash">
-                        -
-                    </span>
-                    <span class="player-song-title">
-                        Tears In The Rain
-                    </span>
-                </div>
-            </div>
-            </div>
-            <div class="queued-song" data-order="1">
-                aaaaaa
-            </div>
-            <div class="queued-song" data-order="2">
-                bbbbbb
-            </div>
-            <div class="queued-song" data-order="3">
-                cccccc
-            </div>
-            <div class="queued-song" data-order="4">
-                dddddd
-            </div>
-            <div class="queued-song" data-order="5">
-                eeeeee
-            </div>
-        </div>
-
-        <div class="appearance-buttons-container">
-            <div class="appearance-btn-group">
-                <button class="dark-btn" id="appearance-btn" onclick="enableDarkMode()"><i class="gg-moon"></i></button>
-                <button class="light-btn" id="appearance-btn" onclick="disableDarkMode()"><i class="gg-sun"></i></button>
-                <button class="system-btn" id="appearance-btn" onclick="toggleColorScheme()"><i class="gg-screen"></i></button>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="col-2 main-feed-col" id="col">
-
-    </div>
-
-    <div class="col-3 misc-col" id="col-inline">
-        <div class="queue-menu-expanded">
-            <button class="close-queue-menu" onclick="toggleQueueMenu()">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-    </div>
-    -->
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--
-    <div class="settings-sidebar" id="settingsSidebar">
-        <div class="settings-sidebar-content-wrapper">
-            
-        </div>
-    </div>
-    -->
-</main>
-
-
-
-
-
-
-
-
-
-
-
 
 <script src="js/global.js"></script>
 </body>

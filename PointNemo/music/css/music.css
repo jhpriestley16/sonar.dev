@@ -244,14 +244,16 @@ footer.navigation-footer {
 
 form.search-service-form {
   height: 50px;
+  width: 100%;
   border-radius: 8px;
   border: var(--tab-border);
   margin-top: 6px;
   background: var(--input-search-background);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
-  gap: 6px;
+  gap: 5px;
 }
 
 form.search-service-form i {
@@ -264,12 +266,12 @@ form.search-service-form i {
 }
 
 input.service-search-bar {
-  flex-grow: 1;
+  width: 100%;
   border: none;
   background: none;
   font-size: 0.95rem;
   color: var(--ff-body-text);
-  font-family: nav-box-font;
+  font-family: text-labels;
 }
 
 input.service-search-bar::-webkit-input-placeholder {
@@ -283,6 +285,11 @@ input.service-search-bar:focus {
 
 input.service-search-bar::-webkit-search-cancel-button {
   display: none;
+}
+
+button.search-bar-clear {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 button.search-bar-clear-btn:hover i {
@@ -485,6 +492,25 @@ button.player-settings-btn {
 
 .player-settings-btn:hover {
   background: var(--appearance-btn-hover);
+}
+
+.player-settings-container {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 30vw;
+  height: 100%;
+  background: var(--container-background);
+  border: var(--tab-border);
+  border-radius: 100vw;
+  padding-inline: 8px;
+  display: flex;
+  align-items: center;
+}
+
+p.empty-text {
+  font-size: 0.9rem;
+  font-family: text-labels;
+  color: var(--ff-inactive-text);
 }
 
 input.song-timeline[type=range] {

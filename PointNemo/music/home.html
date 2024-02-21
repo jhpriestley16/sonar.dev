@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <script src="js/page-load.js"></script>
     <script src="js/menus.js"></script>
+    <script src="js/bluetooth.js"></script>
     
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/carousel.css' rel='stylesheet'>
@@ -231,9 +232,6 @@
                 </div>
             </div>
         </header>
-        <div class="connect-device-menu-container">
-            
-        </div>
         <div class="unopened-player-tab-container">
             <div class="playback-button-group">
                 <button class="playback-btn">
@@ -254,11 +252,15 @@
             </div>
 
             <div class="player-settings-btn-group">
-                <button class="player-settings-btn">
-                    <i class="gg-carousel"></i>                
-                </button>
+                <div class="player-settings-container hidden">
+                    <ul id="deviceList"></ul>
+                    <p class="empty-text">No devices to connect</p>
+                </div>
                 <button class="player-settings-btn">
                     <i class="gg-music-speaker"></i>
+                </button>
+                <button class="player-settings-btn">
+                    <i class="gg-carousel"></i>                
                 </button>
                 <button class="player-settings-btn" onclick="toggleSongExpand()">
                     <i class="gg-arrows-expand-right"></i>                

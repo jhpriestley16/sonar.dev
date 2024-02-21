@@ -128,42 +128,53 @@
         </div>
 
         <footer class="navigation-footer">
-            <div class="menu-container hidden">
+            <div class="menu-container hidden" data-index="1">
                 <div class="menu-content-wrapper">
                     <div class="menu-label-container">
                         <p class="menu-label">Global navigation</p>
                     </div>
                 </div>
             </div>
-            <div class="menu-container hidden">
+            <div class="menu-container hidden" data-index="2">
                 <div class="menu-content-wrapper">
                     <div class="menu-label-container">
                         <p class="menu-label">Search</p>
                     </div>
+                    <form class="search-service-form" role="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="service-search-bar" aria-autocomplete="list" aria-multiline="false" 
+                        aria-label="Search" aria-controls="search-suggestions" 
+                        placeholder="Search" spellcheck="false" 
+                        autocomplete="off" autocorrect="off" 
+                        autocapitalize="off" type="search">
+                        <button class="search-bar-clear-btn">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="menu-container hidden">
+            <div class="menu-container hidden" data-index="3">
                 <div class="menu-content-wrapper">
                     <div class="menu-label-container">
                         <p class="menu-label">Messages</p>
                     </div>
                 </div>
             </div>
-            <div class="menu-container hidden">
+            <div class="menu-container hidden" data-index="4">
                 <div class="menu-content-wrapper">
                     <div class="menu-label-container">
                         <p class="menu-label">Notifications</p>
                     </div>
                 </div>
             </div>
-            <div class="menu-container hidden">
+            <div class="menu-container hidden" data-index="5">
                 <div class="menu-content-wrapper">
                     <div class="menu-label-container">
                         <p class="menu-label">Profile</p>
                     </div>
                 </div>
             </div>
-            <div class="menu-container hidden">
+            <div class="menu-container hidden" data-index="6">
                 <div class="menu-content-wrapper">
                     <div class="menu-label-container">
                         <p class="menu-label">Settings</p>
@@ -220,7 +231,9 @@
                 </div>
             </div>
         </header>
-        
+        <div class="connect-device-menu-container">
+            
+        </div>
         <div class="unopened-player-tab-container">
             <div class="playback-button-group">
                 <button class="playback-btn">
@@ -423,63 +436,6 @@
     </div>
     
 
-<div class="enlarged-search-pop-out-container" id="enlargedSearchContainer">
-    <button class="close-expanded-music-player" onclick="enlargeSearch()">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
-
-    <form class="enlarged-search-box">
-        <input class="enlarged-search-input" type="search" placeholder="Search Loop..." spellcheck="false">
-        <button class="enlarged-search-button">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>     
-    </form>
-
-    </form>
-    <script>
-        function enlargeSearch() {
-var search = document.getElementById("enlargedSearchContainer");
-
-search.classList.toggle("enlarged");
-}
-    </script>
-    <div class="quick-links-container">
-        <label class="quick-links-label" for="ul">Quick Links</label>
-        <ul class="quick-links-ul">
-            <a class="quick-link-a" href="index.html">
-                <li class="quick-link-item">
-                    Home
-                </li>
-            </a>
-            <a class="quick-link-a" href="games.html">
-                <li class="quick-link-item">
-                    Games
-                </li>
-            </a>
-            <a class="quick-link-a" href="quizzes.html">
-                <li class="quick-link-item">
-                    Quizzes
-                </li>
-            </a>
-            <a class="quick-link-a" href="#">
-                <li class="quick-link-item">
-                    Profile
-                </li>
-            </a>
-            <a class="quick-link-a" href="#">
-                <li class="quick-link-item">
-                    Settings
-                </li>
-            </a>
-        </ul>
-    </div>
-    <hr class="enlarged-search-content-separator">
-    <div class="search-results-container">
-        <article class="search-result">
-
-        </article>
-    </div>
-</div>
 
 <script src="js/global.js"></script>
 </body>

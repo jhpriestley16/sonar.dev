@@ -237,8 +237,9 @@ a{
 .music-navigation{
   background: var(--navigation-background);
   border-right: var(--column-border);
-  padding: .75rem 1.5rem;
+  padding: .75rem .5rem;
   display: flex;
+  gap: 15px;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
@@ -258,18 +259,84 @@ p.music-hosting-refer-text{
 .fa-apple{
   color: var(--ff-body-text);
 }
-footer.navigation-footer{
-  height: 50%;
+.on-page-navigation{
+  flex-grow: 1;
+  overflow: auto;
+  padding-right: 5px;
+}
+.navigation-item-group{
+  margin-bottom: 8px;
+}
+p.navigation-label{
+  font-family: nav-box-font;
+  font-size: .8rem;
+  color: var(--ff-inactive-text);
+}
+.navigation-btn-group{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+}
+button.nav-btn{
+  display: flex;
+  justify-content: first baseline;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+.nav-btn:hover{
+  background: var(--tab-background);
+}
+/* .nav-btn:hover p{
+  font-family: nav-box-font;
+} */
+p.navigation-title{
+  font-size: .95rem;
+  font-family: text-labels;
+  color: var(--ff-body-text);
+}
+.nav-icon-container{
+  width: 1rem;
+  display: grid;
+  place-items: center;
+}
+.nav-btn i{
+  font-size: .7rem;
+  color: var(--ff-nav-icon);
+}
+footer.navigation-footer{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .menu-container{
-  flex-grow: 1;
+  height: 250px;
+  width: 100%;
+  padding: 5px 8px;
   background: var(--tab-background);
   border: var(--tab-border);
   border-radius: 16px;
   box-shadow: var(--player-box-shadow);
+}
+.hidden{
+  display: none;
+}
+.menu-content-wrapper{
+  height: 100%;
+  width: 100%;
+}
+.menu-label-container{
+  height: fit-content;
+  display: block;
+  text-align: left;
+  border-bottom: var(--tab-border);
+  padding-bottom: 3px;
+}
+p.menu-label{
+  font-family: nav-box-font;
+  font-size: 1rem;
+  color: var(--ff-body-text);
 }
 .menu-buttons-container{
   display: flex;
@@ -285,16 +352,16 @@ footer.navigation-footer{
 button.menu-opener-btn{
   font-size: 1.25rem;
   width: 2.5rem;
-  color: var(--ff-input-clr);
+  color: var(--ff-nav-icon);
   border-radius: 50%;
   aspect-ratio: 1;
   // display: grid;
   // place-items: center;
 }
-button.menu-opener-btn:focus{
+button.menu-opener-btn:hover{
   background: var(--appearance-btn-hover);
 }
-#profileMenu{
+#profileMenuBtn{
   object-fit: cover;
   display: grid;
   place-items: center;
@@ -343,7 +410,7 @@ p.tab-title{
 }
 .unopened-player-tab-container{
   height: 50px;
-  width: 95%;
+  width: 98%;
   border-radius: 100vw;
   border: var(--tab-border);
   background: var(--tab-background);

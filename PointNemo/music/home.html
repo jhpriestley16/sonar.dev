@@ -11,15 +11,21 @@
     <link rel="stylesheet" type="text/css" href="css/colors.css" />
     <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <script src="js/page-load.js"></script>
+    <script src="js/menus.js"></script>
     
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/carousel.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-speaker.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mic.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-note.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/ui-kit.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/folder.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-search.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
@@ -62,30 +68,136 @@
             </div>
         </header>
 
-        
+        <div class="on-page-navigation">
+            <div class="navigation-item-group">
+                <div class="navigation-item-group-label">
+                    <p class="navigation-label">Library</p>
+                </div>
+                <div class="navigation-btn-group">
+                    <button class="nav-btn">
+                        <div class="nav-icon-container">
+                            <i class="gg-music-note"></i>
+                        </div>
+                        <p class="navigation-title">Songs</p>
+                    </button>
+                    <button class="nav-btn">
+                        <div class="nav-icon-container">
+                            <i class="gg-ui-kit"></i>
+                        </div>
+                        <p class="navigation-title">Albums</p>
+                    </button>
+                    <button class="nav-btn">
+                        <div class="nav-icon-container">
+                            <i class="gg-mic"></i>
+                        </div>
+                        <p class="navigation-title">Artists</p>
+                    </button>
+                </div>
+            </div>
+            <div class="navigation-item-group">
+                <div class="navigation-item-group-label">
+                    <p class="navigation-label">Playlists</p>
+                </div>
+                <div class="navigation-btn-group">
+                    <button class="nav-btn">
+                        <div class="nav-icon-container">
+                            <i class="gg-album"></i>
+                        </div>
+                        <p class="navigation-title">Favourite Songs</p>
+                    </button>
+                    <button class="nav-btn">
+                        <div class="nav-icon-container">
+                            <i class="gg-folder"></i>
+                        </div>
+                        <p class="navigation-title">Playlist 1</p>
+                    </button>
+                    <button class="nav-btn">
+                        <div class="nav-icon-container">
+                            <i class="gg-folder"></i>
+                        </div>
+                        <p class="navigation-title">Playlist 2</p>
+                    </button>
+                    <button class="nav-btn">
+                        <div class="nav-icon-container">
+                            <i class="gg-folder"></i>
+                        </div>
+                        <p class="navigation-title">Playlist 3</p>
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <footer class="navigation-footer">
-            <div class="menu-container">
+            <div class="menu-container hidden">
                 <div class="menu-content-wrapper">
+                    <div class="menu-label-container">
+                        <p class="menu-label">Global navigation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container hidden">
+                <div class="menu-content-wrapper">
+                    <div class="menu-label-container">
+                        <p class="menu-label">Search</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container hidden">
+                <div class="menu-content-wrapper">
+                    <div class="menu-label-container">
+                        <p class="menu-label">Messages</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container hidden">
+                <div class="menu-content-wrapper">
+                    <div class="menu-label-container">
+                        <p class="menu-label">Notifications</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container hidden">
+                <div class="menu-content-wrapper">
+                    <div class="menu-label-container">
+                        <p class="menu-label">Profile</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container hidden">
+                <div class="menu-content-wrapper">
+                    <div class="menu-label-container">
+                        <p class="menu-label">Settings</p>
+                    </div>
+                    <div class="appearance-btn-group">
+                        <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                            <i class="gg-moon"></i>
+                        </button>
+                        <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                            <i class="gg-sun"></i>
+                        </button>
+                        <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                            <i class="gg-screen"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="menu-buttons-container">
-                <button class="menu-opener-btn" id="globeNav" onclick="openGlobalNav()">
+                <button class="menu-opener-btn" id="globeNavBtn">
                     <i class="fa-solid fa-globe"></i>
                 </button>
-                <button class="menu-opener-btn" id="searchMenu" onclick="enlargeSearch()">
+                <button class="menu-opener-btn" id="searchMenuBtn">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <button class="menu-opener-btn" id="messageMenu" onclick="openMessages()">
+                <button class="menu-opener-btn" id="messageMenuBtn">
                     <i class="fa-solid fa-envelope"></i>
                 </button>
-                <button class="menu-opener-btn" id="notiMenu" onclick="openNotiMenu()">
+                <button class="menu-opener-btn" id="notiMenuBtn">
                     <i class="fa-solid fa-bell"></i>
                 </button>
-                <button class="menu-opener-btn" id="profileMenu" onclick="openProfileMenu()">
+                <button class="menu-opener-btn" id="profileMenuBtn">
                     <img class="pfp-img" src="cover-art/ah.gif">
                 </button>
-                <button class="menu-opener-btn" id="settingsMenu" onclick="openSettingsMenu()">
+                <button class="menu-opener-btn" id="settingsMenuBtn">
                     <i class="fa-solid fa-gear"></i>
                 </button>
             </div>
@@ -108,17 +220,7 @@
                 </div>
             </div>
         </header>
-        <div class="appearance-btn-group">
-            <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
-                <i class="gg-moon"></i>
-            </button>
-            <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
-                <i class="gg-sun"></i>
-            </button>
-            <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
-                <i class="gg-screen"></i>
-            </button>
-        </div>
+        
         <div class="unopened-player-tab-container">
             <div class="playback-button-group">
                 <button class="playback-btn">

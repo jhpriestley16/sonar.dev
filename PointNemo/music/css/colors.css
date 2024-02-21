@@ -18,11 +18,12 @@
   --ff-to-top: #c3c3c3;
   --ff-btn-clr: #050505;
   --ff-btn-hover-clr: #ffffff;
-  --ff-input-clr: #4b4b4b;
+  --ff-input-clr: #222222;
   --ff-link-clr: #101010;
   --ff-body-text: #101010;
   --ff-inactive-text: #959595;
   --ff-descriptive-text: #5c5c5c;
+  --ff-nav-icon: #121212;
   --header-border: 1.25px #cdcdcd solid;
   --to-top-border: 2px #4e4e4e solid;
   --column-border: 1.5px #cdcdcd solid;
@@ -57,6 +58,7 @@
   --ff-body-text: #e0e0e0;
   --ff-inactive-text: #737373;
   --ff-descriptive-text: #6b6b6b;
+  --ff-nav-icon: #aeaeae;
   --header-border: 1.25px #272727 solid;
   --to-top-border: 2px #272727 solid;
   --column-border: 1.5px #272727 solid;

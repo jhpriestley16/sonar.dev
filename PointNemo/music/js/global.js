@@ -110,3 +110,5 @@ function openSettings() {
         openMenu.style.visibility = 'hidden';
     }
 }
+
+

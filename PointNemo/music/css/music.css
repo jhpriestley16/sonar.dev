@@ -296,6 +296,10 @@ button.search-bar-clear-btn:hover i {
   color: var(--ff-body-text);
 }
 
+.x-hidden {
+  display: none;
+}
+
 .menu-container[data-index="3"] {
   min-height: 120px;
   max-height: 50vh;
@@ -318,6 +322,7 @@ button.search-bar-clear-btn:hover i {
 
 .hidden {
   display: none;
+  opacity: 0;
 }
 
 .menu-content-wrapper {
@@ -704,10 +709,6 @@ input[type=range]::-webkit-slider-thumb:hover {
   height: 100%;
   transition: opacity 2s;
   position: absolute;
-}
-
-.hidden {
-  opacity: 0;
 }
 
 .expanded-music-player {

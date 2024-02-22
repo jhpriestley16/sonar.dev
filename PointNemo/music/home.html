@@ -32,10 +32,8 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrows-expand-right.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
 </head>
 <html>
 <body>
@@ -43,6 +41,23 @@
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
       </script>
       <script defer src="/_vercel/speed-insights/script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EaselPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/PixiPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+
+
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
 
       <div id="preloader">
         <div id="loader">
@@ -147,13 +162,14 @@
                         aria-label="Search" aria-controls="search-suggestions" 
                         placeholder="Search" spellcheck="false" 
                         autocomplete="off" autocorrect="off" 
-                        autocapitalize="off" type="search">
-                        <button class="search-bar-clear-btn">
+                        autocapitalize="off" type="search" id="searchInput">
+                        <button class="search-bar-clear-btn" id="clearInput" type="button">
                             <i class="fa-solid fa-circle-xmark"></i>
                         </button>
                     </form>
                 </div>
             </div>
+            
             <div class="menu-container hidden" data-index="3">
                 <div class="menu-content-wrapper">
                     <div class="menu-label-container">
@@ -368,10 +384,6 @@
             }).call(this);
                                       </script> -->
                             </article>
-                    
-                            <div id='rg_embed_link_4694697' class='rg_embed_link' data-song-id='4694697'>
-                            </div> 
-                            <script crossorigin src='//genius.com/songs/4694697/embed.js'></script>
             
                             <article class="expanded-music-queue-container">
                                 <div class="expanded-music-queue-placement">

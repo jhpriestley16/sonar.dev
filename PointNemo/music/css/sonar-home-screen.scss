@@ -1,5 +1,5 @@
 html, body {
-    min-height: 100vh; 
+    height: 100%; 
     box-sizing: border-box; 
     user-select: none; 
 }
@@ -13,7 +13,7 @@ html, body {
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-optical-sizing: none;
-    transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out, color .2s ease-in-out;
 }
 @font-face{
     font-family: body-text;
@@ -28,10 +28,11 @@ html, body {
     radial-gradient(at 76% 74%, hsla(252,100%,86%,1) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(354,100%,100%,1) 0px, transparent 50%);
     --appearance-btn-hover: rgba(255, 255, 255, 0.349);
-    --main-background: #f2fffd;
+    --main-background: #eae5f6;
 
 
     --ff-body-text-clr: #050505;
+    --ff-slogan-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 26%, #FFCC70 100%);
 }
 .darkmode{
     --body-background-gradient:
@@ -58,7 +59,6 @@ button{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--main-background);
     border-radius: 15px;
   }
   button.appearance-mode-btn{
@@ -71,10 +71,10 @@ button{
     height: 100%;
     border-radius: 100vw;
     color: var(--ff-body-text-clr);
-    transition: color .2s ease-in-out;
   }
   a{
     text-decoration: none;
+    color: var(--ff-body-text-clr);
   }
 
 body{
@@ -84,15 +84,14 @@ body{
 }
 .page-content-wrapper{
     backdrop-filter: blur(24px);
-    display: grid;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 header.page-header{
     height: fit-content;
     width: 100%;
-    position: absolute;
-    top: 0;
-    padding: .5rem;
+    padding-inline: 1rem;
 }
 .header-content-wrapper{
     display: flex;
@@ -100,13 +99,10 @@ header.page-header{
     align-items: center;
     height: 100%;
     width: 100%;
-    place-self: top;
 }
 .logo-title-wrapper{
-    padding: .5rem 1rem;
     width: fit-content;
     height: fit-content;
-    background: var(--main-background);
     border-radius: 15px;
 }
 span.title-text{
@@ -115,22 +111,78 @@ span.title-text{
     color: var(--ff-body-text-clr);
 }
 main.central-page-content{
-    place-self: center;
-    height: fit-content;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    justify-content: center;
+    width: 100vw;
+    gap: 10px;
+}
+.central-page-content-wrapper{
     background: var(--main-background);
     padding: 1rem;
     border-radius: 15px;
+    width: 40%;
 }
 .information-wrapper{
     text-align: center;
+    height: fit-content;
     font-size: 1.5rem;
     font-family: body-text;
     color: var(--ff-body-text-clr);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
+}
+p.page-slogan-text{
+    background: var(--ff-slogan-clr);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.music-streaming-choice-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 15px;
+    width: 90%;
+    justify-content: center;
+}
+.music-streaming-choice{
+    background: var(--main-background);
+    border-radius: 15px;
+    width: 30%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    padding: .5rem;
+}
+.streaming-service-logo-wrapper{
+    height: 90%;
+    aspect-ratio: 1;
+}
+img.streaming-service-logo{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+    header.page-header{
+        padding: .5rem 1rem;
+    }
+    .central-page-content-wrapper{
+        width: 90%;
+    }
+    .music-streaming-choice-container{
+        width: 60%;
+        justify-content: space-between;
+    }
+    .music-streaming-choice{
+        width: 40%;
+        aspect-ratio: 1;
+    }
 }

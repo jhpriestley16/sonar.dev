@@ -48,4 +48,16 @@ window.addEventListener('load', function() {
     }
   });
   
+  const serviceOpener = document.getElementById("serviceToggleBtn");
+  
+
+  function openChoiceMenu() {
+    const serviceChoiceMenu = document.getElementById("serviceChoiceMenu");
+    
+    if (serviceChoiceMenu.style.display === "none") {
+      serviceChoiceMenu.style.display = "block";
+    } else {
+      serviceChoiceMenu.style.display = "none";
+    }
+  }
   

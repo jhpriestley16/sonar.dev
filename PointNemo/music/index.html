@@ -109,7 +109,7 @@
                     </span>
                 </div>
                 <div class="choose-service-btn-container">
-                    <button class="choose-service-btn">
+                    <button class="choose-service-btn" id="serviceToggleBtn" onclick="openChoiceMenu()">
                         Choose streaming service <!-- <i class="fa-solid fa-arrow-right-long"></i> -->
                     </button>
                 </div>
@@ -123,6 +123,81 @@
                     <a href="https://www.facebook.com" class="social-link" target="_blank">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+        <div class="service-selection-menu-container" id="serviceChoiceMenu" style="display: none;">
+            <div class="service-selection-content-wrapper">
+                <header class="service-selection-menu-header">
+                    <span class="menu-title">Select streaming service</span>
+                    <button class="close-menu-btn" onclick="openChoiceMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </header>
+                <div class="streaming-service-choices-container">
+                    <div class="choice-row">
+                        <article class="service-choice">
+                            <div class="service-logo-wrapper">
+                                
+                            </div>
+                            <div class="service-info-and-button">
+                                <button class="choose-btn">
+                                    Choose Apple Music
+                                </button>
+                            </div>
+                        </article>
+                        <article class="service-choice">
+                            <div class="service-logo-wrapper">
+
+                            </div>
+                            <div class="service-info-and-button">
+                                <button class="choose-btn">
+                                    Choose Spotify
+                                </button>
+                            </div>
+                        </article>
+                        <article class="service-choice">
+                            <div class="service-logo-wrapper">
+
+                            </div>
+                            <div class="service-info-and-button">
+                                <button class="choose-btn">
+                                    Choose Tidal
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="choice-row">
+                        <article class="service-choice">
+                            <div class="service-logo-wrapper">
+                            </div>
+                            <div class="service-info-and-button">
+                                <button class="choose-btn">
+                                    Choose Amazon Music
+                                </button>
+                            </div>
+                        </article>
+                        <article class="service-choice">
+                            <div class="service-logo-wrapper">
+
+                            </div>
+                            <div class="service-info-and-button">
+                                <button class="choose-btn">
+                                    Choose Soundcloud
+                                </button>
+                            </div>
+                        </article>
+                        <article class="service-choice">
+                            <div class="service-logo-wrapper">
+
+                            </div>
+                            <div class="service-info-and-button">
+                                <button class="choose-btn">
+                                    Choose Deezer
+                                </button>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>

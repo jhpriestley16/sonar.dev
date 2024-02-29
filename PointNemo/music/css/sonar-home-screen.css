@@ -9,21 +9,9 @@ html, body {
 * {
   margin: 0;
   padding: 0;
-  shape-rendering: crispEdges;
-  font-variant: normal;
-  font-stretch: none;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-optical-sizing: none;
   transition: all 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
-  text-rendering: optimizeLegibility;
-  font-synthesis: none;
-  font-weight: normal;
-  font-variant-ligatures: none;
-  font-variant-caps: normal;
   scroll-behavior: smooth;
 }
 
@@ -311,7 +299,6 @@ button.choose-service-btn {
   height: 85vh;
   width: 75%;
   border: var(--container-border);
-  box-shadow: var(--menu-box-shadow);
 }
 
 .service-selection-content-wrapper {
@@ -376,6 +363,28 @@ article.service-choice {
   height: 67%;
   display: grid;
   place-items: center;
+}
+
+.service-graphic-wrapper {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: grid;
+  place-items: center;
+}
+
+img.service-graphic {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.apple-music-logo-text {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  fill: var(--ff-body-text-clr);
 }
 
 .service-info-and-button {

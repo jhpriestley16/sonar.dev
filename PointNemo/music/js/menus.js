@@ -78,4 +78,19 @@ window.addEventListener('load', function() {
         pageContent.style.filter = 'none';
     }
 }
+
+function openDropNav() {
+  const dropNavLinks = document.getElementById("dropNavLinks");
+  const dropLinkCont = document.getElementById("dropLinkCont");
+  const rightChevron = document.getElementById("rightChevron");
   
+  if (dropNavLinks.style.display === "none") {
+    dropNavLinks.style.display = "flex";
+    dropLinkCont.style.height = "fit-content";
+    rightChevron.style.rotate = "90deg";
+  } else {
+    dropNavLinks.style.display = "none";
+    dropLinkCont.style.height = "1.5rem";
+    rightChevron.style.rotate = "0deg";
+  }
+}

@@ -11,7 +11,6 @@ html, body {
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
   scroll-behavior: smooth;
 }
 
@@ -35,6 +34,7 @@ html, body {
   --ff-btn-text: #f4f4f4;
   --ff-slogan-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 26%, #FFCC70 100%);
   --ff-info-text-gradient: #000000;
+  --ff-drop-nav-link-clr: #504f4f;
   --container-border: 1.5px #c8c8c8 solid;
   --menu-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -62,6 +62,7 @@ html, body {
   --ff-body-text-clr: #ffffff;
   --ff-btn-text: #0a0a0a;
   --ff-info-text-gradient: linear-gradient(to right, #545454, #c6c6c6);
+  --ff-drop-nav-link-clr: #969696;
   --container-border: 1.5px #3a3a3a solid;
   --menu-box-shadow: rgba(77, 77, 77, 0.12) 0px 2px 4px 0px, rgba(136, 136, 136, 0.32) 0px 2px 16px 0px;
 }
@@ -353,7 +354,7 @@ button.close-menu-btn {
 article.service-choice {
   height: 100%;
   width: 33%;
-  border-radius: 15px;
+  border-radius: 10px;
   border: var(--container-border);
   background: var(--main-background);
   padding: 0.5rem;
@@ -385,6 +386,20 @@ img.service-graphic {
   -o-object-fit: cover;
      object-fit: cover;
   fill: var(--ff-body-text-clr);
+}
+
+.tidal-text-logo {
+  fill: var(--ff-body-text-clr);
+}
+
+svg.deezer-logo-text path {
+  fill: var(--ff-body-text-clr);
+}
+
+img.service-logo-png {
+  width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .service-info-and-button {
@@ -468,7 +483,35 @@ button.choose-btn {
     flex-direction: column;
     height: -moz-fit-content;
     height: fit-content;
-    gap: 1rem;
+    gap: 0.6rem;
+  }
+  .service-link-dropdown-container {
+    height: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+  #rightChevron {
+    transition: all 0.2s ease-in-out;
+  }
+  button.service-link-dropdown-btn {
+    font-size: 1.25rem;
+    font-family: light-text;
+    color: var(--ff-body-text-clr);
+    display: flex;
+    align-items: center;
+  }
+  .service-link-dropdown-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    padding-inline: 0.75rem;
+  }
+  a.mobile-slide-in-nav-link {
+    font-size: 1.15rem;
+    font-family: light-text;
+    color: var(--ff-drop-nav-link-clr);
   }
   footer.slide-in-footer {
     height: 75px;

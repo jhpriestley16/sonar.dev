@@ -15,7 +15,6 @@ html, body {
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-optical-sizing: none;
-  transition: all 0.2s ease-in-out;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
           text-size-adjust: none;
@@ -24,6 +23,7 @@ html, body {
   font-weight: normal;
   font-variant-ligatures: none;
   font-variant-caps: normal;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -151,6 +151,43 @@ span.title-text {
   font-size: 2.25rem;
   font-family: light-text;
   color: var(--ff-body-text-clr);
+}
+
+.nav-container {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+nav.navigation-links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+span.nav-title {
+  font-size: 1.25rem;
+  font-family: light-text;
+  color: var(--ff-body-text-clr);
+}
+
+.mobile-nav-menu-opener-container {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  place-items: center;
+  display: none;
+}
+
+button.mobile-nav-menu-opener-btn {
+  font-size: 2.5rem;
+  color: var(--ff-body-text-clr);
+}
+
+.mobile-slide-in-menu {
+  display: none;
 }
 
 main {
@@ -377,6 +414,64 @@ button.choose-btn {
 @media only screen and (min-width: 0px) and (max-width: 900px) {
   header.page-header {
     padding: 0.5rem 1rem;
+  }
+  .nav-container {
+    display: none;
+  }
+  .mobile-nav-menu-opener-container {
+    display: grid;
+  }
+  .appearance-btn-group {
+    display: none;
+  }
+  .mobile-slide-in-menu {
+    display: none;
+    height: 100dvh;
+    width: 60vw;
+    border-left: var(--container-border);
+    background: var(--main-background);
+    position: absolute;
+    top: 0;
+    right: -60vw;
+    transition: right 0.3s ease-in-out 300ms;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .open {
+    right: 0;
+    display: flex;
+    transition: right 0.3s ease-in-out 300ms;
+  }
+  .mobile-nav-menu-closer-container {
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: grid;
+    place-items: center;
+  }
+  .mobile-nav-container {
+    padding-inline: 1rem;
+    flex-grow: 1;
+  }
+  nav.navigation-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 1rem;
+  }
+  footer.slide-in-footer {
+    height: 75px;
+  }
+  .mobile-appearance-btn-group {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    float: right;
   }
   main.central-page-content {
     overflow: scroll;

@@ -60,4 +60,22 @@ window.addEventListener('load', function() {
       serviceChoiceMenu.style.display = "none";
     }
   }
+
+  function toggleSlideMenu() {
+    const menu = document.querySelector('.mobile-slide-in-menu');
+    const menuOpenerBtn = document.querySelector('.mobile-nav-menu-opener-btn');
+    const pageContent = document.querySelector('.page-content-wrapper');
+    
+    // Toggle the 'open' class on the menu
+    menu.classList.toggle('open');
+    
+    // Toggle the position of the menu opener button
+    if (menu.classList.contains('open')) {
+        menuOpenerBtn.style.right = '0';
+        pageContent.style.filter = 'blur(24px)';
+    } else {
+        menuOpenerBtn.style.right = '-60vw';
+        pageContent.style.filter = 'none';
+    }
+}
   

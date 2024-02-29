@@ -12,23 +12,12 @@
     <script src="js/menus.js"></script>
     <script src="js/bluetooth.js"></script>
     
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/carousel.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-speaker.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mic.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-note.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/ui-kit.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/folder.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-search.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrows-expand-right.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-left-r.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right-r.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
@@ -48,6 +37,16 @@
             <div class="logo-title-wrapper">
                 <span class="title-text">Sonar</span>
             </div>
+            <div class="nav-container">
+                <nav class="navigation-links-wrapper">
+                    <a href="#" class="nav-link">
+                        <span class="nav-title">Sonar Quizzes</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="nav-title">About Us</span>
+                    </a>
+                </nav>
+            </div>
             <div class="appearance-btn-group">
                 <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
                     <i class="gg-moon"></i>
@@ -57,6 +56,11 @@
                 </button>
                 <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
                     <i class="gg-screen"></i>
+                </button>
+            </div>
+            <div class="mobile-nav-menu-opener-container">
+                <button class="mobile-nav-menu-opener-btn" onclick="toggleSlideMenu()">
+                    <i class="gg-chevron-left-r"></i>
                 </button>
             </div>
         </div>
@@ -126,39 +130,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="sonar-quiz-introduction-container">
-            <div class="information-wrapper">
-                <div class="slogan-wrapper">
-                    <p class="page-slogan-text">
-                        Test your knowledge
-                    </p>
-                    <span class="site-name-large">
-                        Sonar Quizzes
-                    </span>
-                </div>
-                <div class="choose-service-btn-container">
-                    <button class="choose-service-btn" id="serviceToggleBtn" onclick="openChoiceMenu()">
-                        Go to Sonar Quizzes
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="extra-information-content-container">
-            <div class="information-wrapper">
-                <div class="slogan-wrapper">
-                    <p class="page-slogan-text">
-                        Learn about us
-                    </p>
-                    <span class="site-name-large">
-                        Sonar Info
-                    </span>
-                </div>
-                <div class="choose-service-btn-container">
-                    <button class="choose-service-btn" id="serviceToggleBtn" onclick="openChoiceMenu()">
-                        Learn more about us 
-                    </button>
-                </div>
-            </div> -->
         </div>
         <div class="service-selection-menu-container" id="serviceChoiceMenu" style="display: none;">
             <div class="service-selection-content-wrapper">
@@ -237,6 +208,44 @@
             </div>
         </div>
     </main>
+
+</div>
+<div class="mobile-slide-in-menu">
+    <header class="page-header">
+        <div class="header-content-wrapper">
+            <div class="mobile-nav-menu-closer-container">
+                <button class="mobile-nav-menu-opener-btn" onclick="toggleSlideMenu()">
+                    <i class="gg-chevron-right-r"></i>
+                </button>
+            </div>
+            <div class="logo-title-wrapper">
+                <span class="title-text">Sonar</span>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-nav-container">
+        <nav class="navigation-links-wrapper">
+            <a href="#" class="nav-link">
+                <span class="nav-title">Sonar Quizzes</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="nav-title">About Us</span>
+            </a>
+        </nav>
+    </div>
+    <footer class="slide-in-footer">
+        <div class="mobile-appearance-btn-group">
+            <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                <i class="gg-moon"></i>
+            </button>
+            <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                <i class="gg-sun"></i>
+            </button>
+            <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                <i class="gg-screen"></i>
+            </button>
+        </div>
+    </footer>
 
 </div>
 <script src="js/global.js"></script>

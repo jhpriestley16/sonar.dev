@@ -19,7 +19,7 @@ html, body {
     // font-weight: normal;
     // font-variant-ligatures: none;
     // font-variant-caps: normal;
-    scroll-behavior: smooth;
+    transition-delay: 0;
 }
 @font-face{
     font-family: body-text;
@@ -37,6 +37,7 @@ html, body {
     --appearance-btn-hover: rgba(255, 255, 255, 0.349);
     --main-background: #f3f3f3;
     --btn-background: #050505;
+    --about-us-info-container-bg-clr: #efefef;
 
 
     --ff-body-text-clr: #050505;
@@ -44,8 +45,11 @@ html, body {
     --ff-slogan-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 26%, #FFCC70 100%);
     --ff-info-text-gradient: #000000;
     --ff-drop-nav-link-clr: #504f4f;
+    --ff-information-icon-clr: #606060;
 
     --container-border: 1.5px #c8c8c8 solid; 
+    --about-us-information-cont-border: 1.5px #dbdbdb solid;
+    --about-info-icon-border: 1px #c7c7c7 solid;
 
     --menu-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -69,13 +73,17 @@ radial-gradient(at 6% 82%, hsla(0,0%,0%,1) 0px, transparent 50%),
 radial-gradient(at 0% 50%, hsla(180,0%,0%,1) 0px, transparent 50%);
     --main-background: #000000;
     --btn-background: #f9f9f9;
+    --about-us-info-container-bg-clr: #111111;
 
     --ff-body-text-clr: #ffffff;
     --ff-btn-text: #0a0a0a;
     --ff-info-text-gradient: linear-gradient(to right, #545454, #c6c6c6);
     --ff-drop-nav-link-clr: #969696;
+    --ff-information-icon-clr: #606060;
 
-    --container-border: 1.5px #3a3a3a solid; 
+    --container-border: 1.5px #3a3a3a solid;
+    --about-us-information-cont-border: 1.5px #202020 solid;
+    --about-info-icon-border: 1px #262626 solid;
 
     --menu-box-shadow: rgba(77, 77, 77, 0.12) 0px 2px 4px 0px, rgba(136, 136, 136, 0.32) 0px 2px 16px 0px;
 }
@@ -345,18 +353,27 @@ img.service-graphic{
     
 }
 .apple-music-logo-text{
-    width: 100%;
+    width: 50%;
     object-fit: cover;
     fill: var(--ff-body-text-clr);
 }
+.spotify-logo-text{
+    width: 50%;
+    object-fit: cover;
+}
 .tidal-text-logo{
+    width: 50%;
     fill: var(--ff-body-text-clr);
+}
+.deezer-logo-text{
+    width: 50%;
+    object-fit: cover;
 }
 svg.deezer-logo-text path{
     fill: var(--ff-body-text-clr);
 }
 img.service-logo-png{
-    width: 70%;
+    width: 40%;
     object-fit: cover;
 }
 .service-info-and-button{
@@ -496,6 +513,7 @@ button.choose-btn{
         width: 95%;
         margin-inline: auto;
         margin-bottom: 1rem;
+        // border: none;
     }
     .sonar-quiz-introduction-container{
         width: 95%;
@@ -523,6 +541,69 @@ button.choose-btn{
     }
     article.service-choice{
         width: 100%;
-        height: 250px;
+        height: 220px;
+    }
+
+
+
+
+    .about-us-site-description-wrapper{
+        height: fit-content;
+        width: 95%;
+        padding: 6px;
+        background: var(--about-us-info-container-bg-clr);
+        margin-inline: auto;
+        border-radius: 10px;
+        border: var(--about-us-information-cont-border);
+    }
+    header.information-container-header{
+        height: fit-content;
+        margin-bottom: 6px;
+    }
+    .information-header-content-wrapper{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        gap: 10px;
+    }
+    .information-type-icon-wrapper{
+        height: 40px;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        border: var(--about-info-icon-border);
+        border-radius: 6px;
+    }
+    .information-type-icon-wrapper i{
+        scale: 1.2;
+        color: var(--ff-information-icon-clr);
+    }
+    span.header-title{
+        font-size: 1.2rem;
+        font-family: light-text;
+        text-decoration: underline;
+        color: var(--ff-body-text-clr);
+    }
+    p.info-text{
+        font-size: 1rem;
+        font-family: text-labels;
+        color: var(--ff-body-text-clr);
+        -webkit-text-fill-color: var(--ff-body-text-clr);
+    }
+    .tech-stack-icon-container{
+        height: 40px;
+        width: 100%;
+        border-radius: 6px;
+        border: var(--about-info-icon-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px .5rem;
+        margin-bottom: 6px;
+    }
+    .tech-icon-wrapper{
+        font-size: 1.5rem;
+        color: var(--ff-information-icon-clr);
     }
 }

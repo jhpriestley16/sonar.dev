@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonar</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/sonar-home-screen.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <script src="js/page-load.js"></script>
+    <script src="js/menus.js"></script>
+    <script src="js/bluetooth.js"></script>
+    
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-left-r.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right-r.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/notes.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/code-slash.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
+</head>
+<html>
+<body>
+    <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
+<div class="page-content-wrapper" style="gap: 15px">
+    <header class="page-header">
+        <div class="header-content-wrapper">
+            <div class="logo-title-wrapper">
+                <span class="title-text">About Us</span>
+            </div>
+            <div class="nav-container">
+                <nav class="navigation-links-wrapper">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-title">Home</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="nav-title">Sonar Quizzes</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="appearance-btn-group">
+                <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                    <i class="gg-moon"></i>
+                </button>
+                <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                    <i class="gg-sun"></i>
+                </button>
+                <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                    <i class="gg-screen"></i>
+                </button>
+            </div>
+            <div class="mobile-nav-menu-opener-container">
+                <button class="mobile-nav-menu-opener-btn" onclick="toggleSlideMenu()">
+                    <i class="gg-chevron-left-r"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="about-us-site-description-wrapper">
+        <header class="information-container-header">
+            <div class="information-header-content-wrapper">
+                <div class="information-type-icon-wrapper">
+                    <i class="gg-notes"></i>                
+                </div>
+                <div class="header-title-wrapper">
+                    <span class="header-title">
+                        What is Sonar?
+                    </span>
+                </div>
+            </div>
+        </header>
+        <div class="info-text-wrapper">
+            <p class="info-text">
+                Sonar is a service developed with the sole goal of helping music lovers find their sound. We use listening data collected via their chosen streaming service's API, and configure them a list of songs and artists they may like.
+            </p>
+        </div>
+    </div>
+    <div class="about-us-site-description-wrapper">
+        <header class="information-container-header">
+            <div class="information-header-content-wrapper">
+                <div class="information-type-icon-wrapper">
+                    <i class="gg-code-slash"></i>                
+                </div>
+                <div class="header-title-wrapper">
+                    <span class="header-title">
+                        How we built Sonar
+                    </span>
+                </div>
+            </div>
+        </header>
+        <div class="tech-stack-icon-container">
+            <div class="tech-icon-wrapper">
+                <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="tech-icon-wrapper">
+                <i class="fa-brands fa-css3"></i>
+            </div>
+            <div class="tech-icon-wrapper">
+                <i class="fa-brands fa-sass"></i>
+            </div>
+            <div class="tech-icon-wrapper">
+                <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="tech-icon-wrapper">
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <!-- <div class="tech-icon-wrapper">
+                
+            </div> -->
+        </div>
+        <div class="info-text-wrapper">
+            <p class="info-text">
+
+            </p>
+        </div>
+    </div>
+</div>
+<div class="mobile-slide-in-menu">
+    <header class="page-header">
+        <div class="header-content-wrapper">
+            <div class="mobile-nav-menu-closer-container">
+                <button class="mobile-nav-menu-opener-btn" onclick="toggleSlideMenu()">
+                    <i class="gg-chevron-right-r"></i>
+                </button>
+            </div>
+            <div class="logo-title-wrapper">
+                <span class="title-text">Sonar</span>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-nav-container">
+        <nav class="navigation-links-wrapper">
+            <a href="index.html" class="nav-link">
+                <span class="nav-title">Home</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="nav-title">Sonar Quizzes</span>
+            </a>
+            <div class="service-link-dropdown-container" id="dropLinkCont">
+                <button class="service-link-dropdown-btn" onclick="openDropNav()">
+                    Services We Use 
+                    <i class="gg-chevron-right" id="rightChevron"></i>
+                </button>
+                <div class="service-link-dropdown-content-wrapper" style="display: none;" id="dropNavLinks">
+                    <a class="mobile-slide-in-nav-link" href="https://music.apple.com" target="_blank">
+                        Apple Music
+                    </a>
+                    <a class="mobile-slide-in-nav-link" href="https://open.spotify.com" target="_blank">
+                        Spotify
+                    </a>
+                    <a class="mobile-slide-in-nav-link" href="https://tidal.com" target="_blank">
+                        Tidal
+                    </a>
+                    <a class="mobile-slide-in-nav-link" href="https://music.amazon.com" target="_blank">
+                        Amazon Music
+                    </a>
+                    <a class="mobile-slide-in-nav-link" href="https://soundcloud.com" target="_blank">
+                        Soundcloud
+                    </a>
+                    <a class="mobile-slide-in-nav-link" href="https://deezer.com" target="_blank">
+                        Deezer
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <footer class="slide-in-footer">
+        <div class="mobile-appearance-btn-group">
+            <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                <i class="gg-moon"></i>
+            </button>
+            <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                <i class="gg-sun"></i>
+            </button>
+            <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                <i class="gg-screen"></i>
+            </button>
+        </div>
+    </footer>
+</div>
+
+
+<script src="js/global.js"></script>
+</body>
+</html>

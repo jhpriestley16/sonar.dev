@@ -73,7 +73,7 @@ radial-gradient(at 6% 82%, hsla(0,0%,0%,1) 0px, transparent 50%),
 radial-gradient(at 0% 50%, hsla(180,0%,0%,1) 0px, transparent 50%);
     --main-background: #000000;
     --btn-background: #f9f9f9;
-    --about-us-info-container-bg-clr: #111111;
+    --about-us-info-container-bg-clr: #0f0f0f;
 
     --ff-body-text-clr: #ffffff;
     --ff-btn-text: #0a0a0a;
@@ -185,6 +185,7 @@ button.mobile-nav-menu-opener-btn{
 main{
     padding: 1rem;
     flex-grow: 1;
+    height: 100%;
     display: flex;
     gap: 30px;
 }
@@ -603,7 +604,7 @@ button.choose-btn{
         align-items: center;
         padding: 4px .5rem;
         margin-bottom: 6px;
-        fill: var(--ff-body-text-clr)
+        fill: var(--ff-body-text-clr);
     }
     .tech-icon-wrapper{
         font-size: 1.5rem;

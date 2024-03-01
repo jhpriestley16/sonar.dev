@@ -36,7 +36,7 @@ html, body {
   --ff-slogan-clr: linear-gradient(43deg, #4158D0 0%, #C850C0 26%, #FFCC70 100%);
   --ff-info-text-gradient: #000000;
   --ff-drop-nav-link-clr: #504f4f;
-  --ff-information-icon-clr: #606060;
+  --ff-information-icon-clr: #3f3f3f;
   --container-border: 1.5px #c8c8c8 solid;
   --about-us-information-cont-border: 1.5px #dbdbdb solid;
   --about-info-icon-border: 1px #c7c7c7 solid;
@@ -68,7 +68,7 @@ html, body {
   --ff-btn-text: #0a0a0a;
   --ff-info-text-gradient: linear-gradient(to right, #545454, #c6c6c6);
   --ff-drop-nav-link-clr: #969696;
-  --ff-information-icon-clr: #606060;
+  --ff-information-icon-clr: #999999;
   --container-border: 1.5px #3a3a3a solid;
   --about-us-information-cont-border: 1.5px #202020 solid;
   --about-info-icon-border: 1px #262626 solid;
@@ -120,6 +120,7 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding-bottom: 6px;
 }
 
 header.page-header {
@@ -640,9 +641,25 @@ button.choose-btn {
     align-items: center;
     padding: 4px 0.5rem;
     margin-bottom: 6px;
+    fill: var(--ff-body-text-clr);
   }
   .tech-icon-wrapper {
     font-size: 1.5rem;
     color: var(--ff-information-icon-clr);
+  }
+  .fa-html5 {
+    color: #e34c36;
+  }
+  .fa-css3 {
+    color: #264de4;
+  }
+  .fa-sass {
+    color: #cc6699;
+  }
+  .fa-js {
+    color: #f0db4f;
+  }
+  .fa-github {
+    color: var(--ff-body-text-clr);
   }
 }/*# sourceMappingURL=sonar-home-screen.css.map */

@@ -71,12 +71,14 @@ window.addEventListener('load', function() {
     
     // Toggle the position of the menu opener button
     if (menu.classList.contains('open')) {
-        menuOpenerBtn.style.right = '0';
-        pageContent.style.filter = 'blur(24px)';
-    } else {
-        menuOpenerBtn.style.right = '-60vw';
-        pageContent.style.filter = 'none';
-    }
+      menuOpenerBtn.style.right = '0';
+      pageContent.style.filter = 'blur(24px)';
+      document.body.style.overflow = 'hidden';
+  } else {
+      menuOpenerBtn.style.right = '-60vw';
+      pageContent.style.filter = 'none';
+      document.body.style.overflow = 'auto';
+  }
 }
 
 function openDropNav() {
@@ -92,5 +94,35 @@ function openDropNav() {
     dropNavLinks.style.display = "none";
     dropLinkCont.style.height = "1.5rem";
     rightChevron.style.rotate = "0deg";
+  }
+}
+/* function expandInfo() {
+  // Find the parent .about-us-site-description-wrapper element
+  const wrapper = document.querySelector('.about-us-site-description-wrapper');
+  // Add the 'expandedInfo' class to the wrapper element
+  wrapper.classList.toggle('expandedInfo');
+  const infoText = document.querySelector('.info-text-wrapper');
+  if (wrapper.classList.contains('expandedInfo')){
+    infoText.style.display = 'block';
+  } else {
+    infoText.style.display = 'none';
+  }
+
+} */
+function expandInfo(event) {
+  // Get the clicked button
+  const btn = event.target;
+
+  // Find the parent .about-us-site-description-wrapper element
+  const wrapper = btn.closest('.about-us-site-description-wrapper');
+
+  // Find the info-text-wrapper inside the current wrapper
+  const infoTextWrapper = wrapper.querySelector('.info-text-wrapper');
+
+  // Toggle the display property of the info-text-wrapper
+  if (infoTextWrapper.style.display === 'none') {
+      infoTextWrapper.style.display = 'block';
+  } else {
+      infoTextWrapper.style.display = 'none';
   }
 }

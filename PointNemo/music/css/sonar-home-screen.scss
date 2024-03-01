@@ -126,6 +126,7 @@ body{
 .page-content-wrapper{
     backdrop-filter: blur(24px);
     flex-grow: 1;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     padding-bottom: 6px;

@@ -692,4 +692,7 @@ button.choose-btn {
     display: grid;
     place-items: center;
   }
+  .gg-read {
+    color: var(--ff-body-text-clr);
+  }
 }/*# sourceMappingURL=sonar-home-screen.css.map */

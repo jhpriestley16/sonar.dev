@@ -47,8 +47,9 @@ html, body {
     --ff-info-text-gradient: #000000;
     --ff-drop-nav-link-clr: #504f4f;
     --ff-information-icon-clr: #3f3f3f;
+    --ff-drop-info-clr: #2b2b2b;
 
-    --container-border: 1.5px #c8c8c8 solid; 
+    --container-border: 1.5px #cdcdcd solid; 
     --about-us-information-cont-border: 1.5px #dbdbdb solid;
     --about-info-icon-border: 1px #c7c7c7 solid;
 
@@ -82,6 +83,7 @@ radial-gradient(at 0% 50%, hsla(180,0%,0%,1) 0px, transparent 50%);
     --ff-info-text-gradient: linear-gradient(to right, #545454, #c6c6c6);
     --ff-drop-nav-link-clr: #969696;
     --ff-information-icon-clr: #999999;
+    --ff-drop-info-clr: #d2d2d2;
 
     --container-border: 1.5px #3a3a3a solid;
     --about-us-information-cont-border: 1.5px #202020 solid;
@@ -146,6 +148,8 @@ header.page-header{
     width: 100%;
 }
 .logo-title-wrapper{
+    display: flex;
+    gap: 1rem;
     width: fit-content;
     height: fit-content;
     border-radius: 15px;
@@ -218,7 +222,7 @@ main.central-page-content{
     align-items: center;
     gap: 30px;
 }
-p{
+p.page-description-text{
     background: var(--ff-info-text-gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -423,6 +427,7 @@ button.choose-btn{
 
 
 
+
 @media only screen and (min-width: 0px) and (max-width: 900px) {
     header.page-header{
         padding: .5rem 1rem;
@@ -556,10 +561,10 @@ button.choose-btn{
         height: fit-content;
         width: 95%;
         padding: 6px;
-        background: var(--about-us-info-container-bg-clr);
+        // background: var(--about-us-info-container-bg-clr);
         margin-inline: auto;
-        border-radius: 10px;
-        border: var(--about-us-information-cont-border);
+        // border-radius: 10px;
+        border-bottom: var(--about-us-information-cont-border);
     }
     .about-us-site-description-wrapper:last-of-type{
         margin-bottom: 16px;
@@ -585,7 +590,7 @@ button.choose-btn{
         aspect-ratio: 1;
         display: grid;
         place-items: center;
-        border: var(--about-info-icon-border);
+        // border: var(--about-info-icon-border);
         border-radius: 6px;
     }
     .information-type-icon-wrapper i{
@@ -604,14 +609,13 @@ button.choose-btn{
     p.info-text{
         font-size: 1rem;
         font-family: text-labels;
-        color: var(--ff-body-text-clr);
-        -webkit-text-fill-color: var(--ff-body-text-clr);
+        color: var(--ff-drop-info-clr);
     }
     .tech-stack-icon-container{
         height: 40px;
         width: 100%;
         border-radius: 6px;
-        border: var(--about-info-icon-border);
+        // border: var(--about-info-icon-border);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -652,10 +656,34 @@ button.choose-btn{
         display: grid;
         place-items: center;
     }
-    .gg-read{
+    .gg-chevron-right{
         color: var(--ff-body-text-clr);
+        transition: rotate .2s ease;
     }
     .expandedInfo{
     }
     
+
+
+
+    .quick-page-description-container{
+        width: 95%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+    p.sonar-quizzes-quick-description-text{
+        font-size: 1.2rem;
+        color: var(--ff-body-text-clr);
+        font-family: light-text;
+        text-align: center;
+    }
+    hr.section-divider{
+        width: 10%;
+        border: none;
+        border-top: var(--about-info-icon-border);
+    }
 }

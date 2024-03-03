@@ -118,11 +118,14 @@ function expandInfo(event) {
 
   // Find the info-text-wrapper inside the current wrapper
   const infoTextWrapper = wrapper.querySelector('.info-text-wrapper');
+  const openIcon = wrapper.querySelector('.gg-chevron-right')
 
   // Toggle the display property of the info-text-wrapper
   if (infoTextWrapper.style.display === 'none') {
       infoTextWrapper.style.display = 'block';
+      openIcon.style.rotate = '90deg';
   } else {
       infoTextWrapper.style.display = 'none';
+      openIcon.style.rotate = '0deg';
   }
 }

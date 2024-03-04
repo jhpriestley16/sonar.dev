@@ -39,6 +39,7 @@ html, body {
     --btn-background: #050505;
     --about-us-info-container-bg-clr: #efefef;
     --overlay-background: #ffffff53;
+    --input-background: #e4e4e4;
 
 
     --ff-body-text-clr: #050505;
@@ -77,6 +78,7 @@ radial-gradient(at 0% 50%, hsla(180,0%,0%,1) 0px, transparent 50%);
     --btn-background: #f9f9f9;
     --about-us-info-container-bg-clr: #0f0f0f;
     --overlay-background: #12121253;
+    --input-background: #121212;
 
     --ff-body-text-clr: #ffffff;
     --ff-btn-text: #0a0a0a;
@@ -406,21 +408,76 @@ button.choose-btn{
 
 
 
-
-.side-menu{
-    width: 20%;
+.result-container{
     height: 100%;
-    border: var(--container-border);
-    background: var(--main-background);
-    border-radius: 15px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
 }
-.main-content{
-    flex-grow: 1;
+.result-song-list-container{
+    width: 40vw;
+    height: 90%;
     border: var(--container-border);
+    border-radius: 6px;
     background: var(--main-background);
-    border-radius: 15px;
 }
+.result-information-playlist-container{
+    width: 20vw;
+    height: 90%;
+    border: var(--container-border);
+    border-radius: 6px;
+    background: var(--main-background);
+    padding: 8px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+header.playlist-customise-title{
+    height: fit-content;
+}
+span.custom-playlist-container-title{
+    font-size: 1.2rem;
+    font-family: light-text;
+    color: var(--ff-body-text-clr);
+}
+form.name-playlist-form{
+    background: var(--input-background);
+    border: var(--about-info-icon-border);
+    border-radius: 4px;
+    height: 40px;
+    padding-inline: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+input.name-playlist{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--ff-body-text-clr);
+    font-size: .9rem;
+    font-family: text-labels;
 
+    ::placeholder{
+        color: var(--ff-drop-nav-link-clr);
+    }
+}
+input:focus{
+    border: none;
+    outline: none
+}
+.pen-icon-wrapper{
+    height: 100%;
+    width: fit-content;
+    margin-inline: 4px;
+    display: grid;
+    place-items: center;
+}
 
 
 

@@ -17,30 +17,24 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-speaker.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mic.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-note.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/ui-kit.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/folder.css' rel='stylesheet'>
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-search.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/add.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrows-expand-right.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
 </head>
 <html>
-<body>
+<body style="flex-direction: column; align-items: center;">
     <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
 
-    <div class="page-content-wrapper">
         <header class="page-header">
             <div class="header-content-wrapper">
                 <div class="logo-title-wrapper">
@@ -60,15 +54,33 @@
             </div>
         </header>
 
-        <main>
-            <div class="side-menu">
+        <div class="result-container">
+            <div class="result-song-list-container">
 
             </div>
-            <div class="main-content">
-                
+            <div class="result-information-playlist-container">
+                <header class="playlist-customise-title">
+                    <span class="custom-playlist-container-title">Customise playlist</span>
+                </header>
+                <form class="name-playlist-form">
+                    <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" placeholder="Name your playlist...">
+                    <!-- <div class="pen-icon-wrapper">
+                        <i class="gg-pen"></i>
+                    </div> -->
+                </form>
+                <!-- <div class="playlist-img-container">
+                    <div class="img-preview-container">
+
+                    </div>
+                    <input class="select-img-input" type="file" placeholder="Choose image">
+                </div> -->
+                <div class="confirm-playlist-button-group">
+                    <button class="add-playlist-btn">
+                        <i class="gg-add"></i>
+                    </button>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
 
     <script src="js/global.js"></script>
 </body>

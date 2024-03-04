@@ -63,17 +63,21 @@
                     <span class="custom-playlist-container-title">Customise playlist</span>
                 </header>
                 <form class="name-playlist-form">
-                    <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" placeholder="Name your playlist...">
+                    <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" maxlength="50" placeholder="Name your playlist...">
                     <!-- <div class="pen-icon-wrapper">
                         <i class="gg-pen"></i>
                     </div> -->
-                </form>
-                <!-- <div class="playlist-img-container">
-                    <div class="img-preview-container">
-
+                    <div class="character-limit-container">
+                        <p class="character-counter counter-number">0</p>
+                        <p class="character-limit-number counter-number">/50</p>
                     </div>
-                    <input class="select-img-input" type="file" placeholder="Choose image">
-                </div> -->
+                </form>
+                <div class="playlist-img-container">
+                    <div class="playlist-img-wrapper">
+                        <img class="playlist-img" src="cover-art/plus-img.png" id="output">
+                    </div>
+                    <input id="file" type="file" onchange="loadFile(event)" accept=".jpg,.jpeg,.png,.webp,.svg" name="Choose an image"/>
+                </div>
                 <div class="confirm-playlist-button-group">
                     <button class="add-playlist-btn">
                         <i class="gg-add"></i>

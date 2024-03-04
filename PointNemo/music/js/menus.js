@@ -129,3 +129,8 @@ function expandInfo(event) {
       openIcon.style.rotate = '0deg';
   }
 }
+
+var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};

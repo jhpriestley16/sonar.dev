@@ -468,7 +468,7 @@ button.choose-btn {
   width: 40vw;
   height: 90%;
   border: var(--container-border);
-  border-radius: 6px;
+  border-radius: 10px;
   background: var(--main-background);
 }
 
@@ -476,7 +476,7 @@ button.choose-btn {
   width: 20vw;
   height: 90%;
   border: var(--container-border);
-  border-radius: 6px;
+  border-radius: 10px;
   background: var(--main-background);
   padding: 8px;
   gap: 10px;
@@ -496,11 +496,7 @@ span.custom-playlist-container-title {
 }
 
 form.name-playlist-form {
-  background: var(--input-background);
-  border: var(--about-info-icon-border);
-  border-radius: 4px;
   height: 40px;
-  padding-inline: 4px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -510,12 +506,14 @@ form.name-playlist-form {
 
 input.name-playlist {
   height: 100%;
-  width: 100%;
-  background: none;
-  border: none;
+  width: 85%;
+  background: var(--input-background);
+  border: var(--about-info-icon-border);
+  padding-inline: 6px;
   color: var(--ff-body-text-clr);
   font-size: 0.9rem;
   font-family: text-labels;
+  border-radius: 6px;
 }
 input.name-playlist ::-moz-placeholder {
   color: var(--ff-drop-nav-link-clr);
@@ -525,8 +523,56 @@ input.name-playlist ::placeholder {
 }
 
 input:focus {
-  border: none;
   outline: none;
+}
+
+.character-limit-container {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+  background: var(--input-background);
+  border: var(--about-info-icon-border);
+  height: 100%;
+  border-radius: 6px;
+  padding-inline: 6px;
+}
+
+p.counter-number {
+  color: var(--ff-information-icon-clr);
+  font-size: 0.9rem;
+  font-family: text-labels;
+}
+
+.playlist-img-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.playlist-img-wrapper {
+  aspect-ratio: 1;
+  height: 100%;
+  border: var(--container-border);
+  border-radius: 6px;
+  display: grid;
+}
+
+img.playlist-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 4.5px;
+  display: grid;
+}
+
+img.playlist-img[src="cover-art/plus-img.png"] {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 50%;
+  width: 50%;
+  place-self: center;
 }
 
 .pen-icon-wrapper {
@@ -785,5 +831,17 @@ input:focus {
     width: 10%;
     border: none;
     border-top: var(--about-info-icon-border);
+  }
+  .result-container {
+    flex-direction: column;
+    height: 70vh;
+  }
+  .result-song-list-container {
+    width: 95vw;
+    height: 100%;
+  }
+  .result-information-playlist-container {
+    width: 95vw;
+    height: 200px;
   }
 }/*# sourceMappingURL=sonar-home-screen.css.map */

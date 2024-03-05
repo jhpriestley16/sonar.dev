@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
 </head>
 <html>
-<body style="flex-direction: column; align-items: center;">
+<body style="flex-direction: column;">
     <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
@@ -53,38 +53,42 @@
                 </div>
             </div>
         </header>
-
-        <div class="result-container">
-            <div class="result-song-list-container">
+        <main class="result-page-main-content" style="justify-content: space-between;">
+            <div class="side-page-content">
 
             </div>
-            <div class="result-information-playlist-container">
-                <header class="playlist-customise-title">
-                    <span class="custom-playlist-container-title">Customise playlist</span>
-                </header>
-                <form class="name-playlist-form">
-                    <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" maxlength="50" placeholder="Name your playlist...">
-                    <!-- <div class="pen-icon-wrapper">
-                        <i class="gg-pen"></i>
-                    </div> -->
-                    <div class="character-limit-container">
-                        <p class="character-counter counter-number">0</p>
-                        <p class="character-limit-number counter-number">/50</p>
+            <div class="result-container">
+                <div class="result-information-playlist-container">
+                    <header class="playlist-customise-title">
+                        <span class="custom-playlist-container-title">Customise playlist</span>
+                    </header>
+                    <form class="name-playlist-form">
+                        <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" maxlength="50" placeholder="Name your playlist...">
+                        <!-- <div class="pen-icon-wrapper">
+                            <i class="gg-pen"></i>
+                        </div> -->
+                        <div class="character-limit-container">
+                            <p class="character-counter counter-number">0</p>
+                            <p class="character-limit-number counter-number">/50</p>
+                        </div>
+                    </form>
+                    <div class="playlist-img-container">
+                        <div class="playlist-img-wrapper">
+                            <img class="playlist-img" src="cover-art/plus-img.png" id="output">
+                        </div>
+                        <input id="file" type="file" onchange="loadFile(event)" accept=".jpg,.jpeg,.png,.webp,.svg" name="Choose an image"/>
                     </div>
-                </form>
-                <div class="playlist-img-container">
-                    <div class="playlist-img-wrapper">
-                        <img class="playlist-img" src="cover-art/plus-img.png" id="output">
+                    <div class="confirm-playlist-button-group">
+                        <button class="add-playlist-btn">
+                            <i class="gg-add"></i>
+                        </button>
                     </div>
-                    <input id="file" type="file" onchange="loadFile(event)" accept=".jpg,.jpeg,.png,.webp,.svg" name="Choose an image"/>
                 </div>
-                <div class="confirm-playlist-button-group">
-                    <button class="add-playlist-btn">
-                        <i class="gg-add"></i>
-                    </button>
+                <div class="result-song-list-container">
+    
                 </div>
             </div>
-        </div>
+        </main>
 
     <script src="js/global.js"></script>
 </body>

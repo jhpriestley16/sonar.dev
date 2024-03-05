@@ -134,10 +134,10 @@ body {
 }
 
 header.page-header {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 50px;
   width: 100%;
   padding-inline: 1rem;
+  background: var(--input-background);
 }
 
 .header-content-wrapper {
@@ -159,7 +159,7 @@ header.page-header {
 }
 
 span.title-text {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-family: light-text;
   color: var(--ff-body-text-clr);
 }
@@ -175,7 +175,7 @@ nav.navigation-links-wrapper {
   justify-content: space-between;
   height: 100%;
   gap: 1rem;
-  align-items: flex-end;
+  align-items: center;
 }
 
 span.nav-title {
@@ -201,6 +201,34 @@ button.mobile-nav-menu-opener-btn {
   display: none;
 }
 
+.streaming-service-logo-slider-container {
+  height: 100px;
+  width: 100vw;
+  overflow: hidden;
+  padding: 1rem 0;
+  white-space: nowrap;
+  background: #f4f4f4;
+}
+
+.logo-slider-img-wrapper {
+  display: inline-block;
+  animation: 10s slide infinite linear;
+  margin: 0;
+}
+
+.logo-slider-img-wrapper img {
+  height: 50px;
+  margin-inline: 40px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 main {
   padding: 1rem;
   flex-grow: 1;
@@ -224,7 +252,6 @@ main.central-page-content {
   padding: 1rem;
   border-radius: 15px;
   width: 33%;
-  border: var(--container-border);
 }
 
 .information-wrapper {
@@ -460,10 +487,13 @@ button.choose-btn {
   border-radius: 100vw;
 }
 
+.side-page-content {
+  width: 20vw;
+}
+
 .result-container {
   height: 100%;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 60vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -591,8 +621,12 @@ img.playlist-img[src="cover-art/plus-img.png"] {
 }
 
 @media only screen and (min-width: 0px) and (max-width: 900px) {
-  header.page-header {
+  header.page-header, .sidebar-header {
     padding: 0.5rem 1rem;
+  }
+  header.sidebar-header {
+    height: 50px;
+    width: 100%;
   }
   .nav-container {
     display: none;
@@ -638,6 +672,7 @@ img.playlist-img[src="cover-art/plus-img.png"] {
     height: -moz-fit-content;
     height: fit-content;
     gap: 0.6rem;
+    align-items: flex-end;
   }
   .service-link-dropdown-container {
     height: 1.5rem;

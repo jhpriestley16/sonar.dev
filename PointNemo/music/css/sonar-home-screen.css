@@ -133,10 +133,14 @@ body {
 .page-content-wrapper {
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
+}
+
+.page-content-wrapper[data-page=home-page] {
+  display: block;
 }
 
 header.page-header {
@@ -208,23 +212,31 @@ button.mobile-nav-menu-opener-btn {
 }
 
 .main-page-content {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .large-intro-text-container {
-  height: 200px;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   place-items: center;
   text-align: center;
+  padding: 30px 6px 0 6px;
 }
 
 span.large-intro-text {
   font-size: 3rem;
+  font-family: neue;
+  color: var(--ff-body-text-clr);
+}
+
+span.small-intro-text {
+  font-size: 2rem;
   font-family: neue;
   color: var(--ff-body-text-clr);
 }
@@ -236,7 +248,7 @@ span.large-intro-text {
   justify-content: space-around;
   align-items: center;
   gap: 30px;
-  background: var(--header-background);
+  margin-bottom: 30px;
 }
 
 .sonar-feature-showcase-item {
@@ -284,8 +296,6 @@ span.subtext-information {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 10px 0 0 0;
-  background: var(--input-background);
 }
 
 .desktop-service-imgs {
@@ -383,12 +393,24 @@ button.choose-service-btn {
   border-radius: 100vw;
 }
 
+button.choose-service-btn:hover {
+  background: #f53d53;
+}
+
+button.choose-service-btn:active {
+  background: #f53d53;
+}
+
 button.close-menu-btn {
   font-size: 1.5rem;
   color: var(--ff-body-text-clr);
   border-radius: 50%;
   height: 30px;
   aspect-ratio: 1;
+}
+
+.page-footer {
+  height: 100px;
 }
 
 .about-us-site-description-wrapper {
@@ -779,6 +801,15 @@ img.playlist-img[src="cover-art/plus-img.png"] {
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 3000px) {
+  .main-page-content {
+    gap: 40px;
+  }
+  span.large-intro-text {
+    font-size: 4.5rem;
+  }
+  span.small-intro-text {
+    font-size: 3rem;
+  }
   .sonar-feature-showcase-container {
     width: 100vw;
     height: 200px;
@@ -816,6 +847,11 @@ img.playlist-img[src="cover-art/plus-img.png"] {
     color: var(--ff-body-text-clr);
     font-size: 1.2rem;
   }
+  .choose-service-btn-container {
+    height: 200px;
+    place-items: center;
+    display: grid;
+  }
   .side-page-content {
     width: 17vw;
     height: 100%;
@@ -823,7 +859,7 @@ img.playlist-img[src="cover-art/plus-img.png"] {
 }
 @media only screen and (min-width: 0px) and (max-width: 900px) {
   .page-content-wrapper {
-    height: 100dvh;
+    min-height: 100dvh;
     width: 100dvw;
   }
   header.page-header, .sidebar-header {
@@ -920,29 +956,41 @@ img.playlist-img[src="cover-art/plus-img.png"] {
     border-radius: 15px;
     float: right;
   }
+  .main-page-content {
+    gap: 30px;
+  }
   .large-intro-text-container {
     padding-inline: 6px;
   }
   span.large-intro-text {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: neue;
     color: var(--ff-body-text-clr);
   }
+  span.small-intro-text {
+    font-size: 1.2rem;
+  }
   .sonar-feature-showcase-container {
-    flex-wrap: wrap;
+    flex-direction: column;
     height: -moz-fit-content;
     height: fit-content;
-    margin-top: 25px;
-    gap: 0;
-    background: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px;
   }
   .sonar-feature-showcase-item {
     margin-bottom: 6px;
     text-wrap: stable;
     border-radius: 10px;
     padding: 6px;
-    background: var(--input-background);
-    border: var(--container-border);
+    width: 70%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .sonar-showcase-text-wrapper {
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .streaming-service-img-container {
     width: 100%;
@@ -967,6 +1015,9 @@ img.playlist-img[src="cover-art/plus-img.png"] {
     -o-object-fit: cover;
        object-fit: cover;
     height: 100%;
+  }
+  button.choose-service-btn:hover {
+    background: #ff4055;
   }
   .quick-page-summary-on-gradient-bg {
     height: 200px;

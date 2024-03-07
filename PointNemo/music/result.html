@@ -40,6 +40,19 @@
                 <div class="logo-title-wrapper">
                     <span class="title-text">Sonar</span>
                 </div>
+                <div class="nav-container">
+                    <nav class="navigation-links-wrapper">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-title">Home</span>
+                        </a>
+                        <a href="quizzes.html" class="nav-link">
+                            <span class="nav-title">Sonar Quizzes</span>
+                        </a>
+                        <a href="about.html" class="nav-link">
+                            <span class="nav-title">About Us</span>
+                        </a>
+                    </nav>
+                </div>
                 <div class="appearance-btn-group">
                     <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
                         <i class="gg-moon"></i>
@@ -55,37 +68,66 @@
         </header>
         <main class="result-page-main-content" style="justify-content: space-between;">
             <div class="side-page-content">
-                
+                <header class="top-artists-sidebar-header">
+                    <div class="top-artists-title">
+                        <span class="top-artists-title-text">Top Artists Right Now</span>
+                    </div>
+                    <div class="select-platform-top-artists-container">
+                        <p class="top-artists-select-platform-title">Select platform</p>
+                        <select class="top-artists-platform-selection">
+                            <option class="platform-option">
+                                Apple Music
+                            </option>
+                            <option class="platform-option">
+                                Spotify
+                            </option>
+                            <option class="platform-option">
+                                Tidal
+                            </option>
+                            <option class="platform-option">
+                                Amazon Music
+                            </option>
+                            <option class="platform-option">
+                                Soundcloud
+                            </option>
+                            <option class="platform-option">
+                                Deezer
+                            </option>
+                        </select>
+                    </div>
+                </header>
             </div>
-            <div class="result-container">
-                <div class="result-information-playlist-container">
-                    <header class="playlist-customise-title">
-                        <span class="custom-playlist-container-title">Customise playlist</span>
-                    </header>
-                    <form class="name-playlist-form">
-                        <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" maxlength="50" placeholder="Name your playlist...">
-                        <!-- <div class="pen-icon-wrapper">
-                            <i class="gg-pen"></i>
-                        </div> -->
-                        <div class="character-limit-container">
-                            <p class="character-counter counter-number">0</p>
-                            <p class="character-limit-number counter-number">/50</p>
+            <div class="results-content-wrapper">
+                <div class="result-container">
+                    <div class="result-information-playlist-container">
+                        <header class="playlist-customise-title">
+                            <span class="custom-playlist-container-title">Customise playlist</span>
+                        </header>
+                        <form class="name-playlist-form">
+                            <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" maxlength="50" placeholder="Name your playlist...">
+                            <!-- <div class="pen-icon-wrapper">
+                                <i class="gg-pen"></i>
+                            </div> -->
+                            <div class="character-limit-container">
+                                <p class="character-counter counter-number">0</p>
+                                <p class="character-limit-number counter-number">/50</p>
+                            </div>
+                        </form>
+                        <div class="playlist-img-container">
+                            <div class="playlist-img-wrapper">
+                                <img class="playlist-img" src="cover-art/plus-img.png" id="output">
+                            </div>
+                            <input id="file" type="file" onchange="loadFile(event)" accept=".jpg,.jpeg,.png,.webp,.svg" name="Choose an image"/>
                         </div>
-                    </form>
-                    <div class="playlist-img-container">
-                        <div class="playlist-img-wrapper">
-                            <img class="playlist-img" src="cover-art/plus-img.png" id="output">
+                        <div class="confirm-playlist-button-group">
+                            <button class="add-playlist-btn">
+                                <i class="gg-add"></i>
+                            </button>
                         </div>
-                        <input id="file" type="file" onchange="loadFile(event)" accept=".jpg,.jpeg,.png,.webp,.svg" name="Choose an image"/>
                     </div>
-                    <div class="confirm-playlist-button-group">
-                        <button class="add-playlist-btn">
-                            <i class="gg-add"></i>
-                        </button>
+                    <div class="result-song-list-container">
+        
                     </div>
-                </div>
-                <div class="result-song-list-container">
-    
                 </div>
             </div>
         </main>

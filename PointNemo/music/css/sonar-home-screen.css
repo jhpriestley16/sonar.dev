@@ -11,7 +11,7 @@ html, body {
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out, background 0s ease-in-out, color 0s ease-in-out, border 0s ease-in-out, fill 0s ease-in-out;
+  transition: all 0.7s, background 0s ease-in-out, color 0s ease-in-out, border 0s ease-in-out, fill 0s ease-in-out, height 0.7s cubic-bezier(0.32, 0.86, 0.94, 1.06);
   transition-delay: 0;
 }
 
@@ -30,10 +30,10 @@ html, body {
   radial-gradient(at 0% 0%, hsl(0deg 0% 100%) 0px, transparent 50%);
   --appearance-btn-hover: rgba(255, 255, 255, 0.349);
   --main-background: #f3f3f3;
-  --header-background: #e4e5f1;
+  --header-background: #f5f5f5;
   --btn-background: #050505;
   --about-us-info-container-bg-clr: #efefef;
-  --overlay-background: #ffffff53;
+  --overlay-background: #ffffff;
   --input-background: #ebebeb;
   --sidebar-bg: #ffffff;
   --ff-body-text-clr: #050505;
@@ -69,11 +69,11 @@ html, body {
   radial-gradient(at 6% 82%, hsla(0,0%,0%,1) 0px, transparent 50%),
   radial-gradient(at 0% 50%, hsla(180,0%,0%,1) 0px, transparent 50%);
   --main-background: #000000;
-  --header-background: #272727;
+  --header-background: #181818;
   --btn-background: #f9f9f9;
   --about-us-info-container-bg-clr: #0f0f0f;
-  --overlay-background: #12121253;
-  --input-background: #292929;
+  --overlay-background: #121212;
+  --input-background: #111111;
   --sidebar-bg: #020202;
   --ff-body-text-clr: #ffffff;
   --ff-btn-text: #0a0a0a;
@@ -261,6 +261,18 @@ span.small-intro-text {
   font-size: 2rem;
   font-family: neue;
   color: #fff;
+}
+
+button.nav-btn {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 160px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: var(--sidebar-bg);
+  color: #fff;
+  font-family: light-text;
+  border-radius: 100vw;
 }
 
 .sonar-feature-showcase-container {
@@ -485,11 +497,18 @@ header.information-container-header {
 }
 
 .about-us-on-page-search-box {
-  min-height: 50px;
-  max-height: 200px;
+  height: 50px;
   width: 100%;
   display: grid;
   place-items: center;
+}
+
+.page-search-box {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 0;
 }
 
 form.about-us-page-search-form {
@@ -911,16 +930,38 @@ img.playlist-img[src="cover-art/plus-img.png"] {
     width: 100%;
   }
   .mobile-navigation-dropdown {
-    height: 0;
+    height: 50px;
     width: 100vw;
     top: 0;
     position: absolute;
     display: flex;
+    flex-direction: column;
     background: var(--header-background);
     z-index: 2;
   }
   .opened-state {
     height: 100vh;
+  }
+  .page-search-box {
+    height: 50px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 0;
+  }
+  .opened-state > .page-search-box {
+    margin-top: 50px;
+  }
+  form.page-search-form {
+    background: var(--input-background);
+    border: var(--about-info-icon-border);
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 6px;
   }
   .nav-container {
     display: none;
@@ -932,43 +973,6 @@ img.playlist-img[src="cover-art/plus-img.png"] {
   }
   .appearance-btn-group {
     display: none;
-  }
-  .mobile-slide-in-menu {
-    height: 100dvh;
-    width: 60vw;
-    border-left: var(--container-border);
-    background: var(--main-background);
-    position: absolute;
-    right: -60vw;
-    transition: right 0.3s ease-in-out;
-    flex-direction: column;
-    gap: 30px;
-    display: none;
-  }
-  .open {
-    right: 0;
-    top: 0dvh;
-    display: flex;
-    transition: right 0.3s ease-in-out;
-  }
-  .mobile-nav-menu-closer-container {
-    height: 100%;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: grid;
-    place-items: center;
-  }
-  .mobile-nav-container {
-    padding-inline: 1rem;
-    flex-grow: 1;
-  }
-  nav.navigation-links-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: -moz-fit-content;
-    height: fit-content;
-    gap: 0.6rem;
-    align-items: flex-end;
   }
   .service-link-dropdown-container {
     height: 1.5rem;
@@ -1023,6 +1027,14 @@ img.playlist-img[src="cover-art/plus-img.png"] {
   }
   span.small-intro-text {
     font-size: 1.2rem;
+  }
+  .page-navigation-container {
+    width: 100%;
+    height: 100px;
+    background: var(--input-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .sonar-feature-showcase-container {
     flex-direction: column;

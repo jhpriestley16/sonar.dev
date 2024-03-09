@@ -68,13 +68,31 @@
         </div>
     </header>
     <div class="mobile-navigation-dropdown" id="navDropdown">
-    
+        <div class="page-search-box">
+            <form class="page-search-form">
+                <input type="search" class="about-us-content-search-input" placeholder="Search..." autocapitalize="on" spellcheck="false" autocomplete="false">
+                <div class="search-icon-wrapper">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="mobile-appearance-btn-group">
+            <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                <i class="gg-moon"></i>
+            </button>
+            <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                <i class="gg-sun"></i>
+            </button>
+            <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                <i class="gg-screen"></i>
+            </button>
+        </div> -->
     </div>
     <script>
         // Get the button and dropdown element
         var toggleButton = document.getElementById("toggleButton");
         var dropDownNavMenu = document.getElementById("navDropdown");
-        var pageHeader = document.getElementById("top");
+        var pageHeader = document.querySelector(".page-header");
       
         // Function to toggle the class
         function toggleNavDropdown() {
@@ -123,6 +141,23 @@
                 </button>
             </div>
         </div>
+
+        <!-- <div class="page-navigation-container">
+            <div class="page-nav-button-wrapper">
+                <a href="quizzes.html">
+                    <button class="nav-btn">
+                        Quizzes
+                    </button>
+                </a>
+            </div>
+            <div class="page-nav-button-wrapper">
+                <a href="about.html">
+                    <button class="nav-btn">
+                        About Us
+                    </button>
+                </a>
+            </div>
+        </div> -->
         
         <div class="sonar-feature-showcase-container">
             <div class="sonar-feature-showcase-item">

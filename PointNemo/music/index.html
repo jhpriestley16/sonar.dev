@@ -8,9 +8,7 @@
     
     <link rel="stylesheet" type="text/css" href="css/sonar-home-screen.css" />
     <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-    <script src="js/page-load.js"></script>
     <script src="js/menus.js"></script>
-    <script src="js/bluetooth.js"></script>
     
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
@@ -35,7 +33,7 @@
 
 <div class="page-content-wrapper" data-page="home-page">
 
-    <header class="page-header">
+    <header class="page-header" id="#top">
         <div class="header-content-wrapper">
             <div class="logo-title-wrapper">
                 <span class="title-text">Sonar</span>
@@ -61,13 +59,35 @@
                     <i class="gg-screen"></i>
                 </button>
             </div>
-            <div class="mobile-nav-menu-opener-container">
-                <button class="mobile-nav-menu-opener-btn" onclick="toggleSlideMenu()">
-                    <i class="gg-menu"></i>
-                </button>
+            <div class="mobile-nav-menu-opener-container" id="toggleButton">
+                <div class="hamburger-menu" id="hamburgerMenu">
+                    <div class="hamburger-menu-bar bar1"></div>
+                    <div class="hamburger-menu-bar bar3"></div>
+                  </div>
             </div>
         </div>
     </header>
+    <div class="mobile-navigation-dropdown" id="navDropdown">
+    
+    </div>
+    <script>
+        // Get the button and dropdown element
+        var toggleButton = document.getElementById("toggleButton");
+        var dropDownNavMenu = document.getElementById("navDropdown");
+        var pageHeader = document.getElementById("top");
+      
+        // Function to toggle the class
+        function toggleNavDropdown() {
+          dropDownNavMenu.classList.toggle("opened-state");
+          document.body.style.overflow = dropDownNavMenu.classList.contains("opened-state") ? "hidden" : "auto";
+          window.scrollTo(0, 0);
+        }
+      
+        // Attach event listener to toggle class on button click
+        toggleButton.addEventListener("click", toggleNavDropdown);
+
+      </script>
+    
     <!-- <div class="streaming-service-logo-slider-container">
         <div class="logo-slider-img-wrapper">
             <img src="streaming-service-logos/apple-music-logo-text.svg" class="slider-imgs">
@@ -88,39 +108,84 @@
     </div> -->
 
     <div class="main-page-content">
-        <div class="large-intro-text-container">
-            <span class="large-intro-text">
-                The place to discover new music
-            </span>
-            <span class="small-intro-text">
-                Regardless of your platform
-            </span>
+        <div class="intro-content-container">
+            <div class="large-intro-text-container">
+                <span class="large-intro-text">
+                    Discover new music
+                </span>
+                <span class="small-intro-text">
+                    Regardless of the streaming service you choose, find music that empowers you.
+                </span>
+            </div>
+            <div class="choose-service-btn-container">
+                <button class="choose-service-btn" id="serviceToggleBtn" onclick="openChoiceMenu()">
+                    Choose streaming service <!-- <i class="fa-solid fa-arrow-right-long"></i> -->
+                </button>
+            </div>
         </div>
-        <div class="choose-service-btn-container">
-            <button class="choose-service-btn" id="serviceToggleBtn" onclick="openChoiceMenu()">
-                Choose streaming service <!-- <i class="fa-solid fa-arrow-right-long"></i> -->
-            </button>
+        
+        <div class="sonar-feature-showcase-container">
+            <div class="sonar-feature-showcase-item">
+                <div class="sonar-feature-icon">
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <div class="showcase-title-wrapper">
+                    Playlisting
+                </div>
+                <div class="sonar-showcase-text-wrapper">
+                    <p class="sonar-showcase-text">
+                        Get given unique songs based on your listening habits, in a playlist format that you can save right away.
+                    </p>
+                </div>
+            </div>
+            <div class="sonar-feature-showcase-item">
+                <div class="sonar-feature-icon">
+                    <i class="fa-solid fa-backward"></i>
+                    <i class="fa-solid fa-pause"></i>
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+                <div class="showcase-title-wrapper">
+                    Playback
+                </div>
+                <div class="sonar-showcase-text-wrapper">
+                    <p class="sonar-showcase-text">
+                        Play back the music we suggest on-site to test if we did a good job. 
+                    </p>
+                    <span class="subtext-information">*Platform playback API dependent</span>
+                </div>
+            </div>
+            <div class="sonar-feature-showcase-item">
+                <div class="sonar-feature-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <div class="showcase-title-wrapper">
+                    Top Artists
+                </div>
+                <div class="sonar-showcase-text-wrapper">
+                    <p class="sonar-showcase-text">
+                        View the most popular artists and songs on your chosen platform, which could serve as inspiration for your new playlist.
+                    </p>
+                </div>
+            </div>
+            <div class="sonar-feature-showcase-item">
+                <div class="sonar-feature-icon">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div class="showcase-title-wrapper">
+                    Quizzing
+                </div>
+                <div class="sonar-showcase-text-wrapper">
+                    <p class="sonar-showcase-text">
+                        Play our range of quizzes related to music, and an array of other topics including geography and sport.
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="streaming-service-img-container">
-            <div class="mobile-service-imgs">
-                <div class="streaming-service-logo-wrapper">
-                    <img class="streaming-service-logo apple-music-logo" src="streaming-service-logos/apple-music.png">
-                </div>
-                <div class="streaming-service-logo-wrapper">
-                    <img class="streaming-service-logo spotify-logo" src="streaming-service-logos/spotify.png">
-                </div>
-                <div class="streaming-service-logo-wrapper">
-                    <img class="streaming-service-logo tidal-logo" src="streaming-service-logos/tidal-logo.png">
-                </div>
-                <div class="streaming-service-logo-wrapper">
-                    <img class="streaming-service-logo amazon-music-logo" src="streaming-service-logos/amazon-music.png">
-                </div>
-                <div class="streaming-service-logo-wrapper">
-                    <img class="streaming-service-logo soundcloud-logo" src="streaming-service-logos/soundcloud.png">
-                </div>
-                <div class="streaming-service-logo-wrapper">
-                    <img class="streaming-service-logo deezer-logo" src="streaming-service-logos/deezer.png">
-                </div>
+            <div class="streaming-services-intro-container">
+                <p class="service-intro-text">
+                    On Sonar we allow you to utilise our services on the following streaming services:
+                </p>
             </div>
             <div class="desktop-service-imgs">
                 <div class="service-graphic-wrapper">
@@ -266,134 +331,17 @@
                 </div>
                 </div>
             </div>
-        <div class="sonar-feature-showcase-container">
-            <div class="sonar-feature-showcase-item">
-                <div class="sonar-feature-icon">
-                    <i class="fa-solid fa-list"></i>
-                </div>
-                <div class="sonar-showcase-text-wrapper">
-                    <p class="sonar-showcase-text">
-                        Get given unique songs based on your listening habits, in a playlist format that you can save right away.
-                    </p>
-                </div>
-            </div>
-            <div class="sonar-feature-showcase-item">
-                <div class="sonar-feature-icon">
-                    <i class="fa-solid fa-backward"></i>
-                    <i class="fa-solid fa-pause"></i>
-                    <i class="fa-solid fa-forward"></i>
-                </div>
-                <div class="sonar-showcase-text-wrapper">
-                    <p class="sonar-showcase-text">
-                        Play back the music we suggest on-site to test if we did a good job. 
-                    </p>
-                    <span class="subtext-information">*Platform playback API dependent</span>
-                </div>
-            </div>
-            <div class="sonar-feature-showcase-item">
-                <div class="sonar-feature-icon">
-                    <i class="fa-solid fa-music"></i>
-                </div>
-                <div class="sonar-showcase-text-wrapper">
-                    <p class="sonar-showcase-text">
-                        View the most popular artists and songs on your chosen platform, which could serve as inspiration for your new playlist.
-                    </p>
-                </div>
-            </div>
-            <div class="sonar-feature-showcase-item">
-                <div class="sonar-feature-icon">
-                    <i class="fa-solid fa-circle-question"></i>
-                </div>
-                <div class="sonar-showcase-text-wrapper">
-                    <p class="sonar-showcase-text">
-                        Play our range of quizzes related to music, and an array of other topics including geography and sport.
-                    </p>
-                </div>
-            </div>
-        </div>
         
             
     </div>
 
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
         
-    </footer>
+    </footer> -->
 </div>
 
-<div class="mobile-slide-in-menu">
-    <header class="sidebar-header">
-        <div class="header-content-wrapper">
-            <div class="mobile-nav-menu-closer-container">
-                <button class="mobile-nav-menu-opener-btn" onclick="toggleSlideMenu()">
-                    <i class="gg-close"></i>
-                </button>
-            </div>
-            <div class="logo-title-wrapper">
-                <span class="title-text">Sonar</span>
-            </div>
-        </div>
-    </header>
-    <div class="mobile-nav-container">
-        <nav class="navigation-links-wrapper">
-            <a href="quizzes.html" class="nav-link">
-                <span class="nav-title">Sonar Quizzes</span>
-            </a>
-            <a href="about.html" class="nav-link">
-                <span class="nav-title">About Us</span>
-            </a>
-            <div class="service-link-dropdown-container" id="dropLinkCont">
-                <button class="service-link-dropdown-btn" onclick="openDropNav()">
-                    Services We Use 
-                    <i class="gg-chevron-right" id="rightChevron"></i>
-                </button>
-                <div class="service-link-dropdown-content-wrapper" style="display: none;" id="dropNavLinks">
-                    <a class="mobile-slide-in-nav-link" href="https://music.apple.com" target="_blank">
-                        Apple Music
-                    </a>
-                    <a class="mobile-slide-in-nav-link" href="https://open.spotify.com" target="_blank">
-                        Spotify
-                    </a>
-                    <a class="mobile-slide-in-nav-link" href="https://tidal.com" target="_blank">
-                        Tidal
-                    </a>
-                    <a class="mobile-slide-in-nav-link" href="https://music.amazon.com" target="_blank">
-                        Amazon Music
-                    </a>
-                    <a class="mobile-slide-in-nav-link" href="https://soundcloud.com" target="_blank">
-                        Soundcloud
-                    </a>
-                    <a class="mobile-slide-in-nav-link" href="https://deezer.com" target="_blank">
-                        Deezer
-                    </a>
-                </div>
-                <!-- <div class="social-media-link-wrapper">
-                    <a href="https://www.instagram.com" class="social-link" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.twitter.com" class="social-link" target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.facebook.com" class="social-link" target="_blank">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </div> -->
-            </div>
-        </nav>
-    </div>
-    <footer class="slide-in-footer">
-        <div class="mobile-appearance-btn-group">
-            <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
-                <i class="gg-moon"></i>
-            </button>
-            <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
-                <i class="gg-sun"></i>
-            </button>
-            <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
-                <i class="gg-screen"></i>
-            </button>
-        </div>
-    </footer>
-</div>
+
+
 <script src="js/global.js"></script>
 </body>
 </html>

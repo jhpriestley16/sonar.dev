@@ -47,39 +47,6 @@ window.addEventListener('load', function() {
       });
     }
   });
-  
-  const serviceOpener = document.getElementById("serviceToggleBtn");
-  
-
-  function openChoiceMenu() {
-    const serviceChoiceMenu = document.getElementById("serviceChoiceMenu");
-    
-    if (serviceChoiceMenu.style.display === "none") {
-      serviceChoiceMenu.style.display = "block";
-    } else {
-      serviceChoiceMenu.style.display = "none";
-    }
-  }
-
-  function toggleSlideMenu() {
-    const menu = document.querySelector('.mobile-slide-in-menu');
-    const menuOpenerBtn = document.querySelector('.mobile-nav-menu-opener-btn');
-    const pageContent = document.querySelector('.page-content-wrapper');
-    
-    // Toggle the 'open' class on the menu
-    menu.classList.toggle('open');
-    
-    // Toggle the position of the menu opener button
-    if (menu.classList.contains('open')) {
-      menuOpenerBtn.style.right = '0';
-      pageContent.style.filter = 'blur(24px)';
-      document.body.style.overflow = 'hidden';
-  } else {
-      menuOpenerBtn.style.right = '-60vw';
-      pageContent.style.filter = 'none';
-      document.body.style.overflow = 'auto';
-  }
-}
 
 function openDropNav() {
   const dropNavLinks = document.getElementById("dropNavLinks");
@@ -96,19 +63,6 @@ function openDropNav() {
     rightChevron.style.rotate = "0deg";
   }
 }
-/* function expandInfo() {
-  // Find the parent .about-us-site-description-wrapper element
-  const wrapper = document.querySelector('.about-us-site-description-wrapper');
-  // Add the 'expandedInfo' class to the wrapper element
-  wrapper.classList.toggle('expandedInfo');
-  const infoText = document.querySelector('.info-text-wrapper');
-  if (wrapper.classList.contains('expandedInfo')){
-    infoText.style.display = 'block';
-  } else {
-    infoText.style.display = 'none';
-  }
-
-} */
 function expandInfo(event) {
   // Get the clicked button
   const btn = event.target;
@@ -130,7 +84,9 @@ function expandInfo(event) {
   }
 }
 
-var loadFile = function (event) {
+/* var loadFile = function (event) {
   var image = document.getElementById("output");
   image.src = URL.createObjectURL(event.target.files[0]);
-};
+}; */
+
+

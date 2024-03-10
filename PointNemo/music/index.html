@@ -21,6 +21,7 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
 </head>
 <html>
@@ -132,7 +133,7 @@
                     Discover new music
                 </span>
                 <span class="small-intro-text">
-                    Regardless of the streaming service you choose, find music that empowers you.
+                    Regardless of the streaming platform you choose, find music that empowers you.
                 </span>
             </div>
             <div class="choose-service-btn-container">
@@ -219,7 +220,7 @@
         <div class="streaming-service-img-container">
             <div class="streaming-services-intro-container">
                 <p class="service-intro-text">
-                    On Sonar we allow you to utilise our services on the following streaming services:
+                    On Sonar we allow you to utilise our services on the following streaming platforms:
                 </p>
             </div>
             <div class="desktop-service-imgs">
@@ -367,12 +368,37 @@
                 </div>
             </div>
         
-            
+            <div class="playlisting-feature-description-container">
+                <div class="playlisting-feature-intro-text">
+                    <div class="large-playlisting-intro-text">
+                        <i class='bx bxs-playlist'></i>
+                        <p class="sonar-playlists-large-title">Sonar Playlists</p>
+                    </div>
+                    <p class="playlisting-intro-details">
+                        When you arrive on our results page, after logging in with your chosen streaming platform, you will be presented with the playlist we make you. However, we also provide you with some playlists curated by us that we believe the wider music community will enjoy.
+                    </p>
+                    <p class="playlisting-info-subtext">
+                        *Sonar curated playlists are done using Spotify embed code. They are accessible to everyone regardless of chosen streaming platform, however those using Spotify will have a smoother experience.
+                    </p>
+                </div>
+            </div>
+
+            <footer class="page-footer">
+                <div class="footer-appearance-btn-group">
+                    <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                        <i class="gg-moon"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                        <i class="gg-sun"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                        <i class="gg-screen"></i>
+                    </button>
+                </div>
+            </footer>
     </div>
 
-    <!-- <footer class="page-footer">
-        
-    </footer> -->
+    
 </div>
 
 

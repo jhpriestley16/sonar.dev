@@ -127,7 +127,6 @@ a {
 
 body {
   background-color: var(--body-background-clr);
-  display: flex;
 }
 
 .page-content-wrapper {
@@ -234,8 +233,8 @@ button.mobile-nav-menu-opener-btn {
 .intro-content-container {
   width: 100vw;
   height: 300px;
-  background-color: #aa99ff;
-  background-image: radial-gradient(at 64% 8%, hsl(0, 98%, 79%) 0px, transparent 50%), radial-gradient(at 67% 6%, hsl(68, 82%, 61%) 0px, transparent 50%), radial-gradient(at 94% 29%, hsl(276, 72%, 76%) 0px, transparent 50%), radial-gradient(at 70% 51%, hsl(280, 90%, 60%) 0px, transparent 50%), radial-gradient(at 55% 44%, hsl(254, 97%, 68%) 0px, transparent 50%), radial-gradient(at 57% 48%, hsl(90, 74%, 63%) 0px, transparent 50%), radial-gradient(at 8% 14%, hsl(336, 60%, 63%) 0px, transparent 50%);
+  background-color: #df99ff;
+  background-image: radial-gradient(at 59% 2%, hsl(262, 95%, 61%) 0px, transparent 50%), radial-gradient(at 85% 32%, hsl(56, 72%, 69%) 0px, transparent 50%), radial-gradient(at 70% 52%, hsl(344, 75%, 62%) 0px, transparent 50%), radial-gradient(at 56% 56%, hsl(241, 92%, 67%) 0px, transparent 50%), radial-gradient(at 91% 93%, hsl(301, 62%, 75%) 0px, transparent 50%), radial-gradient(at 78% 72%, hsl(56, 84%, 77%) 0px, transparent 50%), radial-gradient(at 35% 34%, hsl(122, 89%, 68%) 0px, transparent 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -465,8 +464,64 @@ button.close-menu-btn {
   aspect-ratio: 1;
 }
 
+.playlisting-feature-description-container {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+  background: var(--input-background);
+  display: grid;
+  place-items: center;
+  padding: 36px;
+}
+
+.playlisting-feature-intro-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.large-playlisting-intro-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  color: #ff4055;
+}
+
+p.sonar-playlists-large-title {
+  font-size: 1.3rem;
+  font-family: neue;
+  color: var(--ff-body-text-clr);
+}
+
+p.playlisting-intro-details {
+  font-size: 1.1rem;
+  font-family: light-text;
+  color: var(--ff-body-text-clr);
+}
+
+p.playlisting-info-subtext {
+  font-size: 0.8rem;
+  font-family: text-labels;
+  color: var(--ff-drop-info-clr);
+}
+
 .page-footer {
-  height: 100px;
+  height: 150px;
+  width: 100vw;
+  background: var(--header-background);
+}
+
+.footer-appearance-btn-group {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
 }
 
 .about-us-site-description-wrapper {
@@ -679,8 +734,8 @@ button.focus-info-btn {
     }
 } */
 main {
-  flex-grow: 1;
-  height: 100%;
+  width: 100vw;
+  height: calc(100vh - 50px);
   display: flex;
   gap: 30px;
 }
@@ -854,13 +909,24 @@ img.playlist-img[src="cover-art/plus-img.png"] {
   place-self: center;
 }
 
-.pen-icon-wrapper {
-  height: 100%;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-inline: 4px;
+.sonar-playlist-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #df99ff;
+  background-image: radial-gradient(at 59% 2%, rgb(130, 61, 250) 0px, transparent 50%), radial-gradient(at 85% 32%, rgb(233, 225, 119) 0px, transparent 50%), radial-gradient(at 70% 52%, rgb(231, 85, 124) 0px, transparent 50%), radial-gradient(at 56% 56%, rgb(96, 93, 248) 0px, transparent 50%), radial-gradient(at 91% 93%, rgb(231, 152, 229) 0px, transparent 50%), radial-gradient(at 78% 72%, rgb(246, 239, 147) 0px, transparent 50%), radial-gradient(at 35% 34%, rgb(101, 246, 106) 0px, transparent 50%);
+}
+
+.section-intro-text-wrapper {
+  width: 100vw;
+  height: 100px;
   display: grid;
   place-items: center;
+}
+
+.section-intro-text {
+  font-size: 3rem;
+  font-family: neue;
+  color: #fff;
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 3000px) {
@@ -868,7 +934,7 @@ img.playlist-img[src="cover-art/plus-img.png"] {
     font-size: 4.5rem;
   }
   span.small-intro-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .sonar-feature-showcase-container {
     width: 100vw;

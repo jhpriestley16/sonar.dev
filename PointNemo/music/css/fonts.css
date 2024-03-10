@@ -34,3 +34,7 @@
   font-family: loop;
   src: url("../fonts/Koeltoerals-owwaz.ttf");
 }
+@font-face{
+    font-family: humble-nostalgia;
+    src: url("../fonts/humble-nostalgia-regular.otf");
+  }

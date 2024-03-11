@@ -146,6 +146,9 @@ body{
 .page-content-wrapper[data-page="home-page"]{
     display: block;
 }
+.page-content-wrapper[data-page="playlists-page"]{
+    display: block;
+}
 header.page-header{
     min-height: 50px;
     max-height: 100dvh;
@@ -175,7 +178,8 @@ header.page-header{
 }
 span.title-text{
     font-size: 1.8rem;
-    font-family: light-text;
+    font-family: inter-600;
+    letter-spacing: -.08rem;
     color: var(--ff-body-text-clr);
 }
 .nav-container{
@@ -190,8 +194,8 @@ nav.navigation-links-wrapper{
     align-items: center;
 }
 span.nav-title{
-    font-size: 1.3rem;
-    font-family: light-text;
+    font-size: 1rem;
+    font-family: inter-500;
     color: var(--ff-body-text-clr);
 }
 .mobile-navigation-dropdown{
@@ -257,12 +261,12 @@ radial-gradient(at 35% 34%, hsla(122,89%,68%,1) 0px, transparent 50%);
 }
 span.large-intro-text{
     font-size: 3rem;
-    font-family: neue;
+    font-family: neue-bold;
     color: #fff;
 }
 span.small-intro-text{
     font-size: 2rem;
-    font-family: neue;
+    font-family: neue-bold;
     color: #fff;
 }
 button.nav-btn{
@@ -272,7 +276,7 @@ button.nav-btn{
     font-size: 1.2rem;
     background: var(--sidebar-bg);
     color: #fff;
-    font-family: light-text;
+    font-family: neue-medium;
     border-radius: 100vw;
 }
 
@@ -311,19 +315,19 @@ button.nav-btn{
 }
 .showcase-title-wrapper{
     text-align: center;
-    font-family: neue;
+    font-family: inter-700;
     color: var(--ff-body-text-clr);
     font-size: 1.3rem;
 }
 .sonar-showcase-text-wrapper{
     text-align: center;
-    font-family: light-text;
+    font-family: neue-medium;
     color: var(--ff-body-text-clr);
     font-size: 1rem;
 }
 span.subtext-information{
     font-size: .8rem;
-    font-family: text-labels;
+    font-family: geist-regular;
     color: var(--ff-drop-info-clr);
 }
 
@@ -346,7 +350,7 @@ span.subtext-information{
   }
   p.service-intro-text{
     font-size: 1.3rem;
-    font-family: light-text;
+    font-family: neue-medium;
     color: #fff;
     text-align: center;
   }
@@ -405,7 +409,7 @@ button.choose-btn{
     font-size: 1rem;
     background: var(--btn-background);
     color: var(--ff-btn-text);
-    font-family: text-labels;
+    font-family: geist-regular;
     border-radius: 100vw;
 }
 button.choose-service-btn{
@@ -415,7 +419,7 @@ button.choose-service-btn{
     font-size: 1.2rem;
     background: #ff4055;
     color: #fff;
-    font-family: light-text;
+    font-family: neue-medium;
     border-radius: 100vw;
 }
 button.choose-service-btn:hover{
@@ -470,13 +474,71 @@ p.sonar-playlists-large-title{
 }
 p.playlisting-intro-details{
     font-size: 1.1rem;
-    font-family: light-text;
+    font-family: neue-medium;
     color: #fff;
 }
 p.playlisting-info-subtext{
     font-size: .8rem;
-    font-family: text-labels;
+    font-family: geist-regular;
     color: #494949;
+}
+.streaming-platform-feature-availability-info-table{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    background: var(--input-background);
+    padding: 18px;
+}
+.availability-intro-text-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+p.availability-info-title-text{
+    font-size: 1.3rem;
+    font-family: inter-700;
+    color: var(--ff-body-text-clr);
+    text-decoration: underline 2px;
+}
+p.availability-info-intro-text{
+    font-size: 1.1rem;
+    font-family: neue-medium;
+    color: var(--ff-body-text-clr);
+}
+.availability-information-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.availability-information-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 250px;
+}
+p.platform-name-for-feature-info{
+    font-size: 1.1rem;
+    font-family: inter-600;
+    color: var(--ff-body-text-clr);
+    text-decoration: underline 1px;
+}
+.availability-feature-list-container{
+    text-align: center;
+}
+p.feature-availability-info-text{
+    font-size: .8rem;
+    font-family: geist-medium;
+    color: var(--ff-body-text-clr);
 }
 .page-footer{
     height: 150px;
@@ -565,7 +627,7 @@ input.about-us-content-search-input{
     padding-inline: 6px;
     color: var(--ff-body-text-clr);
     font-size: 1rem;
-    font-family: text-labels;
+    font-family: geist-regular;
     border-radius: 6px;
     
     ::placeholder{
@@ -601,7 +663,7 @@ form.about-us-page-search-form:focus{
 }
 span.header-title{
     font-size: 1.2rem;
-    font-family: light-text;
+    font-family: neue-medium;
     // text-decoration: underline;
     color: var(--ff-body-text-clr);
 }
@@ -610,7 +672,7 @@ span.header-title{
 }
 p.info-text{
     font-size: 1rem;
-    font-family: text-labels;
+    font-family: geist-regular;
     color: var(--ff-drop-info-clr);
 }
 .tech-stack-icon-container{
@@ -701,7 +763,19 @@ main{
 }
 
 //-------------------QUIZ PAGE CSS----------------//
-
+body[data-page="quiz-page"]{
+    background-color: rgb(12, 12, 12);
+    background-image:
+radial-gradient(at 17% 18%, hsla(115,0%,11%,1) 0px, transparent 50%),
+radial-gradient(at 56% 51%, hsla(158,0%,3%,1) 0px, transparent 50%),
+radial-gradient(at 50% 76%, hsla(103,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 44% 99%, hsla(240,0%,26%,1) 0px, transparent 50%),
+radial-gradient(at 94% 10%, hsla(0,0%,11%,1) 0px, transparent 50%),
+radial-gradient(at 89% 76%, hsla(0,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 23% 48%, hsla(63,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 6% 82%, hsla(0,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(180,0%,0%,1) 0px, transparent 50%);
+}
 
 
 
@@ -730,14 +804,14 @@ main{
 .select-platform-top-artists-container{
     display: flex;
     color: var(--ff-information-icon-clr);
-    font-family: text-labels;
+    font-family: geist-regular;
     font-size: .8rem;
     gap: 8px;
     align-items: center;
 }
 select.top-artists-platform-selection{
     border: var(--about-info-icon-border);
-    font-family: text-labels;
+    font-family: geist-regular;
     background: var(--input-background);
     color: var(--ff-body-text-clr);
     font-size: .85rem;
@@ -753,7 +827,7 @@ option{
 }
 span.top-artists-title-text{
     font-size: 1.2rem;
-    font-family: light-text;
+    font-family: neue-medium;
     color: var(--ff-body-text-clr);
 }
 .result-container{
@@ -787,7 +861,7 @@ header.playlist-customise-title{
 }
 span.custom-playlist-container-title{
     font-size: 1.2rem;
-    font-family: light-text;
+    font-family: neue-medium;
     color: var(--ff-body-text-clr);
 }
 form.name-playlist-form{
@@ -809,7 +883,7 @@ input.name-playlist{
     padding-inline: 6px;
     color: var(--ff-body-text-clr);
     font-size: .9rem;
-    font-family: text-labels;
+    font-family: geist-regular;
     border-radius: 6px;
 
     ::placeholder{
@@ -832,7 +906,7 @@ input:focus{
 p.counter-number{
     color: var(--ff-information-icon-clr);
     font-size: .9rem;
-    font-family: text-labels;
+    font-family: geist-regular;
 }
 .playlist-img-container{
     width: 100%;
@@ -883,7 +957,7 @@ img.playlist-img[src="cover-art/plus-img.png"]{
 }
 .section-intro-text{
     font-size: 3rem;
-    font-family: neue;
+    font-family: neue-bold;
     color: #fff;
 }
 //-------------------PLAYLISTS PAGE CSS--------------------//
@@ -928,7 +1002,7 @@ nav.playlist-page-global-navigation{
     justify-content: space-around;
 }
 .playlist-page-global-nav-item{
-    font-family: light-text;
+    font-family: neue-medium;
     font-size: 1rem;
     width: fit-content;
     padding: 6px 8px;
@@ -948,7 +1022,7 @@ form.playlist-page-search-form{
     align-items: center;
     padding: 6px 8px;
     color: #fff;
-    font-family: light-text;
+    font-family: neue-medium;
     font-size: 1rem;
     background: #a0a0a04f;
     border: 1px #f1f1f1b9 solid;
@@ -965,7 +1039,7 @@ input.playlist-page-search-bar{
     border: none;
     background: none;
     color: #fff;
-    font-family: light-text;
+    font-family: neue-medium;
     font-size: 1rem;
 }
 input.playlist-page-search-bar::placeholder{
@@ -974,6 +1048,36 @@ input.playlist-page-search-bar::placeholder{
 input.playlist-page-search-bar:focus{
     border: none;
     outline: none;
+}
+.playlist-item-container{
+    height: 100%;
+    width: 100%;
+    padding: 16px 36px;
+}
+.playlist-item{
+    border-radius: 8px;
+    // border: 1px #c5c5c5 solid;
+    height: 200px;
+    aspect-ratio: 1.5/1;
+    // background: #ffffffbb;
+}
+header.playlist-item-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+}
+p.playlist-title-text{
+    font-size: 1.3rem;
+    font-family: inter-700;
+    color: #fff;
+}
+button.playlist-expand-btn{
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    color: #fff;
 }
 
 
@@ -1019,7 +1123,7 @@ input.playlist-page-search-bar:focus{
     .sonar-showcase-text-wrapper{
         height: 100px;
         text-align: center;
-        font-family: light-text;
+        font-family: neue-medium;
         color: var(--ff-body-text-clr);
         font-size: 1.2rem;
     }
@@ -1111,7 +1215,7 @@ input.playlist-page-search-bar:focus{
     }
     button.service-link-dropdown-btn{
         font-size: 1.25rem;
-        font-family: light-text;
+        font-family: neue-medium;
         color: var(--ff-body-text-clr);
         display: flex;
         align-items: center;
@@ -1125,7 +1229,7 @@ input.playlist-page-search-bar:focus{
     }
     a.mobile-slide-in-nav-link{
         font-size: 1.15rem;
-        font-family: light-text;
+        font-family: neue-medium;
         color: var(--ff-drop-nav-link-clr);
     }
     footer.slide-in-footer{
@@ -1152,7 +1256,7 @@ input.playlist-page-search-bar:focus{
       }
       span.large-intro-text{
         font-size: 1.6rem;
-        font-family: neue;
+        font-family: neue-bold;
     }
     span.small-intro-text{
         font-size: 1.2rem;
@@ -1214,6 +1318,12 @@ input.playlist-page-search-bar:focus{
     button.choose-service-btn:hover{
         background: #ff4055;
     }
+    .availability-information-container{
+        flex-direction: column;
+    }
+    .availability-feature-list-container{
+        width: 250px;
+    }
 
     //------------MEDIA QUERY ABOUT PAGE CSS---------------//
 
@@ -1226,7 +1336,7 @@ input.playlist-page-search-bar:focus{
     }
     p.info-text{
         font-size: 1rem;
-        font-family: text-labels;
+        font-family: geist-regular;
         color: var(--ff-drop-info-clr);
     }
     .tech-stack-icon-container{
@@ -1276,7 +1386,7 @@ input.playlist-page-search-bar:focus{
     p.sonar-quizzes-quick-description-text{
         font-size: 1.2rem;
         color: var(--ff-body-text-clr);
-        font-family: light-text;
+        font-family: neue-medium;
         text-align: center;
     }
     hr.section-divider{
@@ -1300,5 +1410,19 @@ input.playlist-page-search-bar:focus{
     .result-information-playlist-container{
         width: 95vw;
         height: 200px;
+    }
+
+
+
+
+    //--------------------MEDIA QUERY PLAYLISTS PAGE CSS---------------------//
+
+
+    .navigation-page-search-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
     }
 }

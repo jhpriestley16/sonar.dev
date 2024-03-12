@@ -1,37 +1,36 @@
 @font-face{
     font-family: geist-regular;
-    src: url("../fonts/Geist-Regular.otf");
+    src: url("../fonts/Geist-Regular.otf") format('opentype');
 }
 @font-face{
     font-family: geist-medium;
-    src: url("../fonts/Geist-Medium.otf");
+    src: url("../fonts/Geist-Medium.otf") format('opentype');
 }
 @font-face{
   font-family: geist-light;
-  src: url("../fonts/Geist-Light.otf");
+  src: url("../fonts/Geist-Light.otf") format('opentype');
 }
 @font-face{
     font-family: neue-medium;
-    src: url("../fonts/NeueMontreal-Medium.otf");
-    letter-spacing:normal;
+    src: url("../fonts/NeueMontreal-Medium.otf") format('opentype');
 }
 @font-face{
     font-family: neue-bold;
-    src: url("../fonts/NeueMontreal-Bold.otf");
+    src: url("../fonts/NeueMontreal-Bold.otf") format('opentype');
 }
 @font-face{
     font-family: humble-nostalgia;
-    src: url("../fonts/humble-nostalgia-regular.otf");
+    src: url("../fonts/humble-nostalgia-regular.otf") format('opentype');
 }
 @font-face{
     font-family: inter-500;
-    src: url("../fonts/Inter-Medium.ttf");
+    src: url("../fonts/Inter-Medium.ttf") format('truetype');
 }
 @font-face{
     font-family: inter-600;
-    src: url("../fonts/Inter-SemiBold.ttf");
+    src: url("../fonts/Inter-SemiBold.ttf") format('truetype');
 }
 @font-face{
     font-family: inter-700;
-    src: url("../fonts/Inter-Bold.ttf");
+    src: url("../fonts/Inter-Bold.ttf") format('truetype');
 }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonar</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/sonar-home-screen.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <script src="js/page-load.js"></script>
+    <script src="js/menus.js"></script>
+    <script src="js/bluetooth.js"></script>
+    
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/carousel.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/screen.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/moon.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-speaker.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mic.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/sun.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/album.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/filters.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/add.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrows-expand-right.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0719efe947.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
+</head>
+<html>
+<body>
+    <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
+        <header class="page-header about-us-header" style="margin-bottom: 0;">
+            <div class="header-content-wrapper">
+                <div class="logo-title-wrapper">
+                    <span class="title-text">Sonar</span>
+                </div>
+                <div class="nav-container">
+                    <nav class="navigation-links-wrapper">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-title">Home</span>
+                        </a>
+                        <a href="quizzes.html" class="nav-link">
+                            <span class="nav-title">Sonar Quizzes</span>
+                        </a>
+                        <a href="about.html" class="nav-link">
+                            <span class="nav-title">About Us</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="appearance-btn-group">
+                    <button class="appearance-mode-btn" id="darkModeBtn" onclick="enableDarkMode()" title="Dark mode">
+                        <i class="gg-moon"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="lightModeBtn" onclick="disableDarkMode()" title="Light mode">
+                        <i class="gg-sun"></i>
+                    </button>
+                    <button class="appearance-mode-btn" id="systemModeBtn" onclick="toggleColorScheme()" title="System preference">
+                        <i class="gg-screen"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="result-page-main-content">
+            <div class="side-page-content">
+                <header class="top-artists-sidebar-header">
+                    <div class="top-artists-title">
+                        <span class="top-artists-title-text">Top Artists Right Now</span>
+                    </div>
+                    <div class="select-platform-top-artists-container">
+                        <p class="top-artists-select-platform-title">Select platform</p>
+                        <select class="top-artists-platform-selection">
+                            <option class="platform-option">
+                                Apple Music
+                            </option>
+                            <option class="platform-option">
+                                Spotify
+                            </option>
+                            <option class="platform-option">
+                                Tidal
+                            </option>
+                            <option class="platform-option">
+                                Amazon Music
+                            </option>
+                            <option class="platform-option">
+                                Soundcloud
+                            </option>
+                            <option class="platform-option">
+                                Deezer
+                            </option>
+                        </select>
+                    </div>
+                </header>
+            </div>
+            <div class="results-content-wrapper">
+                <div class="result-container">
+                    <div class="result-information-playlist-container">
+                        <header class="playlist-customise-title">
+                            <span class="custom-playlist-container-title">Customise playlist</span>
+                        </header>
+                        <form class="name-playlist-form">
+                            <input class="name-playlist" type="text" spellcheck="false" autocapitalize="false" autocomplete="false" accesskey="k" maxlength="50" placeholder="Name your playlist...">
+                            <!-- <div class="pen-icon-wrapper">
+                                <i class="gg-pen"></i>
+                            </div> -->
+                            <div class="character-limit-container">
+                                <p class="character-counter counter-number">0</p>
+                                <p class="character-limit-number counter-number">/50</p>
+                            </div>
+                        </form>
+                        <div class="playlist-img-container">
+                            <div class="playlist-img-wrapper">
+                                <img class="playlist-img" src="cover-art/plus-img.png" id="output">
+                            </div>
+                            <input id="file" type="file" onchange="loadFile(event)" accept=".jpg,.jpeg,.png,.webp,.svg" name="Choose an image"/>
+                        </div>
+                        <div class="confirm-playlist-button-group">
+                            <button class="add-playlist-btn">
+                                <i class="gg-add"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="result-song-list-container">
+        
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="sonar-playlist-section">
+            <div class="section-intro-text-wrapper">
+                <span class="section-intro-text">
+                    Our playlists
+                </span>
+            </div>
+            <div class="playlist-view-section">
+                <div class="playlist-container nostalgia">
+    
+                </div>
+            </div>
+        </div>
+
+    <script src="js/global.js"></script>
+</body>
+</html>

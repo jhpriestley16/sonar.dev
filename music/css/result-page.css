@@ -233,4 +233,18 @@ button.appearance-mode-btn {
 
 .fa-up-right-and-down-left-from-center {
   font-size: 1.25rem;
+}
+
+#gradient {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
 }/*# sourceMappingURL=result-page.css.map */

@@ -1,4 +1,4 @@
-function newGradient() {
+/* function newGradient() {
     let c1 = {
       r: Math.floor(Math.random() * 255),
       g: Math.floor(Math.random() * 255),
@@ -22,4 +22,5 @@ function newGradient() {
   document.ready(function () {
     rollBg();
     setInterval(rollBg, 5000);
-  });
+  }); */
+  

@@ -167,7 +167,7 @@ header.page-header {
   background: var(--header-background);
   position: sticky;
   top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -260,7 +260,7 @@ button.mobile-nav-menu-opener-btn {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .intro-content-container {
@@ -312,7 +312,7 @@ button.nav-btn {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   gap: 30px;
   background: var(--content-container-background);
@@ -349,6 +349,7 @@ button.nav-btn {
 .showcase-title-wrapper {
   text-align: center;
   font-family: geist-medium;
+  letter-spacing: -0.04rem;
   color: var(--ff-body-text-clr);
   font-size: 1.3rem;
 }
@@ -395,7 +396,7 @@ span.subtext-information {
 
 p.service-intro-text {
   font-size: 1.3rem;
-  font-family: geist-light;
+  font-family: geist-regular;
   letter-spacing: -0.04rem;
   color: #fff;
   text-align: center;
@@ -582,13 +583,14 @@ p.playlisting-info-subtext {
 
 p.availability-info-title-text {
   font-size: 1.3rem;
-  font-family: geist-regular;
+  font-family: geist-medium;
+  letter-spacing: -0.04rem;
   color: var(--ff-body-text-clr);
 }
 
 p.availability-info-intro-text {
   font-size: 1rem;
-  font-family: geist-light;
+  font-family: geist-regular;
   letter-spacing: -0.02rem;
   color: var(--ff-body-text-clr);
 }

@@ -1050,11 +1050,11 @@ button.playlist-expand-btn {
   .large-intro-text-container {
     padding-inline: 6px;
   }
-  span.large-intro-text {
-    font-size: 1.6rem;
+  p.large-intro-text {
+    font-size: 2rem;
   }
-  span.small-intro-text {
-    font-size: 1.1rem;
+  p.small-intro-text {
+    font-size: 1.2rem;
   }
   .page-navigation-container {
     width: 100%;

@@ -7,8 +7,32 @@
     src: url("../fonts/Geist-Medium.otf") format('opentype');
 }
 @font-face{
+    font-family: geist-black;
+    src: url("../fonts/Geist-Black.otf") format('opentype');
+}
+@font-face{
+    font-family: geist-bold;
+    src: url("../fonts/Geist-Bold.otf") format('opentype');
+}
+@font-face{
+    font-family: geist-semibold;
+    src: url("../fonts/Geist-SemiBold.otf") format('opentype');
+}
+@font-face{
   font-family: geist-light;
   src: url("../fonts/Geist-Light.otf") format('opentype');
+}
+@font-face{
+    font-family: geist-variable;
+    src: url("../fonts/GeistVariableVF.ttf") format('truetype');
+  }
+@font-face{
+    font-family: neue-light;
+    src: url("../fonts/NeueMontreal-Light.otf") format('opentype');
+}
+@font-face{
+    font-family: neue-regular;
+    src: url("../fonts/NeueMontreal-Regular.otf") format('opentype');
 }
 @font-face{
     font-family: neue-medium;
@@ -19,8 +43,8 @@
     src: url("../fonts/NeueMontreal-Bold.otf") format('opentype');
 }
 @font-face{
-    font-family: humble-nostalgia;
-    src: url("../fonts/humble-nostalgia-regular.otf") format('opentype');
+    font-family: helvetica-bold;
+    src: url("../fonts/Helvetica-Bold-Font.ttf") format('truetype');
 }
 @font-face{
     font-family: inter-500;
@@ -33,4 +57,8 @@
 @font-face{
     font-family: inter-700;
     src: url("../fonts/Inter-Bold.ttf") format('truetype');
+}
+@font-face{
+    font-family: humble-nostalgia;
+    src: url("../fonts/humble-nostalgia-regular.otf") format('opentype');
 }

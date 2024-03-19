@@ -9,10 +9,20 @@ html, body {
 * {
   margin: 0;
   padding: 0;
+  font-variant: normal;
+  font-stretch: none;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-optical-sizing: none;
   transition: all 0.7s, background 0s ease-in-out, color 0s ease-in-out, border 0s ease-in-out, fill 0s ease-in-out, height 0.7s cubic-bezier(0.32, 0.86, 0.94, 1.06);
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+  text-rendering: optimizeLegibility;
   transition-delay: 0;
+  font-synthesis: none;
+  -moz-font-feature-settings: "kern";
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -99,6 +109,11 @@ button {
   display: none;
 }
 
+input:focus {
+  border: none;
+  outline: none;
+}
+
 .appearance-btn-group {
   width: -moz-fit-content;
   width: fit-content;
@@ -178,9 +193,10 @@ header.page-header {
   border-radius: 15px;
 }
 
-span.title-text {
+.title-text {
   font-size: 1.6rem;
-  font-family: neue-medium;
+  font-family: geist-regular;
+  letter-spacing: -0.045rem;
   color: var(--ff-logo);
 }
 
@@ -267,15 +283,16 @@ button.mobile-nav-menu-opener-btn {
   text-align: center;
 }
 
-span.large-intro-text {
+p.large-intro-text {
   font-size: 3rem;
   font-family: neue-bold;
   color: #fff;
 }
 
-span.small-intro-text {
+p.small-intro-text {
   font-size: 1.3rem;
-  font-family: neue-medium;
+  font-family: geist-regular;
+  letter-spacing: -0.02rem;
   color: #fff;
 }
 
@@ -332,22 +349,27 @@ button.nav-btn {
 
 .showcase-title-wrapper {
   text-align: center;
-  font-family: neue-medium;
+  font-family: geist-medium;
   color: var(--ff-body-text-clr);
   font-size: 1.3rem;
 }
 
 .sonar-showcase-text-wrapper {
   text-align: center;
-  font-family: neue-medium;
+  height: 150px;
+}
+
+p.sonar-showcase-text {
+  font-family: geist-regular;
+  letter-spacing: -0.02rem;
   color: var(--ff-body-text-clr);
   font-size: 1rem;
-  height: 150px;
 }
 
 span.subtext-information {
   font-size: 0.8rem;
   font-family: geist-regular;
+  letter-spacing: -0.02rem;
   color: var(--ff-drop-info-clr);
 }
 
@@ -374,7 +396,8 @@ span.subtext-information {
 
 p.service-intro-text {
   font-size: 1.3rem;
-  font-family: neue-medium;
+  font-family: geist-light;
+  letter-spacing: -0.04rem;
   color: #fff;
   text-align: center;
 }
@@ -452,6 +475,7 @@ button.choose-btn {
   background: var(--btn-background);
   color: var(--ff-btn-text);
   font-family: geist-regular;
+  letter-spacing: -0.02rem;
   border-radius: 100vw;
 }
 
@@ -515,32 +539,27 @@ button.close-menu-btn {
 .large-playlisting-intro-text {
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
-  color: #b6ff40;
 }
 
-p.sonar-playlists-large-title {
-  font-size: 2rem;
-  font-family: neue-medium;
+p.sonar-page-large-title {
+  font-size: 1.7rem;
+  font-family: geist-semibold;
+  letter-spacing: -0.04rem;
   color: var(--ff-body-text-clr);
 }
 
 p.playlisting-intro-details {
   font-size: 1.1rem;
-  font-family: neue-medium;
+  font-family: geist-regular;
+  letter-spacing: -0.02rem;
   color: var(--ff-body-text-clr);
 }
 
 p.playlisting-info-subtext {
   font-size: 0.8rem;
   font-family: geist-regular;
+  letter-spacing: -0.02rem;
   color: var(--ff-drop-nav-link-clr);
-}
-
-p.sonar-quizzes-large-title {
-  font-size: 2rem;
-  font-family: neue-medium;
-  color: var(--ff-body-text-clr);
 }
 
 .streaming-platform-feature-availability-info-table {
@@ -560,20 +579,19 @@ p.sonar-quizzes-large-title {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 p.availability-info-title-text {
   font-size: 1.3rem;
-  font-family: inter-700;
+  font-family: geist-regular;
   color: var(--ff-body-text-clr);
-  -webkit-text-decoration: underline 2px;
-          text-decoration: underline 2px;
 }
 
 p.availability-info-intro-text {
-  font-size: 1.1rem;
-  font-family: neue-medium;
+  font-size: 1rem;
+  font-family: geist-light;
+  letter-spacing: -0.02rem;
   color: var(--ff-body-text-clr);
 }
 
@@ -598,10 +616,8 @@ p.availability-info-intro-text {
 
 p.platform-name-for-feature-info {
   font-size: 1.1rem;
-  font-family: inter-600;
+  font-family: geist-regular;
   color: var(--ff-body-text-clr);
-  -webkit-text-decoration: underline 1px;
-          text-decoration: underline 1px;
 }
 
 .availability-feature-list-container {
@@ -610,7 +626,7 @@ p.platform-name-for-feature-info {
 
 p.feature-availability-info-text {
   font-size: 0.8rem;
-  font-family: geist-medium;
+  font-family: geist-light;
   color: var(--ff-body-text-clr);
 }
 
@@ -693,6 +709,7 @@ input.about-us-content-search-input {
   color: var(--ff-body-text-clr);
   font-size: 1rem;
   font-family: geist-regular;
+  letter-spacing: -0.02rem;
   border-radius: 6px;
 }
 input.about-us-content-search-input ::-moz-placeholder {
@@ -735,7 +752,8 @@ form.about-us-page-search-form:focus {
 
 span.header-title {
   font-size: 1.2rem;
-  font-family: neue-medium;
+  font-family: geist-regular;
+  letter-spacing: -0.02rem;
   color: var(--ff-body-text-clr);
 }
 
@@ -746,6 +764,7 @@ span.header-title {
 p.info-text {
   font-size: 1rem;
   font-family: geist-regular;
+  letter-spacing: -0.02rem;
   color: var(--ff-drop-info-clr);
 }
 
@@ -1033,11 +1052,9 @@ button.playlist-expand-btn {
   }
   span.large-intro-text {
     font-size: 1.6rem;
-    font-family: neue-bold;
   }
   span.small-intro-text {
     font-size: 1.1rem;
-    font-family: neue-medium;
   }
   .page-navigation-container {
     width: 100%;
@@ -1136,7 +1153,6 @@ button.playlist-expand-btn {
   }
   p.info-text {
     font-size: 1rem;
-    font-family: geist-regular;
     color: var(--ff-drop-info-clr);
   }
   .tech-stack-icon-container {
@@ -1181,7 +1197,6 @@ button.playlist-expand-btn {
   p.sonar-quizzes-quick-description-text {
     font-size: 1.2rem;
     color: var(--ff-body-text-clr);
-    font-family: neue-medium;
     text-align: center;
   }
   hr.section-divider {

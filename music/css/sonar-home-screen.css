@@ -26,7 +26,7 @@ html, body {
 }
 
 :root {
-  --body-background-clr: /* hsla(280,100%,47%,1) */ #fafafa;
+  --body-background-clr: /* hsla(280,100%,47%,1) */ #ffffff;
   --body-background-gradient:
     radial-gradient(at 15% 97%, hsla(172,100%,82%,1) 0px, transparent 50%),
   radial-gradient(at 100% 0%, hsla(201,100%,77%,1) 0px, transparent 50%),
@@ -36,8 +36,8 @@ html, body {
   radial-gradient(at 0% 0%, hsl(0deg 0% 100%) 0px, transparent 50%);
   --appearance-btn-hover: rgba(255, 255, 255, 0.349);
   --main-background: #f3f3f3;
-  --header-background: #ffffffd0;
-  --content-container-background: #f1f1f1;
+  --header-background: #ebebebd0;
+  --content-container-background: #f7f7f7;
   --btn-background: #050505;
   --about-us-info-container-bg-clr: #efefef;
   --overlay-background: #ffffff;
@@ -78,7 +78,7 @@ html, body {
   radial-gradient(at 0% 50%, hsla(180,0%,0%,1) 0px, transparent 50%);
   --main-background: #000000;
   --header-background: #181818d0;
-  --content-container-background: #151515;
+  --content-container-background: #1d1d1d;
   --btn-background: #f9f9f9;
   --about-us-info-container-bg-clr: #0f0f0f;
   --overlay-background: #121212;
@@ -161,9 +161,9 @@ body {
 }
 
 header.page-header {
-  height: 50px;
+  height: 40px;
   width: 100%;
-  padding-inline: 1rem;
+  padding-inline: 50px;
   background: var(--header-background);
   position: sticky;
   top: 0;
@@ -177,10 +177,12 @@ header.page-header {
 
 .header-content-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 100px;
 }
 
 .logo-title-wrapper {
@@ -191,11 +193,12 @@ header.page-header {
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 15px;
+  text-align: left;
 }
 
 .title-text {
-  font-size: 1.6rem;
-  font-family: geist-regular;
+  font-size: 1.3rem;
+  font-family: inter-600;
   letter-spacing: -0.045rem;
   color: var(--ff-logo);
 }
@@ -227,31 +230,21 @@ a.nav-link:hover {
 }
 
 a.nav-link {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: inter-500;
   color: var(--ff-body-text-clr);
   transition: color 0.3s ease;
 }
 
-.mobile-navigation-dropdown {
-  display: none;
-}
-
-.mobile-nav-menu-opener-container {
-  height: 100%;
+.search-container {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+button.search-bar-btn {
+  display: grid;
   place-items: center;
-  display: none;
-}
-
-button.mobile-nav-menu-opener-btn {
-  font-size: 2.5rem;
-  color: var(--ff-body-text-clr);
-}
-
-.mobile-slide-in-menu {
-  display: none;
+  font-size: 1.1rem;
 }
 
 .main-page-content {
@@ -263,18 +256,18 @@ button.mobile-nav-menu-opener-btn {
   gap: 10px;
 }
 
-.intro-content-container {
+section.site-intro-banner {
   width: 100%;
-  height: 300px;
-  background: var(--content-container-background);
+  background-image: linear-gradient(to bottom, #ff0000, #ff0022, #ff0037, #ff0b49, #ff1d5a, #ff226c, #ff2a7e, #ff358f, #ff3ea8, #ff4bc3, #ff59de, #ff69f9);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 50px;
+  justify-content: center;
   padding: 36px 0;
 }
 
-.large-intro-text-container {
+.intro-text-container {
   height: -moz-fit-content;
   height: fit-content;
   display: grid;
@@ -285,29 +278,39 @@ button.mobile-nav-menu-opener-btn {
 p.large-intro-text {
   font-size: 3rem;
   font-family: neue-bold;
-  color: var(--ff-body-text-clr);
+  color: #fff;
 }
 
 p.small-intro-text {
   font-size: 1.3rem;
   font-family: geist-regular;
   letter-spacing: -0.02rem;
-  color: var(--ff-body-text-clr);
+  color: #fff;
 }
 
-button.nav-btn {
+button.choose-service-btn {
   height: -moz-fit-content;
   height: fit-content;
-  width: 160px;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 1rem;
   font-size: 1.2rem;
-  background: var(--sidebar-bg);
+  background: #ff1b35;
   color: #fff;
   font-family: neue-medium;
   border-radius: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.sonar-feature-showcase-container {
+button.choose-service-btn:hover {
+  background: #f53d53;
+}
+
+button.choose-service-btn:active {
+  background: #f53d53;
+}
+
+section.feature-banner {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -319,19 +322,18 @@ button.nav-btn {
   padding: 18px 0;
 }
 
-.sonar-feature-showcase-item {
+.feature {
   height: 200px;
   padding: 8px;
   width: 220px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   align-items: center;
-  justify-content: space-evenly;
   border-radius: 12px;
 }
 
-.sonar-feature-icon {
+.feature-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -346,20 +348,20 @@ button.nav-btn {
   font-size: 1.6rem;
 }
 
-.showcase-title-wrapper {
+.feature-title {
   text-align: center;
-  font-family: geist-medium;
+  font-family: geist-regular;
   letter-spacing: -0.04rem;
   color: var(--ff-body-text-clr);
   font-size: 1.3rem;
 }
 
-.sonar-showcase-text-wrapper {
+.feature-description {
   text-align: center;
   height: 150px;
 }
 
-p.sonar-showcase-text {
+p.feature-description-text {
   font-family: geist-regular;
   letter-spacing: -0.02rem;
   color: var(--ff-body-text-clr);
@@ -373,7 +375,7 @@ span.subtext-information {
   color: var(--ff-drop-info-clr);
 }
 
-.streaming-service-img-container {
+section.streaming-platforms-banner {
   height: 200px;
   display: grid;
   grid-template-columns: 1fr;
@@ -383,18 +385,17 @@ span.subtext-information {
   align-items: center;
   justify-content: space-between; */
   width: 100%;
-  background-color: rgb(12, 12, 12);
-  background-image: radial-gradient(at 17% 18%, hsl(115, 0%, 11%) 0px, transparent 50%), radial-gradient(at 56% 51%, hsl(158, 0%, 3%) 0px, transparent 50%), radial-gradient(at 50% 76%, hsl(103, 0%, 0%) 0px, transparent 50%), radial-gradient(at 44% 99%, hsl(240, 0%, 26%) 0px, transparent 50%), radial-gradient(at 94% 10%, hsl(0, 0%, 11%) 0px, transparent 50%), radial-gradient(at 89% 76%, hsl(0, 0%, 0%) 0px, transparent 50%), radial-gradient(at 23% 48%, hsl(63, 0%, 0%) 0px, transparent 50%), radial-gradient(at 6% 82%, hsl(0, 0%, 0%) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(180, 0%, 0%) 0px, transparent 50%);
+  background-image: linear-gradient(to bottom, #00fff3, #00f1fc, #00e3ff, #00d4ff, #00c4ff, #00b3ff, #00a1fe, #008ef8, #0075f0, #005ae5, #003cd6, #2b0bc2);
   padding: 36px;
 }
 
-.streaming-services-intro-container {
+.platforms-text-wrapper {
   place-self: top;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-p.service-intro-text {
+p.platforms-text {
   font-size: 1.3rem;
   font-family: geist-regular;
   letter-spacing: -0.04rem;
@@ -402,7 +403,7 @@ p.service-intro-text {
   text-align: center;
 }
 
-.desktop-service-imgs {
+.platform-logos-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -410,7 +411,7 @@ p.service-intro-text {
   place-self: center;
 }
 
-.service-graphic-wrapper {
+.platform-logo {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -465,41 +466,6 @@ img.service-logo-png {
   place-items: center;
 }
 
-button.choose-btn {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1rem;
-  font-size: 1rem;
-  background: var(--btn-background);
-  color: var(--ff-btn-text);
-  font-family: geist-regular;
-  letter-spacing: -0.02rem;
-  border-radius: 100vw;
-}
-
-button.choose-service-btn {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1rem;
-  font-size: 1.2rem;
-  background: #ff4055;
-  color: #fff;
-  font-family: neue-medium;
-  border-radius: 100vw;
-}
-
-button.choose-service-btn:hover {
-  background: #f53d53;
-}
-
-button.choose-service-btn:active {
-  background: #f53d53;
-}
-
 button.close-menu-btn {
   font-size: 1.5rem;
   color: var(--ff-body-text-clr);
@@ -508,131 +474,83 @@ button.close-menu-btn {
   aspect-ratio: 1;
 }
 
-.feature-description-row {
-  width: 100%;
+section.platform-feature-availability {
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.platform-feature-availability-intro {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background: var(--content-container-background);
+  padding: 10px;
+  text-align: center;
+}
+
+p.platform-feature-availability-intro-text {
+  font-size: 1.2rem;
+  font-family: geist-regular;
+  color: var(--ff-body-text-clr);
+}
+
+.platform-tile-container {
+  width: 100%;
   padding-inline: 10px;
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.feature-description-container {
-  aspect-ratio: 1;
-  width: 33%;
-  display: grid;
-  place-items: center;
-  padding: 36px;
-  background: var(--content-container-background);
-}
-
-.playlisting-feature-intro-text {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  width: 300px;
-}
-
-.large-playlisting-intro-text {
-  display: flex;
-  flex-direction: column;
-}
-
-p.sonar-page-large-title {
-  font-size: 1.7rem;
-  font-family: geist-semibold;
-  letter-spacing: -0.04rem;
-  color: var(--ff-body-text-clr);
-}
-
-p.playlisting-intro-details {
-  font-size: 1.1rem;
-  font-family: geist-regular;
-  letter-spacing: -0.02rem;
-  color: var(--ff-body-text-clr);
-}
-
-p.playlisting-info-subtext {
-  font-size: 0.8rem;
-  font-family: geist-regular;
-  letter-spacing: -0.02rem;
-  color: var(--ff-drop-nav-link-clr);
-}
-
-.streaming-platform-feature-availability-info-table {
+.platform-tile-row {
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.platform-tile {
+  width: 33%;
   height: -moz-fit-content;
   height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
+  min-height: 225px;
   background: var(--content-container-background);
-  padding: 18px;
-}
-
-.availability-intro-text-wrapper {
-  text-align: center;
+  padding: 10px;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-p.availability-info-title-text {
-  font-size: 1.3rem;
+p.tile-title-text {
+  font-size: 1.1rem;
   font-family: geist-medium;
-  letter-spacing: -0.04rem;
   color: var(--ff-body-text-clr);
 }
 
-p.availability-info-intro-text {
+.platform-tile-information {
+  text-align: center;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+p.tile-information-text {
   font-size: 1rem;
   font-family: geist-regular;
-  letter-spacing: -0.02rem;
   color: var(--ff-body-text-clr);
-}
-
-.availability-information-container {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.availability-information-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  width: 250px;
-}
-
-p.platform-name-for-feature-info {
-  font-size: 1.1rem;
-  font-family: geist-regular;
-  color: var(--ff-body-text-clr);
-}
-
-.availability-feature-list-container {
-  text-align: center;
-}
-
-p.feature-availability-info-text {
-  font-size: 0.8rem;
-  font-family: geist-light;
-  color: var(--ff-body-text-clr);
+  text-overflow: ellipsis;
 }
 
 .page-footer {
   height: 150px;
   width: 100%;
-  background: var(--header-background);
+  background: var(--content-container-background);
+  margin-top: 10px;
 }
 
 .footer-appearance-btn-group {
@@ -1000,6 +918,25 @@ button.playlist-expand-btn {
   color: #fff;
 }
 
+@media only screen and (min-width: 1700px) and (max-width: 3000px) {
+  .platform-tile-container {
+    flex-direction: row;
+    gap: 10px;
+    padding-inline: 0;
+  }
+  .platform-tile {
+    width: 33%;
+    aspect-ratio: 1;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    background: var(--content-container-background);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 @media only screen and (min-width: 0px) and (max-width: 900px) {
   .page-content-wrapper {
     min-height: 100dvh;
@@ -1015,10 +952,12 @@ button.playlist-expand-btn {
     height: fit-content;
   }
   .header-content-wrapper {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     height: -moz-fit-content;
     height: fit-content;
+    margin: 0;
+    width: 100%;
   }
   header.sidebar-header {
     height: 50px;
@@ -1046,7 +985,7 @@ button.playlist-expand-btn {
   .main-page-content {
     gap: 15px;
   }
-  .large-intro-text-container {
+  section.site-intro-banner {
     padding-inline: 6px;
   }
   p.large-intro-text {
@@ -1055,15 +994,7 @@ button.playlist-expand-btn {
   p.small-intro-text {
     font-size: 1.2rem;
   }
-  .page-navigation-container {
-    width: 100%;
-    height: 100px;
-    background: var(--input-background);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .sonar-feature-showcase-container {
+  section.feature-banner {
     flex-direction: column;
     height: -moz-fit-content;
     height: fit-content;
@@ -1072,7 +1003,7 @@ button.playlist-expand-btn {
     gap: 20px;
     padding: 12px;
   }
-  .sonar-feature-showcase-item {
+  .feature {
     margin-bottom: 6px;
     text-wrap: stable;
     border-radius: 10px;
@@ -1080,16 +1011,16 @@ button.playlist-expand-btn {
     width: 70%;
     height: 200px;
   }
-  .sonar-showcase-text-wrapper {
+  .feature-description {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .streaming-service-img-container {
+  section.streaming-platforms-banner {
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
   }
-  .desktop-service-imgs {
+  .platform-logos-wrapper {
     height: -moz-fit-content;
     height: fit-content;
     flex-direction: column;
@@ -1097,7 +1028,7 @@ button.playlist-expand-btn {
     align-items: center;
     gap: 50px;
   }
-  .service-graphic-wrapper {
+  .platform-logo {
     width: 70%;
     height: 50px;
     -o-object-fit: cover;
@@ -1134,16 +1065,25 @@ button.playlist-expand-btn {
     place-items: center;
     padding: 36px;
   }
-  .playlisting-feature-intro-text {
-    width: -moz-fit-content;
-    width: fit-content;
+  .platform-tile-container {
+    padding-inline: 0;
+    background: var(--content-container-background);
   }
-  .availability-information-container {
+  .platform-tile-row {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
   }
-  .availability-feature-list-container {
-    width: 250px;
+  .platform-tile {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    justify-content: center;
+    background: none;
   }
   .quick-page-summary-on-gradient-bg {
     height: 200px;

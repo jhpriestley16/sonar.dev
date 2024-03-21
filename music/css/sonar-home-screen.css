@@ -245,6 +245,7 @@ button.search-bar-btn {
   display: grid;
   place-items: center;
   font-size: 1.1rem;
+  color: var(--ff-body-text-clr);
 }
 
 .main-page-content {
